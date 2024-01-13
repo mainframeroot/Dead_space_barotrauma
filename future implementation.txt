@@ -1,0 +1,9 @@
+ <Other file="%ModDir%/Content/Lua/Autorun/init.lua" />
+  <Item file="%ModDir%/Content/Items/Electricity/poweritems.xml" />
+  <Item file="%ModDir%/Content/Items/Electricity/signalitems.xml" />
+  <Item file="%ModDir%/Content/Items/Electricity/lights.xml" />
+  <OutpostConfig file="%ModDir%/Content/Map/Outposts/OutpostGenerationParameters.xml" />
+
+
+    <Other file="%ModDir%/Content/Characters/Corruption/branches.png" />
+  <Item file="%ModDir%/Content/Characters/Corruption/Rooting.xml" />

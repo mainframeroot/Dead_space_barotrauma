@@ -1,0 +1,4 @@
+naprawiono teksutre w klasie cec enginer
+Changed talents, added new talent recipes and items
+Removed the original quality
+Slightly reduced the speed of monsters, and fixed a bit of monster movement
