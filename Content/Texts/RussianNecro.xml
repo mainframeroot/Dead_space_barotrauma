@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <faction.unitologists>Церковь Юнитологии</faction.unitologists>
+  <faction.unitologists.description>Юнитологи непреклонно верят, что человеческая раса была создана разумным замыслом божественного инопланетного агентства и будет воссоединена после смерти на Небесах с помощью священного артефакта, известного как Обелиск.</faction.unitologists.description>
+  <faction.unitologists.shortdescription>Основой религии являются Обелиски, артефакты неизвестного происхождения и назначения. Как ни странно, многие ученые, даже сам Альтман, имеют мало представления об истинном назначении и происхождении Обелиска.</faction.unitologists.shortdescription>
+  <!-- Characters -->
+  <character.slasher>Расчленитель</character.slasher>
+  <character.enhancedslasher>Улучшенный расчленитель</character.enhancedslasher>
+  <character.slasher2>Расчленитель</character.slasher2>
+  <character.deadcrawler>Ползун</character.deadcrawler>
+  <character.infector>Заразитель</character.infector>
+  <character.dwarfmoon>Карликовая Луна</character.dwarfmoon>
+  <!-- Items -->
+  <entityname.necroblood>Кровь некроморфа</entityname.necroblood>
+  <entitydescription.necroblood>Кровь, которая воняет зловонием разложения. Очень заразно.</entitydescription.necroblood>
+  <entityname.necroticeggs>Яйца некроморфа</entityname.necroticeggs>
+  <entitydescription.necroticeggs>Когда вы щелкаете по стеклу, вы видите желтое свечение. Имеет способность воскрешать мертвых товарищей.</entitydescription.necroticeggs>
+  <entityname.plasmacutter2>211-V Плазменный Резак</entityname.plasmacutter2>
+  <entitydescription.plasmacutter2>Этот плазменный резак сочетает в себе мощность и надежность в малом корпусе.</entitydescription.plasmacutter2>
+  <entityname.plasmaround>Плазменный патрон</entityname.plasmaround>
+  <entitydescription.plasmaround>Плазменные боеприпасы, используемые для крафта магазинов. </entitydescription.plasmaround>
+  <entityname.plasmamag>Плазменный магазин</entityname.plasmamag>
+  <entitydescription.plasmamag>Плазменный магазин для вставки в 211-V Плазменный Резак.</entitydescription.plasmamag>
+  <entityname.divingsuit2>Костюм из Dead Space</entityname.divingsuit2>
+  <entitydescription.divingsuit2>Атмосферный скафандр, подходящий для защиты от агрессивных сред. </entitydescription.divingsuit2>
+  <entityname.quarantinesiren>Карантинная сирена</entityname.quarantinesiren>
+  <entitydescription.quarantinesiren>Специальная сирена, которая может предупредить вашу команду о блокировке.</entitydescription.quarantinesiren>
+  <entityname.selfdestructsiren>Сирена Самоуничтожения</entityname.selfdestructsiren>
+  <entitydescription.selfdestructsiren>60-секундная сирена обратного отсчета для подводных лодок с функцией самоуничтожения.</entitydescription.selfdestructsiren>
+  <entityname.alarmbuzzer2>Сирена</entityname.alarmbuzzer2>
+  <entitydescription.alarmbuzzer2>Просто сирена. Ничего необычного.</entitydescription.alarmbuzzer2>
+  <entityname.gassink>Распылитель газа</entityname.gassink>
+  <entitydescription.gassink>Установите в помещении для создания газовой камеры.</entitydescription.gassink>
+  <entityname.nucleardetonator>Ядерный детонатор</entityname.nucleardetonator>
+  <entitydescription.nucleardetonator>Инициирует ядерный взрыв каждый раз, когда он активируется.</entitydescription.nucleardetonator>
+  <entityname.authchip>Чип Самоуничтожения</entityname.authchip>
+  <entitydescription.authchip>Предоставляет доступ к панели самоуничтожения в R25 USG «Ишимура».</entitydescription.authchip>
+  <entityname.redmarker>Красный обелиск</entityname.redmarker>
+  <entitydescription.redmarker>Имеет таинственную ауру. Вы чувствуете сильный дискомфорт.</entitydescription.redmarker>
+  <entityname.redmarkerdead>Красный обелиск (Мгновенная смерть)</entityname.redmarkerdead>
+  <entitydescription.redmarkerdead>Мгновенная смерть всего живого, убивает сервер.</entitydescription.redmarkerdead>
+  <entityname.pulserifle>Импульсная винтовка</entityname.pulserifle>
+  <entitydescription.pulserifle>Импульсная винтовка - это трехствольная штурмовая винтовка военного класса с высокой скорострельностью и большим магазином боеприпасов. </entitydescription.pulserifle>
+  <entityname.pulseround>Импульсный патрон</entityname.pulseround>
+  <entitydescription.pulseround>Боеприпасы для импульсной винтовки, используемые для изготовления магазинов.</entitydescription.pulseround>
+  <entityname.pulsemag>Импульсный магазин</entityname.pulsemag>
+  <entitydescription.pulsemag>Магазин импульсной винтовки, вставляемый в импульсную винтовку.</entitydescription.pulsemag>
+  <!-- Afflictions -->
+  <afflictionname.necroinfection>Инфекция некроморфа</afflictionname.necroinfection>
+  <afflictiondescription.necroinfection>Они стали иррациональными, и их речь бессмысленна. Они стали необузданно жестокими.</afflictiondescription.necroinfection>
+  <afflictioncauseofdeath.necroinfection>Поддался инфекции некроморфа.</afflictioncauseofdeath.necroinfection>
+  <afflictioncauseofdeathself.necroinfection>Вы превратились в некроморфа.</afflictioncauseofdeathself.necroinfection>
+  <!-- Traitor Missions -->
+  <!-- Make Us Whole -->
+  <makeuswhole_goalinfotext_2>Священная кровь некроморфа была спрятана в открытой вентиляции. Найдите эту кровь быстро, пока кто-нибудь еще не наткнулся на них!</makeuswhole_goalinfotext_2>
+  <makeuswhole_objectivesuccessmessage2>Прилив удовольствия накатывает на тебя волной, когда ты находишь кровь. Сухой, безумный смех на мгновение отдается эхом в твоей голове, переходя в галлюцинации нового мира.</makeuswhole_objectivesuccessmessage2>
+  <makeuswhole_objectivesuccessmessage3>Ваша голова кружится, и ваше зрение сужается, когда уничтожается последний каликсанид.</makeuswhole_objectivesuccessmessage3>
+  <makeuswhole_traitorobjectivestartmessage4>Вы читаете заключительное задание:\n[traitorgoalinfos]</makeuswhole_traitorobjectivestartmessage4>
+  <makeuswhole_goalinfotext_4>Все на этой субмарине должны приобщиться к некроморфу! </makeuswhole_goalinfotext_4>
+  <!-- Altman Be Praised -->
+  <altmanbepraised_goalinfotext_1>Найдите особенное яйцо, возможно, спрятанное в одном из вентиляционных отверстий.</altmanbepraised_goalinfotext_1>
+  <altmanbepraised_objectivesuccessmessage1>Яйцо вызывает у вас отвращение, но прекрасно помещается в кармане. Слава Альтману!</altmanbepraised_objectivesuccessmessage1>
+  <altmanbepraised_traitorobjectivestartmessage2>Вырастить яйцо:\n[traitorgoalinfos]</altmanbepraised_traitorobjectivestartmessage2>
+  <altmanbepraised_goalinfotext_2>Найдите безопасное место для роста яйца и кормите его [catalystitem].</altmanbepraised_goalinfotext_2>
+  <altmanbepraised_objectivesuccessmessage2>Яйцо вздувается и издает странные звуки... Вы скоро станете родителем!</altmanbepraised_objectivesuccessmessage2>
+  <altmanbepraised_traitorobjectivestartmessage3>Яйцо трескается, и из него вырывается инфектор:\n[traitorgoalinfos]</altmanbepraised_traitorobjectivestartmessage3>
+  <altmanbepraised_goalinfotext_3>Любыми способами следите за тем, чтобы заразитель прожил не менее 3 минут.</altmanbepraised_goalinfotext_3>
+  <altmanbepraised_objectivesuccessmessage3>Вы хорошо поработали, товарищ юнитолог. Отдайте свое тело им и станьте единым целым с маркером.</altmanbepraised_objectivesuccessmessage3>
+  <altmanbepraised_traitorobjectivestartmessage4>Спасайтесь:\n[traitorgoalinfos]</altmanbepraised_traitorobjectivestartmessage4>
+  <!-- flood_1 traitor mission text package -->
+  <necro_1_traitormissionstartinfotext>Слава Альтману!</necro_1_traitormissionstartinfotext>
+  <necro_1_traitorobjectivestartmessage1>Пора. Когда ваши братья-юнитологи проинструктировали вас еще на погрузочной платформе в [location1], вы приступаете к работе:\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage1>
+  <necro_1_goalinfotext_1>Обыщите шкафчики с запасными припасами в каждом отсеке. Оперативник спрятал кнопку в одном из них.</necro_1_goalinfotext_1>
+  <necro_1_objectivesuccessmessage1>Вы быстро прячете кнопку в карман и стараетесь вести себя непринужденно.</necro_1_objectivesuccessmessage1>
+  <necro_1_traitorobjectivestartmessage2>Далее вам нужно будет найти взрывчатку, пока никто до нее не добрался!\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage2>
+  <necro_1_goalinfotext_2>Возьмите взрывчатку из медблока.</necro_1_goalinfotext_2>
+  <necro_1_objectivesuccessmessage2>План складывается идеально. Вы хватаете взрывчатку и стараетесь не хихикать.</necro_1_objectivesuccessmessage2>
+  <necro_1_traitorobjectivestartmessage3>Наконец, по словам юнитологов, вам нужно будет найти что-то, чтобы привести все это в действие!\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage3>
+  <necro_1_goalinfotext_3>Обыщите стальные шкафы внутри подлодки и достаньте детонатор.</necro_1_goalinfotext_3>
+  <necro_1_objectivesuccessmessage3>Оперативник и вправду справился! Теперь у вас есть все необходимое, чтобы начать вечеринку здесь.</necro_1_objectivesuccessmessage3>
+  <necro_1_traitorobjectivestartmessage4>Вам нужно будет установить детонатор на стене в хорошем месте, разместить кнопку на безопасном расстоянии, соединить их вместе, а затем привести все это в действие, чтобы затопить это ржавое ведро!\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage4>
+  <necro_1_objectivesuccessmessage4>Сейчас в подлодке более чем достаточно воды, чтобы преждевременно завершить ее миссию. Интересно, сколько времени потребуется, чтобы доплыть до ближайшего аванпоста и доложить юнитологам...</necro_1_objectivesuccessmessage4>
+  <!-- MVP traitor mission text package -->
+  <necromvptraitormissionstartinfotext>Голос в вашей голове кричит достаточно громко, чтобы напугать вас: ЦЕРКОВЬ ЮНИТОЛОГИИ ПРИЗЫВАЕТ ВАС К СЛУЖЕНИЮ!</necromvptraitormissionstartinfotext>
+  <necromvptraitorobjectivestartmessage1>В вашем сознании постепенно формируется идея, странно соблазнительная для вас, несмотря на ее обыденность:\n[traitorgoalinfos]</necromvptraitorobjectivestartmessage1>
+  <necromvp_goalinfotext_1>Обыщите шкафчики - под одним из запасных кислородных баллонов спрятано послание специально для вас.</necromvp_goalinfotext_1>
+  <necromvpobjectivesuccessmessage1>Как вы каким-то образом предсказали, к нижней стороне кислородного баллона приклеен клочок грязной бумаги. Он испещрен примитивными каракулями, но вы интуитивно понимаете, что это закодированные инструкции.</necromvpobjectivesuccessmessage1>
+  <necromvptraitorobjectivestartmessage2>Ваша первая задача:\n[traitorgoalinfos]</necromvptraitorobjectivestartmessage2>
+  <necromvpobjectivesuccessmessage2>Прилив удовольствия накатывает на вас как волна, когда вы выполняете первое задание на бумаге. Сухой, безумный смех на мгновение раздается в вашей голове и исчезает в галлюцинациях нового мира.</necromvpobjectivesuccessmessage2>
+  <necromvptraitorobjectivestartmessage3>Вы читаете следующую закодированную инструкцию:\n[traitorgoalinfos]</necromvptraitorobjectivestartmessage3>
+  <necromvpobjectivesuccessmessage3>Больше ничего не остается делать. Подлодка в беспорядке, голос в вашей голове умолкает, и ваша судьба предрешена.</necromvpobjectivesuccessmessage3>
+  <!-- Missions -->
+  <missionname.salvageobelisk>УБИТЬ СЕБЯ</missionname.salvageobelisk>
+  <missiondescription.salvageobelisk>Поступали многочисленные сообщения о моряках, которые чувствовали себя неловко и агрессивно, проходя мимо [location1]. Считается, что находящийся поблизости обелиск заражает проходящих моряков. Осмотрите и заберите обелиск. </missiondescription.salvageobelisk>
+  <missionsonarlabel.salvageobelisk>Зараженная передача</missionsonarlabel.salvageobelisk>
+  <missionsuccess.salvageobelisk>Обелиск был успешно извлечен.</missionsuccess.salvageobelisk>
+  <missionfailure.salvageobelisk>Извлечение обелиска не удалось.</missionfailure.salvageobelisk>
+  <missionheader0.salvageobelisk>Обелиск взят</missionheader0.salvageobelisk>
+  <missionmessage0.salvageobelisk>Обелиск теперь на борту. Выведите подводную лодку из пещеры, чтобы получить награду.</missionmessage0.salvageobelisk>
+  <missionname.killnecros>Зов пустоты</missionname.killnecros>
+  <missiondescription.killnecros>Исследовательская группа, направленная USG «Ишимура», отправила сигнал бедствия перед тем, как перестать выходить на связь между [location1] и [location2]. Все попытки установить связь с пропавшей командой не увенчались успехом, поскольку никто не отвечает на сообщения. Найдите пропавшую команду и благополучно доставьте их на «Ишимуру».</missiondescription.killnecros>
+  <missionsonarlabel.killnecros>Сигнал бедствия</missionsonarlabel.killnecros>
+  <missionsuccess.killnecros>Вы сбежали от некроморфов.</missionsuccess.killnecros>
+  <missionheader0.killnecros>Цель уничтожена</missionheader0.killnecros>
+  <missionmessage0.killnecros>Пропавшие члены экипажа, похоже, были поражены паразитической инопланетной жизнью и должны были быть уничтожены. Выведите подводную лодку из пещеры и доложите об этом на "Ишимуру".</missionmessage0.killnecros>
+  <missionname.killnecros2>Зов пустоты</missionname.killnecros2>
+  <missiondescription.killnecros2>Исследовательская группа, направленная USG «Ишимура», отправила сигнал бедствия перед тем, как перестать выходить на связь между [location1] и [location2]. Все попытки установить связь с пропавшей командой не увенчались успехом, поскольку никто не отвечает на сообщения. Найдите пропавшую команду и благополучно доставьте их на «Ишимуру».</missiondescription.killnecros2>
+  <missionsonarlabel.killnecros2>Сигнал бедствия</missionsonarlabel.killnecros2>
+  <missionsuccess.killnecros2>Вы сбежали от некроморфов.</missionsuccess.killnecros2>
+  <missionheader0.killnecros2>Цель уничтожена</missionheader0.killnecros2>
+  <missionmessage0.killnecros2>Пропавшие члены экипажа, похоже, были поражены паразитической инопланетной жизнью и должны были быть уничтожены. Выведите подводную лодку из пещеры и доложите об этом на "Ишимуру".</missionmessage0.killnecros2>
+  <missionname.killbabynecros>Детоубийство</missionname.killbabynecros>
+  <missiondescription.killbabynecros>Было обнаружено, что некроморфы размножаются на Европе, пытаясь захватить Луну. Гнездо молодых некроморфов было обнаружено между [location1] и [location2]. Награда в виде [reward] кредитов будет вручена любой команде, которая сможет очистить гнездо от заражения и благополучно вернуться обратно. </missiondescription.killbabynecros>
+  <missionsonarlabel.killbabynecros>Гнездо некроморфов</missionsonarlabel.killbabynecros>
+  <missionsuccess.killbabynecros>Гнездо очищено.</missionsuccess.killbabynecros>
+  <missionheader0.killbabynecros>Цель уничтожена</missionheader0.killbabynecros>
+  <missionmessage0.killbabynecros>Заражение замедлилось, но продолжает распространяться в других местах. Выведите подводную лодку из пещеры, чтобы получить награду.</missionmessage0.killbabynecros>
+  <missionname.seismicactivity>Сейсмическая Активность</missionname.seismicactivity>
+  <missiondescription.seismicactivity>Между [location1] и [location2] наблюдались стойкие толчки. Считается, что группа Молохов может сталкиваться со стенами пещеры. Это может привести к обвалу, поэтому рекомендуется избегать этого маршрута, пока угроза не будет устранена.</missiondescription.seismicactivity>
+  <missionsonarlabel.seismicactivity>Сейсмический сигнал</missionsonarlabel.seismicactivity>
+  <missionsuccess.seismicactivity>Просто продолжай плыть. Просто продолжай плыть...</missionsuccess.seismicactivity>
+  <missionheader0.seismicactivity>Возможно, вы захотите уплыть прямо сейчас.</missionheader0.seismicactivity>
+  <missionmessage0.seismicactivity>Просто продолжай плыть. Просто продолжай плыть. Просто продолжай плыть. Просто продолжай плыть. Просто продолжай плыть.</missionmessage0.seismicactivity>
+  <missionname.cargobiohazards>Некрофил Экспресс</missionname.cargobiohazards>
+  <missiondescription.cargobiohazards>Церкви Юнитологии в [location1] нужен кто-то, чтобы переправить немаркированную контрабанду в [location2] за вознаграждение в виде [reward] кредитов без вопросов.</missiondescription.cargobiohazards>
+  <missionsuccess.cargobiohazards>Контрабанда успешно доставлена.</missionsuccess.cargobiohazards>
+  <missionname.necrooutpostassassinate>Судный день</missionname.necrooutpostassassinate>
+  <missiondescription.necrooutpostassassinate>Контакт с [location1] был недавно потерян, и есть подозрения, что враждебная фауна построила внутри него гнездо. Найдите яйца внутри аванпоста и уничтожьте их.</missiondescription.necrooutpostassassinate>
+  <missionsuccess.necrooutpostassassinate>Гнездо внутри аванпоста было успешно уничтожено.</missionsuccess.necrooutpostassassinate>
+  <missionfailure.necrooutpostassassinate>Аванпост остается зараженной. </missionfailure.necrooutpostassassinate>
+  <missionheader0.necrooutpostassassinate>Гнездо уничтожено</missionheader0.necrooutpostassassinate>
+  <missionmessage0.necrooutpostassassinate>Гнездо внутри аванпоста было успешно уничтожено. Отстыкуйтесь от аванпоста, чтобы завершить миссию.</missionmessage0.necrooutpostassassinate>
+  <eventtext.fetalaccident.c1>Вы слышите звон разбитого стекла и крик младенца. При дальнейшем осмотре вы обнаруживаете разбитое стекло и неизвестную жидкость, разлитую по всему полу. Что за черт?</eventtext.fetalaccident.c1>
+  <eventtext.fetalaccident.o1>Навести порядок.</eventtext.fetalaccident.o1>
+  <eventtext.fetalaccident.o1.c1>Вы убираете разбитое стекло и оставляете у стены найденный вами знак мокрого пола. Уборщик наблюдает за вашими действиями и благодарит вас. Когда он уходит, вы крадете его бумажник с 1000 кредитов!</eventtext.fetalaccident.o1.c1>
+  <eventtext.fetalaccident.o1.c2>Подбирая разбитое стекло, вы случайно порезали большой палец и залили кровью весь пол. Уборщик расстроен тем, что вы создали дополнительную работу.</eventtext.fetalaccident.o1.c2>
+  <eventtext.fetalaccident.o2>Посмотреть вверх, в ту сторону, откуда таинственным образом упало стекло.</eventtext.fetalaccident.o2>
+  <eventtext.fetalaccident.o2.c1>НА ПОТОЛКЕ РЕБЕНОК!</eventtext.fetalaccident.o2.c1>
+  <eventtext.fetalaccident.o2.c2>КАКОГО ХРЕНА?!</eventtext.fetalaccident.o2.c2>
+  <eventtext.fetalaccident.o3>Игнорировать.</eventtext.fetalaccident.o3>
+  <eventtext.fetalaccident.o3.c1>Похоже, это могло быть только в вашей голове... Эти аванпосты могут действовать на нервы через некоторое время.</eventtext.fetalaccident.o3.c1>
+  <eventtext.fetalaccident.o3.o1>Сделайте глубокий вдох.</eventtext.fetalaccident.o3.o1>
+  <eventtext.fetalaccident.o3.c2>Вы решаете, что у вас нет времени на эту ерунду, и выбиваете стекло. Это не ваша проблема! Что бы это ни было, кто-то другой разберется с этим, например, бесполезный уборщик!</eventtext.fetalaccident.o3.c2>
+  <eventtext.fetalaccident.o3.o2>Бах!</eventtext.fetalaccident.o3.o2>
+  <eventtext.fetalaccident.o3.c3>Вы решаете, что у вас нет времени на эту ерунду, и делаете вид, что ничего не заметили, но у вас возникает неприятное чувство, что вы еще не видели конца...</eventtext.fetalaccident.o3.c3>
+  <eventtext.fetalaccident.o3.o3>Предвестие?</eventtext.fetalaccident.o3.o3>
+</infotexts>

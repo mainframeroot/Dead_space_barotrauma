@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2013 sp1 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<Slasher2SwimSlow animationtype="SwimSlow" usesinemovement="False" flip="True" mirror="True" waveamplitude="1" wavelength="10" rotatetowardsmovement="True" torsotorque="25" headtorque="25" tailtorque="50" foottorque="25" footangles="12: 0,13: 0" tailangle="NaN" steertorque="10" movementspeed="4" cyclespeed="0.4" headangle="NaN" torsoangle="NaN" flipcooldown="1" flipdelay="0.5" mirrorlerp="True" tailtorquemultiplier="1" />

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Polish" nowhitespace="false" translatedname="Polski">
+  <faction.unitologists>Kosciół zjednoczenia</faction.unitologists>
+  <faction.unitologists.description>Unitolodzy nieugięcie wierzą, że rasa ludzka została stworzona przez inteligentny projekt boskiej obcej agencji i zostanie zjednoczona po śmierci w Niebie dzięki mocy świętego artefaktu znanego jako Znak.</faction.unitologists.description>
+  <faction.unitologists.shortdescription>Podstawą religii są Znaki, artefakty nieznanego pochodzenia i przeznaczenia. Co dziwne, wielu naukowców, nawet sam Altman, nie ma pojęcia o prawdziwym przeznaczeniu i pochodzeniu Znaku.</faction.unitologists.shortdescription>
+  <!-- Characters -->
+  <character.slasher>Slasher</character.slasher>
+  <character.enhancedslasher>Zmutowany Slasher</character.enhancedslasher>
+  <character.slasher2>Slasher</character.slasher2>
+  <character.deadcrawler>Szwendacz</character.deadcrawler>
+  <character.infector>Infector</character.infector>
+  <character.dwarfmoon>księżycowy karzeł </character.dwarfmoon>
+  <!-- Items -->
+  <entityname.necroblood>Nekrotyczna krew</entityname.necroblood>
+  <entitydescription.necroblood>Krew która cuchnie zgnilizną. Wysoce zakaźna..</entitydescription.necroblood>
+  <entityname.necroticeggs>Nekrotyczna Jaja</entityname.necroticeggs>
+  <entitydescription.necroticeggs>Widzisz żółte światło po stłuczeniu szyby. Wysoce niebezpieczne!.</entitydescription.necroticeggs>
+  <entityname.plasmacutter2>211-V Przecinak Plazmowy</entityname.plasmacutter2>
+  <entitydescription.plasmacutter2>Ten Przecinak Plazmowy łączy siłę i niezawodność w poręcznym opakowaniu.</entitydescription.plasmacutter2>
+  <entityname.plasmaround>Ładunek Plazmowy</entityname.plasmaround>
+  <entitydescription.plasmaround> Amunicja Plazmowa używana do tworzenia magazynków.</entitydescription.plasmaround>
+  <entityname.plasmamag>Magazynek Plazmowy</entityname.plasmamag>
+  <entitydescription.plasmamag>Magazynek Plazmowy do 211-V Przecinak Plazmowy.</entitydescription.plasmamag>
+  <entityname.divingsuit2>Ulepszony Kombinezon Środowiskowy</entityname.divingsuit2>
+  <entitydescription.divingsuit2>Kombinezon przystosowany do ekstremalnych środowisk. Chroni przed ciśnieniem do 12,000 metrów. Chroni przed infekcją..</entitydescription.divingsuit2>
+  <entityname.quarantinesiren>Syrena Kwarantanny.</entityname.quarantinesiren>
+  <entitydescription.quarantinesiren>Syrena która ostrzega załogę o lockdownie.</entitydescription.quarantinesiren>
+  <entityname.selfdestructsiren>Syrena Samozniszczenia</entityname.selfdestructsiren>
+  <entitydescription.selfdestructsiren>60 sekundowa syrena ostrzegająca o samodestrukcjiA 60 second countdown siren to implement on submarines with self destruct capabilities.</entitydescription.selfdestructsiren>
+  <entityname.alarmbuzzer2>Brzęcząca SyrenaAlarm Buzzer Variant</entityname.alarmbuzzer2>
+  <entitydescription.alarmbuzzer2>Syrena z innym sygnałem dźwiękowymA custom alarm buzzer with a different sound.</entitydescription.alarmbuzzer2>
+  <entityname.gassink>Rozpylacz GazuGas Sink</entityname.gassink>
+  <entitydescription.gassink>Zainstaluj w pokoju żeby zrobić z niego komorę gazową </entitydescription.gassink>
+  <entityname.nucleardetonator>Detonatar AtomowyNuclear Detonator</entityname.nucleardetonator>
+  <entitydescription.nucleardetonator>Odpala głowicę atomową gdy jest aktywnaIgnites a nuclear detonation everytime it's activated.</entitydescription.nucleardetonator>
+  <entityname.authchip>Czip Samo ZniszczeniaSelf Destruct Chip</entityname.authchip>
+  <entitydescription.authchip>Daje dostęp do panelu samozniszczenia w R25 USS IshimuraGrants access to the self destruct panel in the R25 USS Ishimura submarine.</entitydescription.authchip>
+  <entityname.redmarker>Cczerwony Marker</entityname.redmarker>
+  <entitydescription.redmarker>Emituje tajemniczą aure. Powoduje duży dyskomfortHas a mysterious aura. Makes you feel severe discomfort.</entitydescription.redmarker>
+  <entityname.redmarkerdead>Czerwony Marker Śmierciczerwony Marker</entityname.redmarkerdead>
+  <entitydescription.redmarkerdead>Powoduje natychmiastową śmierć wszystkich istot żywych.Instant death of all live, kills the server.</entitydescription.redmarkerdead>
+  <entityname.pulserifle>Karabin PulsacyjnyPulse Rifle</entityname.pulserifle>
+  <entitydescription.pulserifle>Karabin Pulsacyjny to wojskowy, trójlufowy karabin szturmowy o wysokiej szybkostrzelności i pojemnym magazynku.The Pulse Rifle is a military-grade, triple-barreled assault rifle with a rapid rate of fire and large magazine ammunition capacity.</entitydescription.pulserifle>
+  <entityname.pulseround>Pocisk PulsacyjnyPulse Round</entityname.pulseround>
+  <entitydescription.pulseround>Amunicja do karabinu pulsacyjnego używana do tworzenia magazynków.Pulse rifle ammunition used for crafting magazines.</entitydescription.pulseround>
+  <entityname.pulsemag>Magazynek PulsacyjnyPulse Magazine</entityname.pulsemag>
+  <entitydescription.pulsemag>Magazynek pulsacyjny do karabinu pulsacyjnego.Pulse rifle magazine to be inserted in a pulse rifle.</entitydescription.pulsemag>
+  <entitydescription.NodseLV1>zwiększa nieco wydajność broni</entitydescription.NodseLV1>
+  <entitydescription.NodseLV2>zwiększa średnio skuteczność broni</entitydescription.NodseLV2>
+  <entitydescription.NodseLV3>znacznie zwiększa wydajność broni</entitydescription.NodseLV3>
+  <entityname.NodseLV1>Węzeł zasilający</entityname.NodseLV1>
+  <entityname.NodseLV2>Węzeł zasilający</entityname.NodseLV2>
+  <entityname.NodseLV3>Węzeł zasilający</entityname.NodseLV3>
+  <!-- DolegliwościAfflictions -->
+  <afflictionname.necroinfection>Nekrotyczna infekcja</afflictionname.necroinfection>
+  <afflictiondescription.necroinfection>Powoduje irracjonalność i powoduje bełkotanie. Powoduje ekstremalną agresję.</afflictiondescription.necroinfection>
+  <afflictioncauseofdeath.necroinfection>Śmierć od Nekrozy.</afflictioncauseofdeath.necroinfection>
+  <afflictioncauseofdeathself.necroinfection>Zostałeś przemieniony w nekromorfa.</afflictioncauseofdeathself.necroinfection>
+  <!-- Misje ZdrajcówTraitor Missions -->
+  <!-- Zjednocz NasMake Us Whole -->
+  <makeuswhole_goalinfotext_2>Święta krew nekromorfa została ukryta za poluzowaną kratką wentylacjną. Znajdź ją zanim ktoś Cię uprzedzi!</makeuswhole_goalinfotext_2>
+  <makeuswhole_objectivesuccessmessage2>A rush of pleasure hits you like a wave as you find the blood. A dry, mad laugh echoes within your head for a moment, fading into hallucinations of the new world.</makeuswhole_objectivesuccessmessage2>
+  <makeuswhole_objectivesuccessmessage3>Your head spins and your vision narrows as the last of the calyxanide is destroyed.</makeuswhole_objectivesuccessmessage3>
+  <makeuswhole_traitorobjectivestartmessage4>You read the final task:\n[traitorgoalinfos]</makeuswhole_traitorobjectivestartmessage4>
+  <makeuswhole_goalinfotext_4>All on this sub must partake of communion with the necromorph!</makeuswhole_goalinfotext_4>
+  <!-- Altman Be Praised -->
+  <altmanbepraised_goalinfotext_1>Find a very special egg, possibly hidden in one of the vents.</altmanbepraised_goalinfotext_1>
+  <altmanbepraised_objectivesuccessmessage1>The egg disgusts you, but fits neatly in your pocket. Altman be praised!</altmanbepraised_objectivesuccessmessage1>
+  <altmanbepraised_traitorobjectivestartmessage2>Grow the egg:\n[traitorgoalinfos]</altmanbepraised_traitorobjectivestartmessage2>
+  <altmanbepraised_goalinfotext_2>Find a safe place for the egg to grow, and feed it [catalystitem].</altmanbepraised_goalinfotext_2>
+  <altmanbepraised_objectivesuccessmessage2>The egg bulges and makes strange noises... You're about to become a parent!</altmanbepraised_objectivesuccessmessage2>
+  <altmanbepraised_traitorobjectivestartmessage3>The egg cracks and an infector bursts forth:\n[traitorgoalinfos]</altmanbepraised_traitorobjectivestartmessage3>
+  <altmanbepraised_goalinfotext_3>See to it by any means that the infector survives for at least 3 minutes.</altmanbepraised_goalinfotext_3>
+  <altmanbepraised_objectivesuccessmessage3>You have done well fellow unitologist. Give your body to them and become one with the marker.</altmanbepraised_objectivesuccessmessage3>
+  <altmanbepraised_traitorobjectivestartmessage4>Escape:\n[traitorgoalinfos]</altmanbepraised_traitorobjectivestartmessage4>
+  <!-- flood_1 traitor mission text package -->
+  <necro_1_traitormissionstartinfotext>Altman Be Praised!</necro_1_traitormissionstartinfotext>
+  <necro_1_traitorobjectivestartmessage1>It's time. As the your unitologist brethren instructed you back on the loading dock at Minos Linea, you get to work:\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage1>
+  <necro_1_goalinfotext_1>Search the emergency supplies lockers in each compartment. An operative has hidden a button component in one of them.</necro_1_goalinfotext_1>
+  <necro_1_objectivesuccessmessage1>You quickly stash the button in your pocket and try to act casual.</necro_1_objectivesuccessmessage1>
+  <necro_1_traitorobjectivestartmessage2>Next, you'll need to find some explosives before anyone else can get to them!\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage2>
+  <necro_1_goalinfotext_2>Retrieve the explosives from the medbay.</necro_1_goalinfotext_2>
+  <necro_1_objectivesuccessmessage2>The plan is coming together perfectly. You grab the explosives and try not to giggle too much.</necro_1_objectivesuccessmessage2>
+  <necro_1_traitorobjectivestartmessage3>Finally, the unitologists said you'll need to find something to set this all off!\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage3>
+  <necro_1_goalinfotext_3>Search the steel storage cabinets around the sub and retrieve the detonator.</necro_1_goalinfotext_3>
+  <necro_1_objectivesuccessmessage3>The operative really came through! You have all you need now to get the party here started.</necro_1_objectivesuccessmessage3>
+  <necro_1_traitorobjectivestartmessage4>You're going to need to set the detonator on a wall in a good location, place the button a safe distance away, wire the two together, then set it all off to flood this rust bucket!\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage4>
+  <necro_1_objectivesuccessmessage4>There's more than enough water in the sub now to end its mission prematurely. You wonder how long it will take to swim to the nearest outpost and report back to the unitologists...</necro_1_objectivesuccessmessage4>
+  <!-- MVP traitor mission text package -->
+  <necromvptraitormissionstartinfotext>A voice within your head screams loudly enough to startle you: THE CHURCH OF UNITOLOGY CALLS YOU TO SERVICE!</necromvptraitormissionstartinfotext>
+  <necromvptraitorobjectivestartmessage1>An idea gradually forms in your mind, strangely seductive to you in spite of its mundane nature:\n[traitorgoalinfos]</necromvptraitorobjectivestartmessage1>
+  <necromvp_goalinfotext_1>Search the storage lockers—a special message just for you is hidden under one of the spare oxygen tanks.</necromvp_goalinfotext_1>
+  <necromvpobjectivesuccessmessage1>As you somehow predicted, a slip of filthy paper is stuck to the underside of this oxygen tank. It's covered in primitive scribbles, but you intuitively understand it to be coded instructions.</necromvpobjectivesuccessmessage1>
+  <necromvptraitorobjectivestartmessage2>Your first task:\n[traitorgoalinfos]</necromvptraitorobjectivestartmessage2>
+  <necromvpobjectivesuccessmessage2>A rush of pleasure hits you like a wave as you complete the first task on the paper. A dry, mad laugh echoes within your head for a moment, fading into hallucinations of the new world.</necromvpobjectivesuccessmessage2>
+  <necromvptraitorobjectivestartmessage3>You read the next coded instruction:\n[traitorgoalinfos]</necromvptraitorobjectivestartmessage3>
+  <necromvpobjectivesuccessmessage3>With that, there is nothing more to do. The sub is in disarray, the voice in your head grows silent, and your fate is sealed.</necromvpobjectivesuccessmessage3>
+  <!-- Missions -->
+  <missionname.salvageobelisk>KILL YOURSELF</missionname.salvageobelisk>
+  <missiondescription.salvageobelisk>There have been numerous reports of sailors feeling uneasy and violent while passing by [location1]. It is believed that an obelisk nearby has been infecting passing sailors. Investigate and retrieve the obelisk.</missiondescription.salvageobelisk>
+  <missionsonarlabel.salvageobelisk>Infectious Transmission</missionsonarlabel.salvageobelisk>
+  <missionsuccess.salvageobelisk>The obelisk has been successfully retrieved.</missionsuccess.salvageobelisk>
+  <missionfailure.salvageobelisk>Retrieving the obelisk failed.</missionfailure.salvageobelisk>
+  <missionheader0.salvageobelisk>Obelisk collected</missionheader0.salvageobelisk>
+  <missionmessage0.salvageobelisk>The obelisk is now on board. Navigate the submarine out of the cavern to claim the reward.</missionmessage0.salvageobelisk>
+  <missionname.killnecros>Call of the Void</missionname.killnecros>
+  <missiondescription.killnecros>A research team sent out by the USG Ishimura has sent out a distress signal before going radio silent between [location1] and [location2].  All attempts to establish communication with the missing team have failed as no one is responding to comms. Find the missing crew and bring them back to the Ishimura safely.</missiondescription.killnecros>
+  <missionsonarlabel.killnecros>Distress-Signal</missionsonarlabel.killnecros>
+  <missionsuccess.killnecros>You have escaped the necromorphs.</missionsuccess.killnecros>
+  <missionheader0.killnecros>Target terminated</missionheader0.killnecros>
+  <missionmessage0.killnecros>The missing crew members seem to have been overwhelmed by parasitic alien life and had to be terminated. Navigate the submarine out of the cavern and report back to the Ishimura.</missionmessage0.killnecros>
+  <missionname.killnecros2>Call of the Void</missionname.killnecros2>
+  <missiondescription.killnecros2>A research team sent out by the USG Ishimura has sent out a distress signal before going radio silent between [location1] and [location2].  All attempts to establish communication with the missing team have failed as no one is responding to comms. Find the missing crew and bring them back to the Ishimura safely.</missiondescription.killnecros2>
+  <missionsonarlabel.killnecros2>Distress-Signal</missionsonarlabel.killnecros2>
+  <missionsuccess.killnecros2>You have escaped the necromorphs.</missionsuccess.killnecros2>
+  <missionheader0.killnecros2>Target terminated</missionheader0.killnecros2>
+  <missionmessage0.killnecros2>The missing crew members seem to have been overwhelmed by parasitic alien life and had to be terminated. Navigate the submarine out of the cavern and report back to the Ishimura.</missionmessage0.killnecros2>
+  <missionname.killbabynecros>Infanticide</missionname.killbabynecros>
+  <missiondescription.killbabynecros>It has been discovered that necromorphs have been multiplying on Europa in an attempt to claim the moon. A nest of young necromorphs has been discovered between [location1] and [location2]. A reward of [reward] credits will be rewarded to any crew that can clear the nest of the infestation and return back safely.</missiondescription.killbabynecros>
+  <missionsonarlabel.killbabynecros>Young</missionsonarlabel.killbabynecros>
+  <missionsuccess.killbabynecros>The nest has been cleared.</missionsuccess.killbabynecros>
+  <missionheader0.killbabynecros>Target terminated</missionheader0.killbabynecros>
+  <missionmessage0.killbabynecros>The infestation has slowed down but continues to spread elsewhere. Navigate the submarine out of the cavern to claim the reward.</missionmessage0.killbabynecros>
+  <missionname.seismicactivity>Seismic Activity</missionname.seismicactivity>
+  <missiondescription.seismicactivity>There have been peristent tremors occuring between [location1] and [location2]. It is believed that a group of Molochs may be colliding against cave walls. This may result in a cave-in so it is advisable to steer clear of this route until the threat is dealt with.</missiondescription.seismicactivity>
+  <missionsonarlabel.seismicactivity>Seismic Signal</missionsonarlabel.seismicactivity>
+  <missionsuccess.seismicactivity>Just keep swimming. Just keep swimming...</missionsuccess.seismicactivity>
+  <missionheader0.seismicactivity>You may want to start swimming now.</missionheader0.seismicactivity>
+  <missionmessage0.seismicactivity>Just keep swimming. Just keep swimming. Just keep swimming. Just keep swimming. Just keep swimming.</missionmessage0.seismicactivity>
+  <missionname.cargobiohazards>Necrophile Express</missionname.cargobiohazards>
+  <missiondescription.cargobiohazards>The Church of Unitology at [location1] need someone to smuggle some unmarked contraband to [location2] for a reward of [reward] credits no questions asked.</missiondescription.cargobiohazards>
+  <missionsuccess.cargobiohazards>The contraband has been successfully delivered.</missionsuccess.cargobiohazards>
+  <eventtext.fetalaccident.c1>You hear glass break and a shrieking infant child. Upon further inspection you find broken glass and an unknown fluid spilled all over the floor. What the hell?</eventtext.fetalaccident.c1>
+  <eventtext.fetalaccident.o1>Clean up the mess.</eventtext.fetalaccident.o1>
+  <eventtext.fetalaccident.o1.c1>You pickup the broken glass and leave a wet floor sign you found against the wall. The janitor walked in on your action and thanks you. As he leaves, you steal his wallet with 1000 marks!</eventtext.fetalaccident.o1.c1>
+  <eventtext.fetalaccident.o1.c2>As you pick up the broken glass, you accidentally slice your thumb open and bleed all over the floor. The janitor is upset at the extra work you created.</eventtext.fetalaccident.o1.c2>
+  <eventtext.fetalaccident.o2>Look up towards the direction the glass mysteriously fell from.</eventtext.fetalaccident.o2>
+  <eventtext.fetalaccident.o2.c1>THERE'S A BABY ON THE CEILING!</eventtext.fetalaccident.o2.c1>
+  <eventtext.fetalaccident.o2.c2>WHAT THE FUCK?!</eventtext.fetalaccident.o2.c2>
+  <eventtext.fetalaccident.o3>Ignore it.</eventtext.fetalaccident.o3>
+  <eventtext.fetalaccident.o3.c1>Seems it might have just been in your head... These outposts can get on your nerves after a while.</eventtext.fetalaccident.o3.c1>
+  <eventtext.fetalaccident.o3.o1>Take a deep breath.</eventtext.fetalaccident.o3.o1>
+  <eventtext.fetalaccident.o3.c2>You decide you don’t have time for this nonsense and kick the glass. Not your problem! Whatever it is, someone else will sort that out, like the good for nothing janitor!</eventtext.fetalaccident.o3.c2>
+  <eventtext.fetalaccident.o3.o2>Bah!</eventtext.fetalaccident.o3.o2>
+  <eventtext.fetalaccident.o3.c3>You decide you don’t have time for this nonsense and pretend you didn't see anything, but you get the nagging feeling you've not seen the end of this yet...</eventtext.fetalaccident.o3.c3>
+  <eventtext.fetalaccident.o3.o3>A foreshadowing?</eventtext.fetalaccident.o3.o3>
+</infotexts>

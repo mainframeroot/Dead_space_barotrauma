@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <sounds>
+    <music file="%ModDir%/Content/Sounds/Music/Main Menu Music.ogg" type="menu" continuefromprevioustime="true" />
+  </sounds>
+</Override>

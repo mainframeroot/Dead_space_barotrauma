@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Talents>
+    <Talent identifier="IsaacClarke">
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="0,1" sheetelementsize="128,128" />
+      <Description tag="talentdescription.additionalresistanceself">
+        <Replace tag="[amount]" value="100" color="gui.green" />
+        <Replace tag="[affliction]" value="afflictionname.necroinfection" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.additionalresistanceself">
+        <Replace tag="[amount]" value="100" color="gui.green" />
+        <Replace tag="[affliction]" value="afflictionname.opiateaddiction" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.additionalresistanceself">
+        <Replace tag="[amount]" value="100" color="gui.green" />
+        <Replace tag="[affliction]" value="afflictionname.chemaddiction" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.IsaacClarke">
+        <Replace tag="[qualitystattypenames1]" value="stattypenames.movementspeed" color="gui.orange" />
+        <Replace tag="[qualitystattypenames2]" value="stattypenames.swimmingspeed" color="gui.orange" />
+        <Replace tag="[qualitystattypenames3]" value="stattypenames.meleeattackspeed" color="gui.orange" />
+        <Replace tag="[amount]" value="15" color="gui.green" />
+      </Description>
+      <AbilityGroupInterval interval="0.9">
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="IsaacClarke" amount="1.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="MovementSpeed" value="0.15" />
+          <CharacterAbilityGiveStat stattype="SwimmingSpeed" value="0.15" />
+          <CharacterAbilityGiveStat stattype="meleeattackspeed" value="0.15" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveResistance resistanceid="opiateaddiction" multiplier="0.0" />
+          <CharacterAbilityGiveResistance resistanceid="chemaddiction" multiplier="0.0" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="DeadSpaceengineer">
+      <!--“engineers”-->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="3,1" sheetelementsize="128,128" />
+      <Description tag="talentdescription.DeadSpaceengineer">
+        <Replace tag="[stattype1]" value="entityname.plasmacutter2" color="gui.orange" />
+        <Replace tag="[stattype2]" value="entityname.pulserifle" color="gui.orange" />
+        <Replace tag="[amount]" value="20" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.additionalstattypeself">
+        <Replace tag="[amount]" value="10" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.physicalresistance" color="gui.orange" />
+      </Description>
+      <AbilityGroupInterval interval="0.9">
+        <Conditions>
+          <AbilityConditionHasItem tags="plasmacutter2,pulserifle" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="DeadSpaceengineer" amount="1.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveResistance resistanceid="damage" multiplier="0.9" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="Necromorphkiller2">
+      <!--Corpse Killer -->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="1,1" sheetelementsize="128,128" />
+      <Description tag="talentdescription.Necromorph2">
+        <Replace tag="[amount]" value="20" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.additionalstattypeself">
+        <Replace tag="[amount]" value="10" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.physicalresistance" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnAttack">
+        <Conditions>
+          <AbilityConditionAttackData weapontype="Ranged" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.2" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveResistance resistanceid="damage" multiplier="0.9" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="Necromorphkiller">
+      <!--Corpse Mutant Killer -->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="4,1" sheetelementsize="128,128" />
+      <Description tag="talentdescription.Necromorph">
+        <Replace tag="[amount]" value="50" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.additionalstattypeself">
+        <Replace tag="[amount]" value="10" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.physicalresistance" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnAttack">
+        <Conditions>
+          <AbilityConditionAttackData weapontype="NoWeapon,Melee" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="0.5" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveResistance resistanceid="damage" multiplier="0.9" />
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+    <Talent identifier="Armedescalation">
+      <!--Weapon upgrades-->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="2,1" sheetelementsize="128,128" />
+      <Description tag="talentdescription.Armedescalation1">
+        <Replace tag="[entityname1]" value="entityname.NodseLV1" color="gui.orange" />
+        <Replace tag="[entityname2]" value="entityname.NodseLV2" color="gui.orange" />
+        <Replace tag="[entityname3]" value="entityname.NodseLV3" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.Armedescalation2">
+        <Replace tag="[entityname1]" value="entityname.pulseround" color="gui.orange" />
+        <Replace tag="[entityname2]" value="entityname.plasmaround" color="gui.orange" />
+      </Description>
+      <AddedRecipe itemidentifier="NodseLV1" />
+      <AddedRecipe itemidentifier="NodseLV2" />
+      <AddedRecipe itemidentifier="NodseLV3" />
+      <AddedRecipe itemidentifier="pulseround" />
+      <AddedRecipe itemidentifier="plasmaround" />
+    </Talent>
+    <Talent identifier="LostDrawings">
+      <!--Lost drawings-->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="3,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.LostDrawings" />
+      <AddedRecipe itemidentifier="divingsuit4" />
+      <!--Adding new formulas-->
+    </Talent>
+    <Talent identifier="spacepowerarmourreform">
+      <!--Space Power Armor Sonar Modification-->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="1,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.spacepowerarmourreform1">
+        <Replace tag="itemname" value="entityname.divingsuit2" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.spacepowerarmourreform2">
+        <Replace tag="itemname" value="entityname.divingsuit3" color="gui.orange" />
+      </Description>
+      <AddedRecipe itemidentifier="divingsuit3" />
+    </Talent>
+    <Talent identifier="spacepowerarmourenhancefortress">
+      <!--Space Power Armor Enhancement-->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="3,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.spacepowerarmourenhance">
+        <Replace tag="[entityname1]" value="entityname.divingsuit2" color="gui.orange" />
+        <Replace tag="[entityname2]" value="entityname.divingsuit3" color="gui.orange" />
+        <Replace tag="[entityname3]" value="entityname.divingsuit4" color="gui.orange" />
+        <Replace tag="[stattypenames]" value="stattypenames.physicalresistance" color="gui.orange" />
+        <Replace tag="[amount]" value="20" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.spacepowerarmourenhance2">
+        <Replace tag="[entityname1]" value="entityname.divingsuit2" color="gui.orange" />
+        <Replace tag="[entityname2]" value="entityname.divingsuit3" color="gui.orange" />
+        <Replace tag="[entityname3]" value="entityname.divingsuit4" color="gui.orange" />
+        <Replace tag="[qualitystattypenames1]" value="stattypenames.movementspeed" color="gui.orange" />
+        <Replace tag="[qualitystattypenames2]" value="stattypenames.swimmingspeed" color="gui.orange" />
+        <Replace tag="[amount]" value="20" color="gui.green" />
+      </Description>
+      <AbilityGroupInterval interval="0.9">
+        <Conditions>
+          <AbilityConditionHasItem tags="DeadSpaceDiving" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="spacepowerarmourenhancefortress" amount="1.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
+    <Talent identifier="spacepowerarmourenhance">
+      <!--Space Power Armor Enhancement-->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="3,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.spacepowerarmourenhance">
+        <Replace tag="[entityname1]" value="entityname.divingsuit2" color="gui.orange" />
+        <Replace tag="[entityname2]" value="entityname.divingsuit3" color="gui.orange" />
+        <Replace tag="[entityname3]" value="entityname.divingsuit4" color="gui.orange" />
+        <Replace tag="[stattypenames]" value="stattypenames.physicalresistance" color="gui.orange" />
+        <Replace tag="[amount]" value="10" color="gui.green" />
+      </Description>
+      <AbilityGroupInterval interval="0.9">
+        <Conditions>
+          <AbilityConditionHasItem tags="DeadSpaceDiving" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="spacepowerarmourenhance" amount="1.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
+    <Talent identifier="spacepowerarmourAthleticabilityUP">
+      <!--Space Power Armor -->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="2,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.spacepowerarmourAthleticabilityUP">
+        <Replace tag="[entityname1]" value="entityname.divingsuit2" color="gui.orange" />
+        <Replace tag="[entityname2]" value="entityname.divingsuit3" color="gui.orange" />
+        <Replace tag="[entityname3]" value="entityname.divingsuit4" color="gui.orange" />
+        <Replace tag="[qualitystattypenames1]" value="stattypenames.movementspeed" color="gui.orange" />
+        <Replace tag="[qualitystattypenames2]" value="stattypenames.swimmingspeed" color="gui.orange" />
+        <Replace tag="[amount]" value="25" color="gui.green" />
+      </Description>
+      <AbilityGroupInterval interval="0.9">
+        <Conditions>
+          <AbilityConditionHasItem tags="DeadSpaceDiving" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="spacepowerarmourAthleticabilityUP" amount="1.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+    </Talent>
+    <Talent identifier="spacepowerarmourattackUP">
+      <!--Space Power Armor Attack Proficiency-->
+      <Icon texture="%ModDir%/Content/job/DeadSpaceEngineer.png" sheetindex="4,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.spacepowerarmourattackUP">
+        <Replace tag="[entityname1]" value="entityname.divingsuit2" color="gui.orange" />
+        <Replace tag="[entityname2]" value="entityname.divingsuit3" color="gui.orange" />
+        <Replace tag="[entityname3]" value="entityname.divingsuit4" color="gui.orange" />
+        <Replace tag="[amount]" value="20" color="gui.green" />
+      </Description>
+      <AbilityGroupInterval interval="0.9">
+        <Conditions>
+          <AbilityConditionHasItem tags="DeadSpaceDiving" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="spacepowerarmourattackUP" amount="1.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
+        </Abilities>
+      </AbilityGroupInterval>
+      <AddedRecipe itemidentifier="spacepowerarmourEX" />
+    </Talent>
+  </Talents>
+</Override>

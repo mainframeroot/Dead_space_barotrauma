@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <faction.unitologists>The Church of Unitology</faction.unitologists>
+  <faction.unitologists.description>Unitologists adamantly believe that the human race was created by the intelligent design of a divine alien agency, and will be reunified after death in Heaven through the power of a sacred artifact known as the Marker.</faction.unitologists.description>
+  <faction.unitologists.shortdescription>The basis of the religion are the Markers, artifacts of unknown origin and purpose. Oddly, many scientists, even Altman himself, have little idea of the Marker's true purpose and origin.</faction.unitologists.shortdescription>
+  <faction.coalition>Earth Government Colonial Alliance</faction.coalition>
+  <faction.coalition.description>The Earth Government Colonial Alliance, also known as EarthGov, is the governing body of Earth and its colonies.</faction.coalition.description>
+  <faction.coalition.shortdescription>In addition to its administrative, policing, and trade oversight, EarthGov's military arm, the Earth Defense Force, is responsible for defense and traffic control operations.</faction.coalition.shortdescription>
+  <!-- Characters -->
+  <character.slasher>Slasher</character.slasher>
+  <character.enhancedslasher>Enhanced Slasher</character.enhancedslasher>
+  <character.slasher2>Slasher</character.slasher2>
+  <character.deadcrawler>Dead Crawler</character.deadcrawler>
+  <character.infector>Infector</character.infector>
+  <character.dwarfmoon>Dwarf Moon</character.dwarfmoon>
+  <character.slasherx>Derelict</character.slasherx>
+  <character.slasher3>Hunters</character.slasher3>
+  <character.Doomslasher>Missing Engineers</character.Doomslasher>
+  <character.CarrierEX>Missing Shuttle Boat</character.CarrierEX>
+  <character.CarrierEX2>Missing Shuttle Boat</character.CarrierEX2>
+  <character.CarrierEX3>Missing Shuttle Boat</character.CarrierEX3>
+  <!-- mission -->
+  <missionname.necrooutpostDestroy>Judgment Day</missionname.necrooutpostDestroy>
+  <missiondescription.necrooutpostDestroy>We have recently lost contact with [location1] and we suspect that the aliens have killed everyone and detonated the nuclear reactor to blow them up into the sky.</missiondescription.necrooutpostDestroy>
+  <missionsuccess.necrooutpostDestroy>The outpost has been successfully destroyed.</missionsuccess.necrooutpostDestroy>
+  <missionfailure.necrooutpostDestroy>The outpost wasn't destroyed.</missionfailure.necrooutpostDestroy>
+  <missionheader0.necrooutpostDestroy>Destroy</missionheader0.necrooutpostDestroy>
+  <missionmessage0.necrooutpostDestroy>The outpost has been successfully destroyed. Evacuation from the outpost to complete the mission.</missionmessage0.necrooutpostDestroy>
+  <missionname.necrooutpostassassinate>Judgment Day</missionname.necrooutpostassassinate>
+  <missiondescription.necrooutpostassassinate>We have recently lost contact with [location1], where we suspect alien beings are nesting. Find all the eggs in the outpost and destroy them.</missiondescription.necrooutpostassassinate>
+  <missionsuccess.necrooutpostassassinate>The outpost's nest has been successfully destroyed.</missionsuccess.necrooutpostassassinate>
+  <missionfailure.necrooutpostassassinate>The alien creatures at the outpost were not all killed.</missionfailure.necrooutpostassassinate>
+  <missionheader0.necrooutpostassassinate>destruction of nests</missionheader0.necrooutpostassassinate>
+  <missionmessage0.necrooutpostassassinate>The outpost's nest has been successfully destroyed. Evacuate from the outpost to complete the mission.</missionmessage0.necrooutpostassassinate>
+  <!-- mission -->
+  <!-- Items -->
+  <entityname.necroblood>Necrotic Blood</entityname.necroblood>
+  <entitydescription.necroblood>Blood that reeks with the stench of decay. Highly infectious.</entitydescription.necroblood>
+  <entityname.necroticeggs>Necrotic Eggs</entityname.necroticeggs>
+  <entitydescription.necroticeggs>You see a yellow glow when you flick the glass. Highly lethal.</entitydescription.necroticeggs>
+  <entityname.quarantinesiren>Quarantine Siren</entityname.quarantinesiren>
+  <entitydescription.quarantinesiren>A custom siren that can alert your crew to lockdown.</entitydescription.quarantinesiren>
+  <entityname.selfdestructsiren>Self Destruct Siren</entityname.selfdestructsiren>
+  <entitydescription.selfdestructsiren>A 60 second countdown siren to implement on submarines with self destruct capabilities.</entitydescription.selfdestructsiren>
+  <entityname.alarmbuzzer2>Alarm Buzzer Variant</entityname.alarmbuzzer2>
+  <entitydescription.alarmbuzzer2>A custom alarm buzzer with a different sound.</entitydescription.alarmbuzzer2>
+  <entityname.gassink>Gas Sink</entityname.gassink>
+  <entitydescription.gassink>Install in a room to create a gas chamber.</entitydescription.gassink>
+  <entityname.nucleardetonator>Nuclear Detonator</entityname.nucleardetonator>
+  <entitydescription.nucleardetonator>Ignites a nuclear detonation everytime it's activated.</entitydescription.nucleardetonator>
+  <entityname.authchip>Self Destruct Chip</entityname.authchip>
+  <entitydescription.authchip>Grants access to the self destruct panel in the R25 USS Ishimura submarine.</entitydescription.authchip>
+  <entityname.redmarker>Red Marker</entityname.redmarker>
+  <entitydescription.redmarker>Has a mysterious aura. Makes you feel severe discomfort.</entitydescription.redmarker>
+  <entityname.redmarkerdead>Red Marker</entityname.redmarkerdead>
+  <entitydescription.redmarkerdead>Instant death of all live, kills the server.</entitydescription.redmarkerdead>
+  <entityname.NodseLV1>Power Node</entityname.NodseLV1>
+  <entitydescription.NodseLV1>increases weapon performance a little</entitydescription.NodseLV1>
+  <entitydescription.NodseLV2>increases weapon efficiency on average</entitydescription.NodseLV2>
+  <entitydescription.NodseLV3>significantly increases weapon performance</entitydescription.NodseLV3>
+  <entityname.NodseLV2>Power Node</entityname.NodseLV2>
+  <entityname.NodseLV3>Power Node</entityname.NodseLV3>
+  <entityname.headset2>Thermal Headset</entityname.headset2>
+  <entityname.headset3>Medical Headset</entityname.headset3>
+  <entityname.headset4>Tactical Headset</entityname.headset4>
+  <entityname.pulseroundss>Pulse burst core</entityname.pulseroundss>
+  <ToggleLaser>Switching Lasers</ToggleLaser>
+  <mode.Shooting>Shooting </mode.Shooting>
+  <mode.cutter>Cutting </mode.cutter>
+  <mode.flamer>Burning </mode.flamer>
+  <mode.burst>Burst mode</mode.burst>
+  <entityname.EnergyammunitionDS>Energy Ammunition</entityname.EnergyammunitionDS>
+  <entitydescription.EnergyammunitionDS>General-purpose ammunition for energy weapons, which can provide a good amount of energy</entitydescription.EnergyammunitionDS>
+  <entityname.MetalammunitionDS>Metal Ammunition</entityname.MetalammunitionDS>
+  <entitydescription.MetalammunitionDS>General-purpose ammunition for live-fire weapons, providing a decent amount of ammunition</entitydescription.MetalammunitionDS>
+  <entityname.rageGatling>"Rage" Gatlin</entityname.rageGatling>
+  <entitydescription.rageGatling>Powerful firepower, horrific 200 round capacity, enough to shred most creatures, but unfortunately requires power armor to fully harness. Use of metal ammunition</entitydescription.rageGatling>
+  <entityname.GuardShieldedpistol>"Guards" with shield pistol</entityname.GuardShieldedpistol>
+  <entitydescription.GuardShieldedpistol>A medium-sized pistol with a shield that blocks projectiles and shoots small explosive rounds from the muzzle, which is quite powerful. Use metal ammunition</entitydescription.GuardShieldedpistol>
+  <entityname.stillLaserRifle>"Quiet" laser rifle</entityname.stillLaserRifle>
+  <entitydescription.stillLaserRifle>Silent energy weapon, three shots can kill the enemy very well, accuracy and recoil is also excellent. Use of energy ammunition</entitydescription.stillLaserRifle>
+  <entityname.destructionIndividualLaserCannon>"Doom man-portable laser cannon</entityname.destructionIndividualLaserCannon>
+  <entitydescription.destructionIndividualLaserCannon>Powerful energy weapons, the launch of high-energy particle beam can even penetrate the wall to kill the enemy, of course, the recoil force is also proportional to the power, you need power armor to fully harness. Use of energy ammunition</entitydescription.destructionIndividualLaserCannon>
+  <!-- Items -->
+  <!-- armor name -->
+  <entityname.divingsuit3>Space-type power armor (transformation)</entityname.divingsuit3>
+  <entityname.divingsuit2>EVA Suit</entityname.divingsuit2>
+  <entityname.divingsuit4>Infected Advanced Soldier RIG</entityname.divingsuit4>
+  <entitydescription.divingsuit2>"A lightweight space suit designed to protect its wearer from prolonged radiation exposure; typically worn by private-sector salvage operators."</entitydescription.divingsuit2>
+  <entitydescription.divingsuit4>The Infected Advanced Soldier RIG is a fatigue and body armor assembly that was designed for combat use and is standard issue protective wear for the EDF Marines and Sailors. </entitydescription.divingsuit4>
+  <entityname.spacepowerarmourEX>Fortress-class space power armor</entityname.spacepowerarmourEX>
+  <entitydescription.spacepowerarmourEX>Heavy space power armor that is safe in harsh environments, can be used underwater, has high defensive power and is equipped with sonar and infrared detectors</entitydescription.spacepowerarmourEX>
+  <!-- armor name -->
+  <!-- descriptions of weapons -->
+  <entityname.pulserifle>Pulse Rifle</entityname.pulserifle>
+  <entitydescription.pulserifle>The Pulse Rifle is a military-grade, triple-barreled assault rifle with a rapid rate of fire and large magazine ammunition capacity.</entitydescription.pulserifle>
+  <entityname.pulseround>Pulse Round</entityname.pulseround>
+  <entitydescription.pulseround>Pulse rifle ammunition used for crafting magazines.It can also be used as a grenade</entitydescription.pulseround>
+  <entityname.pulsemag>Pulse Magazine</entityname.pulsemag>
+  <entitydescription.pulsemag>Pulse rifle magazine to be inserted in a pulse rifle.</entitydescription.pulsemag>
+  <entityname.plasmacutter2>211-V Plasma Cutter</entityname.plasmacutter2>
+  <entityname.MatadorAssaultrifle>Matador Assault Rifle</entityname.MatadorAssaultrifle>
+  <entitydescription.MatadorAssaultrifle>"The Matador is a remarkably unique weapon, an assault rifle with an Under Barrel mounted flamethrower that aids with its crowd control ability. It's versatility makes the Matador a preferred weapon for a large number of fighting forces, even against more... Alien opponents."</entitydescription.MatadorAssaultrifle>
+  <entityname.matadormagazine> Matador magazine</entityname.matadormagazine>
+  <entitydescription.plasmacutter2>This Plasma Cutter combines power and reliability in a portable package.</entitydescription.plasmacutter2>
+  <entityname.plasmaround>Plasma Round</entityname.plasmaround>
+  <entitydescription.plasmaround>Plasma ammunition used for crafting magazines.It can also be used as a grenade</entitydescription.plasmaround>
+  <entityname.plasmamag>Plasma Magazine</entityname.plasmamag>
+  <entitydescription.plasmamag>Plasma magazine to be inserted in 211-V Plasma Cutters.</entitydescription.plasmamag>
+  <entitydescription.magazineground>Matador rifle cartridges</entitydescription.magazineground>
+  <!-- descriptions of weapons -->
+  <!-- Afflictions -->
+  <afflictionname.necroinfection>Necrotic infection</afflictionname.necroinfection>
+  <afflictiondescription.necroinfection>They have become irrational and their speech is nonsensical. They have become violent beyond reasoning.</afflictiondescription.necroinfection>
+  <afflictioncauseofdeath.necroinfection>Succumbed to the necromorph infection.</afflictioncauseofdeath.necroinfection>
+  <afflictioncauseofdeathself.necroinfection>You have transformed into a necromorph.</afflictioncauseofdeathself.necroinfection>
+  <!-- Traitor Missions -->
+  <!-- Make Us Whole -->
+  <makeuswhole_goalinfotext_2>Sacred blood of the necromorph has been hidden behind a loose vent. Find this blood quickly before someone else stumbles upon them!</makeuswhole_goalinfotext_2>
+  <makeuswhole_objectivesuccessmessage2>A rush of pleasure hits you like a wave as you find the blood. A dry, mad laugh echoes within your head for a moment, fading into hallucinations of the new world.</makeuswhole_objectivesuccessmessage2>
+  <makeuswhole_objectivesuccessmessage3>Your head spins and your vision narrows as the last of the calyxanide is destroyed.</makeuswhole_objectivesuccessmessage3>
+  <makeuswhole_traitorobjectivestartmessage4>You read the final task:\n[traitorgoalinfos]</makeuswhole_traitorobjectivestartmessage4>
+  <makeuswhole_goalinfotext_4>All on this sub must partake of communion with the necromorph!</makeuswhole_goalinfotext_4>
+  <!-- Altman Be Praised -->
+  <altmanbepraised_goalinfotext_1>Find a very special egg, possibly hidden in one of the vents.</altmanbepraised_goalinfotext_1>
+  <altmanbepraised_objectivesuccessmessage1>The egg disgusts you, but fits neatly in your pocket. Altman be praised!</altmanbepraised_objectivesuccessmessage1>
+  <altmanbepraised_traitorobjectivestartmessage2>Grow the egg:\n[traitorgoalinfos]</altmanbepraised_traitorobjectivestartmessage2>
+  <altmanbepraised_goalinfotext_2>Find a safe place for the egg to grow, and feed it [catalystitem].</altmanbepraised_goalinfotext_2>
+  <altmanbepraised_objectivesuccessmessage2>The egg bulges and makes strange noises... You're about to become a parent!</altmanbepraised_objectivesuccessmessage2>
+  <altmanbepraised_traitorobjectivestartmessage3>The egg cracks and an infector bursts forth:\n[traitorgoalinfos]</altmanbepraised_traitorobjectivestartmessage3>
+  <altmanbepraised_goalinfotext_3>See to it by any means that the infector survives for at least 3 minutes.</altmanbepraised_goalinfotext_3>
+  <altmanbepraised_objectivesuccessmessage3>You have done well fellow unitologist. Give your body to them and become one with the marker.</altmanbepraised_objectivesuccessmessage3>
+  <altmanbepraised_traitorobjectivestartmessage4>Escape:\n[traitorgoalinfos]</altmanbepraised_traitorobjectivestartmessage4>
+  <!-- flood_1 traitor mission text package -->
+  <necro_1_traitormissionstartinfotext>Altman Be Praised!</necro_1_traitormissionstartinfotext>
+  <necro_1_traitorobjectivestartmessage1>It's time. As the your unitologist brethren instructed you back on the loading dock at Minos Linea, you get to work:\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage1>
+  <necro_1_goalinfotext_1>Search the emergency supplies lockers in each compartment. An operative has hidden a button component in one of them.</necro_1_goalinfotext_1>
+  <necro_1_objectivesuccessmessage1>You quickly stash the button in your pocket and try to act casual.</necro_1_objectivesuccessmessage1>
+  <necro_1_traitorobjectivestartmessage2>Next, you'll need to find some explosives before anyone else can get to them!\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage2>
+  <necro_1_goalinfotext_2>Retrieve the explosives from the medbay.</necro_1_goalinfotext_2>
+  <necro_1_objectivesuccessmessage2>The plan is coming together perfectly. You grab the explosives and try not to giggle too much.</necro_1_objectivesuccessmessage2>
+  <necro_1_traitorobjectivestartmessage3>Finally, the unitologists said you'll need to find something to set this all off!\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage3>
+  <necro_1_goalinfotext_3>Search the steel storage cabinets around the sub and retrieve the detonator.</necro_1_goalinfotext_3>
+  <necro_1_objectivesuccessmessage3>The operative really came through! You have all you need now to get the party here started.</necro_1_objectivesuccessmessage3>
+  <necro_1_traitorobjectivestartmessage4>You're going to need to set the detonator on a wall in a good location, place the button a safe distance away, wire the two together, then set it all off to flood this rust bucket!\n[traitorgoalinfos]</necro_1_traitorobjectivestartmessage4>
+  <necro_1_objectivesuccessmessage4>There's more than enough water in the sub now to end its mission prematurely. You wonder how long it will take to swim to the nearest outpost and report back to the unitologists...</necro_1_objectivesuccessmessage4>
+  <!-- MVP traitor mission text package -->
+  <necromvptraitormissionstartinfotext>A voice within your head screams loudly enough to startle you: THE CHURCH OF UNITOLOGY CALLS YOU TO SERVICE!</necromvptraitormissionstartinfotext>
+  <necromvptraitorobjectivestartmessage1>An idea gradually forms in your mind, strangely seductive to you in spite of its mundane nature:\n[traitorgoalinfos]</necromvptraitorobjectivestartmessage1>
+  <necromvp_goalinfotext_1>Search the storage lockers—a special message just for you is hidden under one of the spare oxygen tanks.</necromvp_goalinfotext_1>
+  <necromvpobjectivesuccessmessage1>As you somehow predicted, a slip of filthy paper is stuck to the underside of this oxygen tank. It's covered in primitive scribbles, but you intuitively understand it to be coded instructions.</necromvpobjectivesuccessmessage1>
+  <necromvptraitorobjectivestartmessage2>Your first task:\n[traitorgoalinfos]</necromvptraitorobjectivestartmessage2>
+  <necromvpobjectivesuccessmessage2>A rush of pleasure hits you like a wave as you complete the first task on the paper. A dry, mad laugh echoes within your head for a moment, fading into hallucinations of the new world.</necromvpobjectivesuccessmessage2>
+  <necromvptraitorobjectivestartmessage3>You read the next coded instruction:\n[traitorgoalinfos]</necromvptraitorobjectivestartmessage3>
+  <necromvpobjectivesuccessmessage3>With that, there is nothing more to do. The sub is in disarray, the voice in your head grows silent, and your fate is sealed.</necromvpobjectivesuccessmessage3>
+  <!-- Missions -->
+  <missionname.killnecros>Call of the Void</missionname.killnecros>
+  <missiondescription.killnecros>A research team sent out by the USG Ishimura has sent out a distress signal before going radio silent between [location1] and [location2].  All attempts to establish communication with the missing team have failed as no one is responding to comms. Find the missing crew and bring them back to the Ishimura safely.</missiondescription.killnecros>
+  <missionsonarlabel.killnecros>Distress-Signal</missionsonarlabel.killnecros>
+  <missionsuccess.killnecros>You have escaped the necromorphs.</missionsuccess.killnecros>
+  <missionheader0.killnecros>Target terminated</missionheader0.killnecros>
+  <missionmessage0.killnecros>The missing crew members seem to have been overwhelmed by parasitic alien life and had to be terminated. Navigate the submarine out of the cavern and report back to the Ishimura.</missionmessage0.killnecros>
+  <missionname.killnecros2>Call of the Void</missionname.killnecros2>
+  <missiondescription.killnecros2>A research team sent out by the USG Ishimura has sent out a distress signal before going radio silent between [location1] and [location2].  All attempts to establish communication with the missing team have failed as no one is responding to comms. Find the missing crew and bring them back to the Ishimura safely.</missiondescription.killnecros2>
+  <missionsonarlabel.killnecros2>Distress-Signal</missionsonarlabel.killnecros2>
+  <missionsuccess.killnecros2>You have escaped the necromorphs.</missionsuccess.killnecros2>
+  <missionheader0.killnecros2>Target terminated</missionheader0.killnecros2>
+  <missionmessage0.killnecros2>The missing crew members seem to have been overwhelmed by parasitic alien life and had to be terminated. Navigate the submarine out of the cavern and report back to the Ishimura.</missionmessage0.killnecros2>
+  <missionname.killbabynecros>Infanticide</missionname.killbabynecros>
+  <missiondescription.killbabynecros>It has been discovered that necromorphs have been multiplying on Europa in an attempt to claim the moon. A nest of young necromorphs has been discovered between [location1] and [location2]. A reward of [reward] credits will be rewarded to any crew that can clear the nest of the infestation and return back safely.</missiondescription.killbabynecros>
+  <missionsonarlabel.killbabynecros>Young</missionsonarlabel.killbabynecros>
+  <missionsuccess.killbabynecros>The nest has been cleared.</missionsuccess.killbabynecros>
+  <missionheader0.killbabynecros>Target terminated</missionheader0.killbabynecros>
+  <missionmessage0.killbabynecros>The infestation has slowed down but continues to spread elsewhere. Navigate the submarine out of the cavern to claim the reward.</missionmessage0.killbabynecros>
+  <missionname.seismicactivity>Seismic Activity</missionname.seismicactivity>
+  <missiondescription.seismicactivity>There have been peristent tremors occuring between [location1] and [location2]. It is believed that a group of Molochs may be colliding against cave walls. This may result in a cave-in so it is advisable to steer clear of this route until the threat is dealt with.</missiondescription.seismicactivity>
+  <missionsonarlabel.seismicactivity>Seismic Signal</missionsonarlabel.seismicactivity>
+  <missionsuccess.seismicactivity>Just keep swimming. Just keep swimming...</missionsuccess.seismicactivity>
+  <missionheader0.seismicactivity>You may want to start swimming now.</missionheader0.seismicactivity>
+  <missionmessage0.seismicactivity>Just keep swimming. Just keep swimming. Just keep swimming. Just keep swimming. Just keep swimming.</missionmessage0.seismicactivity>
+  <missionname.cargobiohazards>Necrophile Express</missionname.cargobiohazards>
+  <missiondescription.cargobiohazards>The Church of Unitology at [location1] need someone to smuggle some unmarked contraband to [location2] for a reward of [reward] credits no questions asked.</missiondescription.cargobiohazards>
+  <missionsuccess.cargobiohazards>The contraband has been successfully delivered.</missionsuccess.cargobiohazards>
+  <!-- descriptions of events -->
+  <eventtext.fetalaccident.c1>You hear glass break and a shrieking infant child. Upon further inspection you find broken glass and an unknown fluid spilled all over the floor. What the hell?</eventtext.fetalaccident.c1>
+  <eventtext.fetalaccident.o1>Clean up the mess.</eventtext.fetalaccident.o1>
+  <eventtext.fetalaccident.o1.c1>You pickup the broken glass and leave a wet floor sign you found against the wall. The janitor walked in on your action and thanks you. As he leaves, you steal his wallet with 1000 marks!</eventtext.fetalaccident.o1.c1>
+  <eventtext.fetalaccident.o1.c2>As you pick up the broken glass, you accidentally slice your thumb open and bleed all over the floor. The janitor is upset at the extra work you created.</eventtext.fetalaccident.o1.c2>
+  <eventtext.fetalaccident.o2>Look up towards the direction the glass mysteriously fell from.</eventtext.fetalaccident.o2>
+  <eventtext.fetalaccident.o2.c1>THERE'S A BABY ON THE CEILING!</eventtext.fetalaccident.o2.c1>
+  <eventtext.fetalaccident.o2.c2>WHAT THE FUCK?!</eventtext.fetalaccident.o2.c2>
+  <eventtext.fetalaccident.o3>Ignore it.</eventtext.fetalaccident.o3>
+  <eventtext.fetalaccident.o3.c1>Seems it might have just been in your head... These outposts can get on your nerves after a while.</eventtext.fetalaccident.o3.c1>
+  <eventtext.fetalaccident.o3.o1>Take a deep breath.</eventtext.fetalaccident.o3.o1>
+  <eventtext.fetalaccident.o3.c2>You decide you don’t have time for this nonsense and kick the glass. Not your problem! Whatever it is, someone else will sort that out, like the good for nothing janitor!</eventtext.fetalaccident.o3.c2>
+  <eventtext.fetalaccident.o3.o2>Bah!</eventtext.fetalaccident.o3.o2>
+  <eventtext.fetalaccident.o3.c3>You decide you don’t have time for this nonsense and pretend you didn't see anything, but you get the nagging feeling you've not seen the end of this yet...</eventtext.fetalaccident.o3.c3>
+  <eventtext.fetalaccident.o3.o3>A foreshadowing?</eventtext.fetalaccident.o3.o3>
+  <EventText.unitologistscultambush.c1>Three sightless men lean over, hands reaching into their clothes as if to take out something, and you feel in danger.</EventText.unitologistscultambush.c1>
+  <EventText.unitologistscultambush.o1>“Hey, three, what...what is this?”</EventText.unitologistscultambush.o1>
+  <EventText.unitologistscultambush.o1.c1>You quickly interrupted their movements, the three men pulled out their knives and rushed towards you</EventText.unitologistscultambush.o1.c1>
+  <EventText.unitologistscultambush.o1.c2>Three people pulled out syringes from their clothes to inject themselves with an unknown liquid</EventText.unitologistscultambush.o1.c2>
+  <EventText.unitologistscultambush.o2>“Life is transformed into a whole, one body, one mind, so that we are whole and one”</EventText.unitologistscultambush.o2>
+  <EventText.unitologistscultambush.o2.c1>They stop, apologize for their actions, and then the three of you have a creeper cocktail together. A laugh. They tell you they'll attack the outpost next and give you a little gift.</EventText.unitologistscultambush.o2.c1>
+  <EventText.unitologistscultambush.o2.c2>Three people pulled out syringes from their clothes to inject themselves with an unknown liquid</EventText.unitologistscultambush.o2.c2>
+  <EventText.Growl.c1>You hear glass break and a roar. Upon further inspection, you find that a piece of broken glass and an unknown liquid has just splashed in front of the door, what happened</EventText.Growl.c1>
+  <EventText.Growl.o1>Wrap up the mess</EventText.Growl.o1>
+  <EventText.LostDrawings.c1>“Hey, three, what...what is this?</EventText.LostDrawings.c1>
+  <EventText.LostDrawings.o1.o1>Wrap up the mess</EventText.LostDrawings.o1.o1>
+  <EventText.LostDrawings.o1.o1>You get ????</EventText.LostDrawings.o1.o1>
+  <EventText.Growl.o1.c1>You pick up the broken glass and leave a mark on the wall with a wet floor. The janitor walks in on you, "Thank you.”</EventText.Growl.o1.c1>
+  <EventText.Growl.o1.c2>When you pick up the broken glass, you accidentally cut your thumb and it bleeds, and the blood from the glass enters the wound.</EventText.Growl.o1.c2>
+  <EventText.Growl.o2>Close the door now!</EventText.Growl.o2>
+  <EventText.Growl.o2.c1>一After the second slam, the thing behind the door seems to be gone, and when you really breathe a sigh of relief, you find that something is crawling out of the ventilation pipe</EventText.Growl.o2.c1>
+  <EventText.Growl.o2.c2>Just as you are about to close the door, the monster crashes right out and you are surrounded by three monsters</EventText.Growl.o2.c2>
+  <EventText.Growl.o3>Run away quickly</EventText.Growl.o3>
+  <EventText.Growl.o3.c1>You fought tooth and nail to escape from the scene and intended to leave the site immediately</EventText.Growl.o3.c1>
+  <EventText.Growl.o3.c2>Just as you are planning to escape, the monster crashes right out and you are surrounded by three monsters</EventText.Growl.o3.c2>
+  <EventText.EnhancedSlasheroutbreak.c1>Groups of panicked fellows run past you, "They've escaped!!!" And you pick up their slipped medals by hand and think about what to do now</EventText.EnhancedSlasheroutbreak.c1>
+  <!-- descriptions of events -->
+  <!-- talent description -->
+  <jobname.IsaacClarke>CEC Engineer</jobname.IsaacClarke>
+  <talentname.IsaacClarke>Isaac</talentname.IsaacClarke>
+  <jobdescription.securityofficer>Since Isaac Clark is only an engineer and not a soldier, the main weapons in the game are converted mining tools.</jobdescription.securityofficer>
+  <talentdescription.Necromorph>Increased melee damage dealt [amount]%</talentdescription.Necromorph>
+  <talentdescription.Necromorph2>Right‖color:gui.orange‖necrophage‖end‖Increased long-range damage dealt [amount]%</talentdescription.Necromorph2>
+  <talentdescription.DeadSpaceengineer>Use[stattype1]and[stattype2]Increase the damage dealt when [amount]%</talentdescription.DeadSpaceengineer>
+  <talentdescription.IsaacClarke>[qualitystattypenames1]，[qualitystattypenames2]和[qualitystattypenames3]Improve [amount]%</talentdescription.IsaacClarke>
+  <entityname.divingsuit3>Space-type power armor (transformation)</entityname.divingsuit3>
+  <talentdescription.spacepowerarmourreform1>It is possible to place[itemname]Add sonar。</talentdescription.spacepowerarmourreform1>
+  <talentdescription.spacepowerarmourreform2>Unlock[itemname]。</talentdescription.spacepowerarmourreform2>
+  <talentdescription.spacepowerarmourenhance>Wearing[entityname1]，[entityname2]When[stattypenames]Increased resistance[amount]%。</talentdescription.spacepowerarmourenhance>
+  <talentdescription.spacepowerarmourenhance2>Wearing[entityname1]，[entityname2]Time[qualitystattypenames1]，[qualitystattypenames2]Reduce[amount]%。</talentdescription.spacepowerarmourenhance2>
+  <talentdescription.spacepowerarmourAthleticabilityUP>Wearing[entityname1]，[entityname2]Time[qualitystattypenames1]，[qualitystattypenames2]Improve[amount]%。</talentdescription.spacepowerarmourAthleticabilityUP>
+  <talentdescription.spacepowerarmourattackUP>Wearing[entityname1]，[entityname2]Damage increase[amount]%。</talentdescription.spacepowerarmourattackUP>
+  <talentdescription.Armedescalation>Unlock a more efficient[entityname1]，[entityname2]Formulation</talentdescription.Armedescalation>
+  <!-- talent description -->
+  <!-- affliction description -->
+  <afflictionname.spacepowerarmourAthleticabilityUP>Space power armor movement proficiency</afflictionname.spacepowerarmourAthleticabilityUP>
+  <afflictiondescription.spacepowerarmourAthleticabilityUP>Increased athletic ability</afflictiondescription.spacepowerarmourAthleticabilityUP>
+  <afflictionname.spacepowerarmourenhance>Space Power Armor Enhancement</afflictionname.spacepowerarmourenhance>
+  <afflictiondescription.spacepowerarmourenhance>Defense increase</afflictiondescription.spacepowerarmourenhance>
+  <afflictionname.spacepowerarmourenhancefortress>Space Power Armor Enhancement (Fortress)</afflictionname.spacepowerarmourenhancefortress>
+  <afflictiondescription.spacepowerarmourenhancefortress>Significant increase in defense and decrease in speed</afflictiondescription.spacepowerarmourenhancefortress>
+  <afflictionname.spacepowerarmourattackUP>Space Power Armor Attack Mastery</afflictionname.spacepowerarmourattackUP>
+  <afflictiondescription.spacepowerarmourattackUP>Increase damage by 20%</afflictiondescription.spacepowerarmourattackUP>
+  <afflictionname.DeadSpaceengineer>Engineer</afflictionname.DeadSpaceengineer>
+  <!-- affliction description -->
+  <entityname.plasmacutter2combat>211-V Plasma cutter Melee</entityname.plasmacutter2combat>
+  <entitydescription.plasmacutter2combat>The plasma cutter combines power and reliability in a portable carry.</entitydescription.plasmacutter2combat>
+  <entityname.plasmarounds>Plasma core</entityname.plasmarounds>
+  <entitydescription.plasmarounds>211-V Plasma core shot from plasma cutting machine</entitydescription.plasmarounds>
+  <entityname.pulserounds>Pulse core</entityname.pulserounds>
+  <entitydescription.pulserounds>Pulse rifle shoots pulse cartridges</entitydescription.pulserounds>
+  <missionname.salvageobelisk1>Kill yourself</missionname.salvageobelisk1>
+  <missiondescription.salvageobelisk1>There are many reports that,Sailors passing[location1]When you feel restless and impulsive.It is said that the Seal of God is always affecting the creatures nearby, so please investigate and retrieve the Seal of God as soon as possible.</missiondescription.salvageobelisk1>
+  <missionsonarlabel.salvageobelisk1>Objectives</missionsonarlabel.salvageobelisk1>
+  <missionsuccess.salvageobelisk1>Red marker has been successfully retrieved.</missionsuccess.salvageobelisk1>
+  <missionfailure.salvageobelisk1>Failed to retrieve the divine seal.</missionfailure.salvageobelisk1>
+  <missionheader0.salvageobelisk1>Divine Seal Collection</missionheader0.salvageobelisk1>
+  <missionmessage0.salvageobelisk1>The Seal of God is now on the boat. Take the submarine out of the hole and collect the reward.</missionmessage0.salvageobelisk1>
+  <missionname.salvageobelisk2>Kill yourself</missionname.salvageobelisk2>
+  <missiondescription.salvageobelisk2>There have been numerous reports of sailors feeling uneasy and violent while passing by [location1]. It is believed that an obelisk nearby has been infecting passing sailors. Investigate and retrieve the obelisk.</missiondescription.salvageobelisk2>
+  <missionsonarlabel.salvageobelisk2>Objectives</missionsonarlabel.salvageobelisk2>
+  <missionsuccess.salvageobelisk2>The divine seal has been successfully recovered.</missionsuccess.salvageobelisk2>
+  <missionfailure.salvageobelisk2>Failed to recover the divine seal.</missionfailure.salvageobelisk2>
+  <missionheader0.salvageobelisk2>Divine Seal Collection</missionheader0.salvageobelisk2>
+  <missionmessage0.salvageobelisk2>The  Red marker is now on the boat. Take the submarine out of the hole and collect the reward.</missionmessage0.salvageobelisk2>
+  <missionname.Ishimura>The Ishimura</missionname.Ishimura>
+  <missiondescription.Ishimura>deliver the artifact to the next facility[location2]Further Research</missiondescription.Ishimura>
+  <missionsonarlabel.Ishimura>Objectives</missionsonarlabel.Ishimura>
+  <missionsuccess.Ishimura>The seal of God has been delivered.</missionsuccess.Ishimura>
+  <missionheader0.Ishimura>Task completion</missionheader0.Ishimura>
+  <missionmessage0.Ishimura>The Red marker safely delivered, so go get your reward.</missionmessage0.Ishimura>
+  <missionname.Ishimura>The Ishimura</missionname.Ishimura>
+  <missiondescription.Ishimura>Exploration ship finds unknown alien object, hopes someone will take it with them[location2]Further Research</missiondescription.Ishimura>
+  <missionsonarlabel.Ishimura>Objectives</missionsonarlabel.Ishimura>
+  <missionsuccess.Ishimura>The  Red marker has been delivered.</missionsuccess.Ishimura>
+  <missionheader0.Ishimura>Task completion</missionheader0.Ishimura>
+  <missionmessage0.Ishimura>The Red marker is safely delivered, so go get your reward.</missionmessage0.Ishimura>
+  <entityname.redmarkerMission>deliver the Marker</entityname.redmarkerMission>
+  <entitydescription.redmarkerMission>The Marker seal commissioned to be delivered has a mysterious force field that will make you feel seriously uncomfortable.</entitydescription.redmarkerMission>
+</infotexts>

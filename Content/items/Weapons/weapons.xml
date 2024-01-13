@@ -1,0 +1,1840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Item name="" identifier="plasmacutter2" category="Equipment" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,pistolitem,gunsmith,mountableweapon,cuttingequipment,tool" impactsoundtag="impact_metal_light" scale="0.32">
+    <Price baseprice="3500" soldeverywhere="false">
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="120">
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="physicorium" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="219,274,290,102" depth="0.55" origin="0.5,0.5" />
+    <Body width="280" height="60" density="50" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="90,10" aimpos="90,10" handle1="-70,-6" handle2="-29,7" holdangle="-40" msg="ItemMsgPickUpSelect">
+      <!--X-coordinate increases, relative to →, Y-coordinate decreases, relative to ↑-->
+    </Holdable>
+    <RangedWeapon barrelpos="49,10" spread="0" unskilledspread="2" reload="1" drawhudwhenequipped="true" crosshairscale="0.2" combatPriority="50">
+      <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
+      <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.2" scalemax="1" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="%ModDir%/Content/Items/Weapons/plasmashot.ogg" type="OnUse" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="3" shockwave="false" smoke="false" flames="false" flash="true" sparks="false" underwaterbubble="false" camerashake="3.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained">
+        <Use />
+      </StatusEffect>
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <RequiredItems items="Shooting" type="Contained" />
+      <RequiredItems items="plasmamag" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="40" />
+    </RangedWeapon>
+    <RepairTool firedamage="10.0" structurefixamount="-0.5" range="150" barrelpos="25,-4" combatpriority="10" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-5.0" targetforce="10">
+      <RequiredItems items="cutter" type="Contained" />
+      <RequiredItems items="plasmamag" type="Contained" msg="ItemMsgAmmoRequired" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" Condition="-0.1" />
+      <StatusEffect type="OnSuccess" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-40" Condition="-3.0" />
+      <StatusEffect type="OnSuccess" targettype="UseTarget" Condition="-3.0" />
+      <StatusEffect type="OnSuccess" targettype="Limb" severlimbsprobability="0.005">
+        <Affliction identifier="burn" amount="10.0" />
+      </StatusEffect>
+      <ParticleEmitter particle="plasma" particlespersecond="50" copyentityangle="true" />
+      <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+      <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+      <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+      <ParticleEmitterHitItem identifiers="ore" particle="iceshards" particlespersecond="5" anglemin="-40" anglemax="40" velocitymin="10" velocitymax="300" scalemin="0.5" scalemax="1.0" />
+      <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+      <sound file="Content/Items/Tools/PlasmaCutterLoop.ogg" type="OnUse" range="500.0" loop="true" />
+      <Fixable identifier="structure" />
+      <RequiredSkill identifier="weapons" level="40" />
+    </RepairTool>
+    <ItemContainer autofill="false" maxstacksize="1" capacity="1" hideitems="false" containedstateindicatorslot="0" containedstateindicatorstyle="bullet" containedspritedepth="0.56">
+      <Containable items="plasmamag" hide="true" />
+      <SlotIcon slotindex="1" texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="70,142,42,26" origin="0.5,0.5" />
+      <SlotIcon slotindex="2" texture="Content/UI/CampaignUIAtlas2.png" sourcerect="896,536,128,64" origin="0.45,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="NodseLV1" hide="true">
+          <StatusEffect type="OnContaining" target="This" weapondamagemodifier="1.1" reload="0.9" setvalue="true" />
+        </Containable>
+        <Containable items="NodseLV2" hide="true">
+          <StatusEffect type="OnContaining" target="This" weapondamagemodifier="1.2" reload="0.7" setvalue="true" />
+        </Containable>
+        <Containable items="NodseLV3" hide="true">
+          <StatusEffect type="OnContaining" target="This" weapondamagemodifier="1.3" reload="0.5" setvalue="true" />
+        </Containable>
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="flashlight" hide="false" itempos="0,-3" setactive="true" />
+      </SubContainer>
+      <StatusEffect type="Always" target="Contained" targets="plasmamag" tags="Shooting" setvalue="true">
+        <Conditional hastag="Shooting_mode" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Contained" targets="plasmamag" tags="cutter" setvalue="true">
+        <Conditional hastag="cutter_mode" targetcontainer="true" />
+      </StatusEffect>
+    </ItemContainer>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/dspclaser.png" origin="-0.001, 0.5" size="1.0,0.3" />
+    </LightComponent>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/dspclaser.png" origin="-0.001, 0.5" size="1.0,0.3" />
+    </LightComponent>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.1,0.15" anchor="BottomLeft" absoluteoffset="20,128" style="ItemUI" />
+      <TickBox text="ToggleLaser">
+        <StatusEffect type="OnUse" target="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+      </TickBox>
+      <Button text="mode.Shooting">
+        <StatusEffect type="OnUse" target="This" tags="Shooting_mode" setvalue="true" disabledeltatime="true" />
+      </Button>
+      <Button text="mode.cutter">
+        <StatusEffect type="OnUse" target="This" tags="cutter_mode" setvalue="true" disabledeltatime="true" />
+      </Button>
+    </CustomInterface>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/dspc.png" origin="0.5,0.5" />
+    <PreferredContainer primary="locker" spawnprobability="0.02" />
+  </Item>
+  <Item name="" identifier="plasmacutter2combat" category="Equipment" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gunsmith,mountableweapon" impactsoundtag="impact_metal_light" scale="0.32">
+    <Price baseprice="3500" soldeverywhere="false">
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="120">
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="physicorium" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="219,274,321,102" depth="0.55" origin="0.5,0.5" />
+    <Body width="161" height="20" density="25" />
+    <LightComponent LightColor="95,200,255,150" range="400" IsOn="true" castshadows="true" canbeselected="false">
+      <LightTexture texture="%ModDir%/Content/Lights/bright_hires.png" origin="0.5, 0.5" />
+    </LightComponent>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <Quality>
+      <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
+    </Quality>
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/dspc.png" origin="0.5,0.5" />
+    <PreferredContainer primary="locker" spawnprobability="0.02" />
+    <MeleeWeapon slots="Any,RightHand+LeftHand" aimpos="50,0" handle1="-22,2" handle2="-32,5" holdangle="30" reload="1.2" range="161" combatPriority="40" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="5" severlimbsprobability="1" itemdamage="50" structuredamage="25">
+        <Affliction identifier="lacerations" strength="70" />
+        <Affliction identifier="burn" strength="50" />
+        <Affliction identifier="stun" strength="0.2" />
+      </Attack>
+      <StatusEffect type="OnActive" target="this">
+        <sound file="Content/Items/Alien/alienweapon.ogg" type="OnUse" range="800.0" loop="true" />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  <Item name="" identifier="pulserifle" category="weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" impactsoundtag="impact_metal_light" scale="0.5">
+    <Price baseprice="3500" soldeverywhere="false">
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="120">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="physicorium" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new 2.png" sourcerect="0,121,144,80" depth="0.55" origin="0.5,0.5" />
+    <Body width="140" height="60" density="50" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="45,-10" aimpos="45,-10" handle1="-35,-6" handle2="25,16" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="65,10" spread="4" unskilledspread="10" drawhudwhenequipped="true" reload="0.24" crosshairscale="0.2" combatPriority="80">
+      <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" />
+      <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
+      <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.2" scalemax="1" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="%ModDir%/Content/Items/Weapons/pulsesingleshot.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="3" shockwave="false" smoke="false" flames="false" flash="true" sparks="false" underwaterbubble="false" camerashake="3.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained">
+        <Use />
+      </StatusEffect>
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <RequiredItems items="Shooting" type="Contained" />
+      <RequiredItems items="pulsemag" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="50" />
+    </RangedWeapon>
+    <RangedWeapon barrelpos="65,10" spread="4" unskilledspread="10" drawhudwhenequipped="true" reload="0.24" crosshairscale="0.2" combatPriority="80">
+      <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" />
+      <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
+      <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.2" scalemax="1" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="%ModDir%/Content/Items/Weapons/pulsesingleshot.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <StatusEffect type="OnUse" disabledeltatime="true">
+        <Explosion range="150.0" force="1.5" shockwave="false" smoke="false" flames="false" flash="true" sparks="false" underwaterbubble="false" camerashake="5.0" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleGrenadeShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleGrenadeShot2.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleGrenadeShot3.ogg" type="OnUse" range="3000" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <RequiredItem items="pulsemag" type="Contained" targetslot="1" />
+        <SpawnItem identifiers="pulseroundss" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" targetslot="1" Condition="-18" disabledeltatime="true" />
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <RequiredItems items="Burst" type="Contained" />
+      <RequiredItems items="pulsemag" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="50" />
+    </RangedWeapon>
+    <ItemContainer autofill="False" capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorstyle="bullet" containedstateindicatorslot="1" containedspritedepth="0.56">
+      <Containable items="grenade" hide="true" />
+      <SlotIcon slotindex="0" texture="Content/UI/ContainerIndicators.png" sourcerect="4,216,75,35" origin="0.5,0.5" />
+      <SlotIcon slotindex="2" texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="70,142,42,26" origin="0.5,0.5" />
+      <SlotIcon slotindex="3" texture="Content/UI/CampaignUIAtlas2.png" sourcerect="896,536,128,64" origin="0.45,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="pulsemag" hide="true" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="NodseLV1" hide="true">
+          <StatusEffect type="OnContaining" target="This" weapondamagemodifier="1.1" spread="3.6" setvalue="true" />
+        </Containable>
+        <Containable items="NodseLV2" hide="true">
+          <StatusEffect type="OnContaining" target="This" weapondamagemodifier="1.2" spread="3" setvalue="true" />
+        </Containable>
+        <Containable items="NodseLV3" hide="true">
+          <StatusEffect type="OnContaining" target="This" weapondamagemodifier="1.3" spread="2.4" setvalue="true" />
+        </Containable>
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="flashlight" hide="false" itempos="26,5" setactive="true" />
+      </SubContainer>
+      <StatusEffect type="Always" target="Contained" targets="pulsemag" tags="Shooting" setvalue="true">
+        <Conditional hastag="Shooting_mode" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Contained" targets="pulsemag" tags="Burst" setvalue="true">
+        <Conditional hastag="Burst_mode" targetcontainer="true" />
+      </StatusEffect>
+    </ItemContainer>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/dsprlaser.png" depth="0.4" origin="-0.001, 0.499" size="1.0,0.3" />
+    </LightComponent>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/dsprlaser.png" depth="0.4" origin="-0.001, 0.499" size="1.0,0.3" />
+    </LightComponent>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.1,0.15" anchor="BottomLeft" absoluteoffset="20,128" style="ItemUI" />
+      <TickBox text="ToggleLaser">
+        <StatusEffect type="OnUse" target="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+      </TickBox>
+      <Button text="mode.Shooting">
+        <StatusEffect type="OnUse" target="This" tags="Shooting_mode" setvalue="true" disabledeltatime="true" />
+      </Button>
+      <Button text="mode.Burst">
+        <StatusEffect type="OnUse" target="This" tags="Burst_mode" setvalue="true" disabledeltatime="true" />
+      </Button>
+    </CustomInterface>
+    <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/dspr.png" origin="0.5,0.5" />
+    <PreferredContainer primary="locker" spawnprobability="0.02" />
+  </Item>
+  <Item name="" identifier="MatadorAssaultrifle" category="weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" impactsoundtag="impact_metal_light" scale="0.4">
+    <Price baseprice="3500" soldeverywhere="false">
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="120">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="physicorium" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="271,161,236,100" depth="0.55" origin="0.5,0.5" />
+    <Body width="150" height="60" density="50" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="55,-10" aimpos="55,-10" handle1="-47,-15" handle2="25,-5" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="100,10" spread="4" unskilledspread="10" drawhudwhenequipped="true" reload="0.14" crosshairscale="0.2" combatPriority="80">
+      <RequiredItems items="Shooting" type="Contained" />
+      <RequiredItems items="matadormagazine" type="Contained" msg="ItemMsgAmmoRequired" />
+      <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" />
+      <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
+      <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.2" scalemax="1" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <StatusEffect type="OnUse" forceplaysounds="true">
+        <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+        <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot2.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot3.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot4.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot5.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/JobGear/Security/WEAPON_hmgShot6.ogg" type="OnUse" range="3000" />
+      </StatusEffect>
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="1.2" shockwave="false" smoke="false" flames="false" flash="true" sparks="false" underwaterbubble="false" camerashake="5.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained">
+        <Use />
+      </StatusEffect>
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <RequiredSkill identifier="weapons" level="50" />
+    </RangedWeapon>
+    <RepairTool range="500" barrelpos="50,-10" fireprobability="0.0" repairmultiple="true" repairthroughwalls="false" repairthroughholes="true" combatpriority="90" spread="25" unskilledspread="25" targetforce="50">
+      <!-- the item must contain a welding fuel tank for it to work -->
+      <RequiredItems items="flamer" type="Contained" />
+      <RequiredItems items="matadormagazine" type="Contained" msg="ItemMsgAmmoRequired" />
+      <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+      <ParticleEmitter particle="flamethrower" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="1000" velocitymax="1500" highqualitycollisiondetection="true" />
+      <ParticleEmitter particle="flamethrowersmoke" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="500" velocitymax="1000" />
+      <sound file="Content/Items/Weapons/FlameThrowerLoop.ogg" type="OnUse" range="500.0" loop="true" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="matadormagazine" Condition="-2.0" />
+      <!-- do burn damage to characters -->
+      <StatusEffect type="OnSuccess" target="UseTarget">
+        <Affliction identifier="burn" amount="5" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" target="UseTarget">
+        <RequiredItem items="NodseLV1" type="Contained" targetslot="1" />
+        <Affliction identifier="burn" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" target="UseTarget">
+        <RequiredItem items="NodseLV2" type="Contained" targetslot="1" />
+        <Affliction identifier="burn" amount="2" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" target="UseTarget">
+        <RequiredItem items="NodseLV3" type="Contained" targetslot="1" />
+        <Affliction identifier="burn" amount="3" />
+      </StatusEffect>
+    </RepairTool>
+    <ItemContainer autofill="False" capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorstyle="bullet" containedstateindicatorslot="0" containedspritedepth="0.56">
+      <Containable items="matadormagazine" hide="true" />
+      <SlotIcon slotindex="1" texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="70,142,42,26" origin="0.5,0.5" />
+      <SlotIcon slotindex="2" texture="Content/UI/CampaignUIAtlas2.png" sourcerect="896,536,128,64" origin="0.45,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="NodseLV1" hide="true">
+          <StatusEffect type="OnContaining" target="This" weapondamagemodifier="1.1" setvalue="true" />
+        </Containable>
+        <Containable items="NodseLV2" hide="true">
+          <StatusEffect type="OnContaining" target="This" weapondamagemodifier="1.2" setvalue="true" />
+        </Containable>
+        <Containable items="NodseLV3" hide="true">
+          <StatusEffect type="OnContaining" target="This" weapondamagemodifier="1.3" setvalue="true" />
+        </Containable>
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="flashlight" hide="false" itempos="0,-3" setactive="true" />
+      </SubContainer>
+      <StatusEffect type="Always" target="Contained" targets="matadormagazine" tags="Shooting" setvalue="true">
+        <Conditional hastag="Shooting_mode" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Contained" targets="matadormagazine" tags="flamer" setvalue="true">
+        <Conditional hastag="flamer_mode" targetcontainer="true" />
+      </StatusEffect>
+    </ItemContainer>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/dsprlaser.png" depth="0.4" origin="-0.001, 0.5" size="1.0,0.3" />
+    </LightComponent>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/dsprlaser.png" depth="0.4" origin="-0.001, 0.5" size="1.0,0.3" />
+    </LightComponent>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.1,0.15" anchor="BottomLeft" absoluteoffset="20,128" style="ItemUI" />
+      <TickBox text="ToggleLaser">
+        <StatusEffect type="OnUse" target="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+      </TickBox>
+      <Button text="mode.Shooting">
+        <StatusEffect type="OnUse" target="This" tags="Shooting_mode" setvalue="true" disabledeltatime="true" />
+      </Button>
+      <Button text="mode.flamer">
+        <StatusEffect type="OnUse" target="This" tags="flamer_mode" setvalue="true" disabledeltatime="true" />
+      </Button>
+    </CustomInterface>
+    <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="271,161,236,100" origin="0.5,0.5" />
+    <PreferredContainer primary="locker" spawnprobability="0.02" />
+  </Item>
+  <Item name="" identifier="pulsemag" scale="0.32" category="weapon" cargocontaineridentifier="metalcrate" linkable="true" maxstacksize="2" tags="smallitem,assaultrifleammo,riflemanbonus,pulsemag" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator" requiredtime="120">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="pulseround" />
+      <RequiredItem identifier="lithium" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="pulseround" />
+      <RequiredItem identifier="pulsemag" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="uranium" amount="2" />
+      <RequiredItem identifier="pulsemag" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="lithium" copycondition="true" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new 2.png" sourcerect="110,414,31,62" depth="0.6" origin="0.5,0.5" />
+    <Body width="50" height="65" density="50" />
+    <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet" SpawnWithId="pulserounds">
+      <Containable identifiers="pulserounds" />
+      <!--Spawn a pulse round on use. Condition -6.7 -> 15 shots per magazine.-->
+      <StatusEffect type="OnUse" target="This" condition="-2" disabledeltatime="true">
+        <SpawnItem identifiers="pulserounds" spawnposition="ThisInventory" />
+      </StatusEffect>
+    </ItemContainer>
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new 2.png" sourcerect="110,414,31,62" />
+  </Item>
+  <Item name="" identifier="pulseround" category="weapon" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="uranium" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="2" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="uranium" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="128,3,40,14" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="14" density="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="128,3,40,14" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" launchimpulse="20.0" maxtargetstohit="1" sticktocharacters="false">
+      <Attack structuredamage="40" penetration="0.5">
+        <Affliction identifier="explosiondamage" strength="50" />
+      </Attack>
+      <sound file="Content/Items/Weapons/FragGrenade40mmShot1.ogg" type="OnImpact" range="500" selectionmode="Random" />
+      <sound file="Content/Items/Weapons/FragGrenade40mmShot2.ogg" type="OnImpact" range="500" />
+      <!--Grenade launcher ammo explodes on impact-->
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+        <Explosion range="300.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="400" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.3">
+          <Affliction identifier="burn" strength="150" />
+          <Affliction identifier="bleeding" strength="400" probability="0.05" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>
+        <sound file="Content/Items/Weapons/StunGrenade.ogg" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="pulserounds" interactthroughwalls="true" hideinmenus="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="128,3,40,14" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="14" density="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="128,3,40,14" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,170,200,175" scalemultiplier="1,0.8" />
+      <Attack targetforce="12" structuredamage="10" itemdamage="25" severlimbsprobability="0.2" penetration="0.2">
+        <Affliction identifier="gunshotwound" strength="40" />
+        <Affliction identifier="bleeding" strength="25" />
+        <Affliction identifier="stun" strength="0.25" />
+        <Affliction identifier="stun" strength="0.5" probability="0.2" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="glowdot" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+        <ParticleEmitter particle="plasmasmoke" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="plasmaspark" particlespersecond="20" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+        <ParticleEmitter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="pulseroundss" interactthroughwalls="true" hideinmenus="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="uranium" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="2" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="uranium" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="128,3,40,14" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="14" density="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="128,3,40,14" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" launchimpulse="40.0" maxtargetstohit="1" sticktocharacters="false">
+      <Attack structuredamage="40" penetration="0.5">
+        <Affliction identifier="explosiondamage" strength="50" />
+      </Attack>
+      <sound file="Content/Items/Weapons/FragGrenade40mmShot1.ogg" type="OnImpact" range="500" selectionmode="Random" />
+      <sound file="Content/Items/Weapons/FragGrenade40mmShot2.ogg" type="OnImpact" range="500" />
+      <!--Grenade launcher ammo explodes on impact-->
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+        <Explosion range="300.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="400" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.3">
+          <Affliction identifier="burn" strength="150" />
+          <Affliction identifier="bleeding" strength="400" probability="0.05" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>
+        <sound file="Content/Items/Weapons/StunGrenade.ogg" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="plasmamag" maxstacksize="4" scale="0.32" category="Equipment" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,handcannonammo,pistolammoitem,plasmamag" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator" requiredtime="120">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="plasmaround" />
+      <RequiredItem identifier="lithium" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="plasmaround" />
+      <RequiredItem identifier="plasmamag" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="uranium" />
+      <RequiredItem identifier="plasmamag" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="lithium" copycondition="true" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" depth="0.54" sourcerect="136,296,52,69" origin="0.5,0.5" />
+    <Body width="50" height="65" density="50" />
+    <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet" SpawnWithId="plasmarounds">
+      <Containable identifiers="plasmarounds" />
+      <!--Spawn a plasma round on use. Condition -8.33 -> 12 shots per magazine.-->
+      <StatusEffect type="OnUse" target="This" condition="-6.7" disabledeltatime="true">
+        <SpawnItem identifiers="plasmarounds" spawnposition="ThisInventory" />
+      </StatusEffect>
+    </ItemContainer>
+    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="960,960,64,64" />
+  </Item>
+  <Item name="" identifier="plasmaround" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="uranium" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="2" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="uranium" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="128,3,40,14" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="14" density="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="896,960,64,64" origin="0.5,0.5" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="false">
+      <Attack structuredamage="40" penetration="0.5">
+        <Affliction identifier="explosiondamage" strength="50" />
+      </Attack>
+      <sound file="Content/Items/Weapons/FragGrenade40mmShot1.ogg" type="OnImpact" range="500" selectionmode="Random" />
+      <sound file="Content/Items/Weapons/FragGrenade40mmShot2.ogg" type="OnImpact" range="500" />
+      <!--Grenade launcher ammo explodes on impact-->
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+        <Explosion range="300.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="400" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.3">
+          <Affliction identifier="burn" strength="100" />
+          <Affliction identifier="bleeding" strength="400" probability="0.05" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>
+        <sound file="Content/Items/Weapons/StunGrenade.ogg" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="plasmarounds" interactthroughwalls="true" hideinmenus="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="128,3,40,14" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="14" density="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="896,960,64,64" origin="0.5,0.5" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,170,200,175" scalemultiplier="1,0.8" />
+      <Attack targetforce="30" structuredamage="25" itemdamage="45" severlimbsprobability="1.0" penetration="0.8">
+        <Affliction identifier="lacerations" strength="80" />
+        <Affliction identifier="bleeding" strength="60" />
+        <Affliction identifier="stun" strength="1.5" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="glowdot" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+        <ParticleEmitter particle="plasmasmoke" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="plasmaspark" particlespersecond="20" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+        <ParticleEmitter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="matadormagazine" maxstacksize="2" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem" impactsoundtag="impact_metal_light">
+    <Price baseprice="350" sold="true" minleveldifficulty="65" displaynonempty="true">
+      <Price storeidentifier="merchantoutpost" multiplier="1.4" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
+      <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="matadormagazine" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="15">
+      <Item identifier="lead" mincondition="0.95" />
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="211,185,28,40" depth="0.55" origin="0.5,0.5" />
+    <Body width="29" height="40" density="40" />
+    <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" SpawnWithId="magazineground" containedstateindicatorstyle="bullet">
+      <Containable identifiers="magazineground" />
+      <!--Spawn a plasma round on use. Condition -8.33 -> 12 shots per magazine.-->
+      <StatusEffect type="OnUse" target="This" condition="-1" disabledeltatime="true">
+        <SpawnItem identifiers="magazineground" spawnposition="ThisInventory" />
+      </StatusEffect>
+    </ItemContainer>
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="211,185,28,40" origin="0.5,0.5" />
+    <PreferredContainer primary="matadormagazine" minamount="1" maxamount="1" spawnprobability="1" />
+    <PreferredContainer primary="armcab" secondary="secarmcab" />
+  </Item>
+  <Item name="" identifier="magazineground" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" hideinmenus="true" scale="0.5">
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="195,282,17,6" depth="0.55" origin="0.5,0.5" />
+    <Body width="17" height="6" density="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="896,960,64,64" origin="0.5,0.5" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,200,175" scalemultiplier="1,0.8" />
+      <Attack structuredamage="4" targetforce="7.5" itemdamage="4" severlimbsprobability="0.2" penetration="0.4">
+        <Affliction identifier="gunshotwound" strength="12" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.1" />
+        <Affliction identifier="stun" strength="0.5" probability="0.01" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <!-- hmg rounds should not exist outside magazines -->
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="“暴怒”加特林" identifier="rageGatling" category="weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" impactsoundtag="impact_metal_light" scale="0.6">
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,0,276,111" depth="0.55" origin="0.5,0.5" />
+    <Body width="276" height="111" density="50" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="55,-30" aimpos="55,-30" handle1="-57,-25" handle2="25,-5" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="HMG Worn" texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,0,276,111" depth="0.55" rotation="90" canbehiddenbyotherwearables="false" inheritlimbdepth="false" limb="Torso" scale="0.5" origin="0.5,0.8" />
+    </Wearable>
+    <RangedWeapon barrelpos="130,-10" spread="4" unskilledspread="10" drawhudwhenequipped="true" reload="0.14" crosshairscale="0.2" combatPriority="80" suitableprojectiles="liveammunitionDS">
+      <RequiredItems items="MetalammunitionDS" type="Contained" msg="ItemMsgAmmoRequired" />
+      <ParticleEmitter particle="muzzleflashchaingun" particleamount="1" velocitymin="0" velocitymax="0" distancemin="-50" distancemax="-50" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" />
+      <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" origin="0.5,0.1" />
+      <StatusEffect type="OnUse" disabledeltatime="true" forceplaysounds="true">
+        <Sound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" type="OnUse" range="10000" selectionmode="all" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" disabledeltatime="true" forceplaysounds="true">
+        <Sound file="Content/Items/Weapons/WEAPONS_chainGunShot1.ogg" type="OnUse" range="10000" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/WEAPONS_chainGunShot2.ogg" type="OnUse" range="10000" />
+        <Sound file="Content/Items/Weapons/WEAPONS_chainGunShot3.ogg" type="OnUse" range="10000" />
+        <Sound file="Content/Items/Weapons/WEAPONS_chainGunShot4.ogg" type="OnUse" range="10000" />
+        <Sound file="Content/Items/Weapons/WEAPONS_chainGunShot5.ogg" type="OnUse" range="10000" />
+        <Sound file="Content/Items/Weapons/WEAPONS_chainGunShot6.ogg" type="OnUse" range="10000" />
+        <Explosion range="150" force="3" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="8" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <SpawnItem identifiers="liveammunitionDS" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" targetslot="0" Condition="-0.5" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" comparison="and">
+        <Conditional skillrequirement="true" weapons="lt 75" />
+        <Conditional recoilstabilized="lte 0" />
+        <Affliction identifier="stun" strength="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" comparison="and">
+        <Conditional skillrequirement="true" weapons="lt 50" />
+        <Conditional recoilstabilized="lte 0" />
+        <Affliction identifier="stun" strength="0.1" />
+      </StatusEffect>
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <RequiredSkill identifier="weapons" level="70" />
+    </RangedWeapon>
+    <Propulsion force="-30" usablein="both" ApplyToHands="false">
+      <RequiredItems items="hmgammo" type="Contained" />
+    </Propulsion>
+    <ItemContainer autofill="False" capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorstyle="bullet" containedstateindicatorslot="0" containedspritedepth="0.56">
+      <Containable items="MetalammunitionDS" hide="true" />
+    </ItemContainer>
+    <ItemContainer capacity="1" maxstacksize="1" spawnwithid="liveammunitionDS">
+      <Containable items="liveammunitionDS" />
+    </ItemContainer>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/lightcone.png" depth="0.4" origin="-0.001, 0.499" size="1.0,0.3" />
+    </LightComponent>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/lightcone2.png" depth="0.41" origin="-0.001, 0.499" size="1.0,0.3" />
+    </LightComponent>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.1,0.15" anchor="BottomLeft" absoluteoffset="20,128" style="ItemUI" />
+      <TickBox text="ToggleLaser">
+        <StatusEffect type="OnUse" target="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+      </TickBox>
+    </CustomInterface>
+    <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,0,276,111" origin="0.5,0.5" />
+    <Quality Qualitylevel="3" />
+    <SkillRequirementHint identifier="weapons" level="70" />
+  </Item>
+  <Item name="“守卫”带盾手枪" identifier="GuardShieldedpistol" category="weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" impactsoundtag="impact_metal_light" scale="0.6" damagedbyprojectiles="true">
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,361,146,88" depth="0.55" origin="0.5,0.5" />
+    <Body width="146" height="88" density="50" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="55,-10" aimpos="50,-12" handle1="-27,-15" handle2="25,-5" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="HMG Worn" texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,361,146,88" depth="0.55" rotation="90" canbehiddenbyotherwearables="false" inheritlimbdepth="false" limb="Torso" scale="0.5" origin="0.5,0.8" />
+    </Wearable>
+    <RangedWeapon barrelpos="80,10" spread="0" unskilledspread="4" drawhudwhenequipped="true" reload="0.5" crosshairscale="0.2" combatPriority="80" suitableprojectiles="SmallliveammunitionDS">
+      <RequiredItems items="MetalammunitionDS" type="Contained" msg="ItemMsgAmmoRequired" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" />
+      <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <StatusEffect type="OnUse" disabledeltatime="true" forceplaysounds="true">
+        <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
+        <Explosion range="150" force="3" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="8" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <SpawnItem identifiers="SmallliveammunitionDS" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" targetslot="0" Condition="-3.34" disabledeltatime="true" />
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <RequiredSkill identifier="weapons" level="40" />
+    </RangedWeapon>
+    <ItemContainer autofill="False" capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorstyle="bullet" containedstateindicatorslot="0" containedspritedepth="0.56">
+      <Containable items="MetalammunitionDS" hide="true" />
+    </ItemContainer>
+    <ItemContainer capacity="1" maxstacksize="1" spawnwithid="SmallliveammunitionDS">
+      <Containable items="SmallliveammunitionDS" />
+    </ItemContainer>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/lightcone.png" depth="0.4" origin="-0.001, 0.499" size="1.0,0.3" />
+    </LightComponent>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/lightcone2.png" depth="0.41" origin="-0.001, 0.499" size="1.0,0.3" />
+    </LightComponent>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.1,0.15" anchor="BottomLeft" absoluteoffset="20,128" style="ItemUI" />
+      <TickBox text="ToggleLaser">
+        <StatusEffect type="OnUse" target="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+      </TickBox>
+    </CustomInterface>
+    <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,361,146,88" origin="0.5,0.5" />
+    <Quality Qualitylevel="3" />
+    <SkillRequirementHint identifier="weapons" level="40" />
+  </Item>
+  <Item name="金属弹药" identifier="MetalammunitionDS" maxstacksize="2" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem" impactsoundtag="impact_metal_light">
+    <Price baseprice="350" sold="true" minleveldifficulty="65" displaynonempty="true">
+      <Price storeidentifier="merchantoutpost" multiplier="1.4" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
+      <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="MetalammunitionDS" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="15">
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="329,181,40,40" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="40" density="40" />
+    <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="329,181,40,40" origin="0.5,0.5" />
+  </Item>
+  <Item name="实弹" identifier="liveammunitionDS" interactthroughwalls="true" hideinmenus="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="191,290,21,7" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="14" density="40" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,170,200,175" scalemultiplier="1,1.6" />
+      <Attack targetforce="60" structuredamage="10" itemdamage="25" severlimbsprobability="0.2" penetration="0.7">
+        <Affliction identifier="gunshotwound" strength="24" />
+        <Affliction identifier="bleeding" strength="20" probability="0.5" />
+        <Affliction identifier="stun" strength="0.25" />
+        <Affliction identifier="stun" strength="0.5" probability="0.2" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="glowdot" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+        <ParticleEmitter particle="swirlysmoke" particleamount="3" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" particlespersecond="20" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+        <ParticleEmitter particle="swirlysmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="191,290,21,7" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="小型爆破实弹" identifier="SmallliveammunitionDS" interactthroughwalls="true" hideinmenus="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="191,290,21,7" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="14" density="40" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,170,200,175" scalemultiplier="1,1.6" />
+      <Attack targetforce="10" structuredamage="10" itemdamage="10" severlimbsprobability="0.2" penetration="0.7">
+        <Affliction identifier="gunshotwound" strength="24" />
+        <Affliction identifier="stun" strength="0.25" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="This" disabledeltatime="true">
+        <Explosion range="150" ballastfloradamage="80" structuredamage="20" levelwalldamage="20" itemdamage="20" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.15">
+          <Affliction identifier="burn" strength="50" />
+          <Affliction identifier="bleeding" strength="20" probability="0.5" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>
+        <sound file="Content/Items/Weapons/StunGrenade.ogg" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="glowdot" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+        <ParticleEmitter particle="swirlysmoke" particleamount="3" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" particlespersecond="20" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+        <ParticleEmitter particle="swirlysmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="191,290,21,7" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="“静谧”激光步枪" identifier="stillLaserRifle" category="weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" impactsoundtag="impact_metal_light" scale="0.6">
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,118,217,118" depth="0.55" origin="0.5,0.5" />
+    <Body width="217" height="118" density="50" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="55,-30" aimpos="55,-16" handle1="-50,5" handle2="25,7" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="HMG Worn" texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,118,217,118" depth="0.55" rotation="90" canbehiddenbyotherwearables="false" inheritlimbdepth="false" limb="Torso" scale="0.5" origin="0.5,0.8" />
+    </Wearable>
+    <RangedWeapon barrelpos="100,5" spread="1" unskilledspread="3" drawhudwhenequipped="true" reload="0.1" crosshairscale="0.2" suitableprojectiles="SmalllaserDS" combatPriority="80">
+      <RequiredItems items="EnergyammunitionDS" type="Contained" msg="ItemMsgAmmoRequired" />
+      <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,0.75" colormultiplier="150,150,255,180" />
+      <ParticleEmitter particle="glowdot" particleamount="2" velocitymin="0" velocitymax="0" colormultiplier="150,150,255,180" />
+      <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.5" scalemax="2" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <StatusEffect type="OnUse" forceplaysounds="true">
+        <Sound file="Content/Sounds/Damage/HitMetal2.ogg" type="OnUse" range="3000" selectionmode="Random" />
+        <Sound file="Content/Sounds/Damage/HitMetal3.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Sounds/Damage/HitMetal4.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Sounds/Damage/HitMetal5.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Sounds/Damage/HitMetal6.ogg" type="OnUse" range="3000" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" disabledeltatime="true">
+        <Explosion range="150.0" force="3" shockwave="false" smoke="false" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="3" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <SpawnItem identifiers="SmalllaserDS" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" targetslot="0" Condition="-1.67" disabledeltatime="true" />
+      <StatusEffect type="OnUse" disabledeltatime="true" target="This" reload="0.7" setvalue="true" delay="0.2" />
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <SpawnItem identifiers="SmalllaserDS" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" disabledeltatime="true" target="This" reload="0.1" setvalue="true" delay="0.7" />
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <SpawnItem identifiers="SmalllaserDS" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <RequiredSkill identifier="weapons" level="40" />
+    </RangedWeapon>
+    <ItemContainer autofill="False" capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorstyle="bullet" containedstateindicatorslot="0" containedspritedepth="0.56">
+      <Containable items="EnergyammunitionDS" hide="true" />
+    </ItemContainer>
+    <ItemContainer capacity="1" maxstacksize="1" spawnwithid="SmalllaserDS">
+      <Containable items="SmalllaserDS" />
+    </ItemContainer>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/lightcone.png" depth="0.4" origin="-0.001, 0.499" size="1.0,0.3" />
+    </LightComponent>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/lightcone2.png" depth="0.39" origin="-0.001, 0.499" colormultiplier="255,200,225,180" size="1.0,0.3" />
+    </LightComponent>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.1,0.05" anchor="BottomLeft" absoluteoffset="20,128" style="ItemUI" />
+      <TickBox text="ToggleLaser">
+        <StatusEffect type="OnUse" target="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+      </TickBox>
+    </CustomInterface>
+    <aitarget sightrange="100" soundrange="100" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,118,217,118" origin="0.5,0.5" />
+    <Quality Qualitylevel="3" />
+    <SkillRequirementHint identifier="weapons" level="40" />
+  </Item>
+  <Item name="“毁灭”单兵激光炮" identifier="destructionIndividualLaserCannon" category="weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" impactsoundtag="impact_metal_light" scale="0.6">
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,235,292,118" depth="0.55" origin="0.5,0.5" />
+    <Body width="292" height="118" density="50" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="55,-10" aimpos="55,-8" handle1="-47,-30" handle2="25,-5" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="HMG Worn" texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,235,292,118" depth="0.55" rotation="90" canbehiddenbyotherwearables="false" inheritlimbdepth="false" limb="Torso" scale="0.5" origin="0.5,0.8" />
+    </Wearable>
+    <RangedWeapon barrelpos="150,-10" spread="0" unskilledspread="10" drawhudwhenequipped="true" reload="1" crosshairscale="0.2" combatPriority="80" suitableprojectiles="LargelaserDS" holdtrigger="true" maxchargetime="1">
+      <RequiredItems items="EnergyammunitionDS" type="Contained" msg="ItemMsgAmmoRequired" />
+      <ParticleEmitter particle="FlareBubbles" scalemin="1.4" scalemax="1.8" particleamount="14" anglemin="0" anglemax="360" velocitymin="0" velocitymax="50" />
+      <ParticleEmitter particle="GlowDot" scalemin="4.0" scalemax="4.0" particleamount="20" anglemin="0" anglemax="360" velocitymin="0" velocitymax="0" colormultiplier="10,235,195,255" />
+      <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
+      <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="1" scalemax="2" />
+      <ParticleEmitterCharge particle="ElectricShock" particlespersecond="50" scalemultiplier="0.25,0.25" scalemin="1.0" scalemax="1.0" anglemin="0" anglemax="359" AngleMax="360" CopyEntityDir="False" CopyTargetAngle="True" ColorMultiplier="255,50,50,255" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot1.ogg" range="10000" type="OnUse" />
+      <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot2.ogg" range="10000" type="OnUse" />
+      <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot3.ogg" range="10000" type="OnUse" />
+      <Sound file="Content/Items/Weapons/WEAPONS_laserGunShot4.ogg" range="10000" type="OnUse" />
+      <ChargeSound file="Content/Items/JobGear/Engineer/WEAPONS_rapidFissileAcceleratorStartLoop.ogg" range="1000" />
+      <StatusEffect type="OnUse" disabledeltatime="true">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="8" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <SpawnItem identifiers="LargelaserDS" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" targetslot="0" Condition="-2" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" comparison="and">
+        <Conditional skillrequirement="true" weapons="lt 75" />
+        <Conditional recoilstabilized="lte 0" />
+        <Affliction identifier="stun" strength="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" comparison="and">
+        <Conditional skillrequirement="true" weapons="lt 50" />
+        <Conditional recoilstabilized="lte 0" />
+        <Affliction identifier="stun" strength="0.25" />
+      </StatusEffect>
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <RequiredSkill identifier="weapons" level="70" />
+    </RangedWeapon>
+    <Propulsion force="-30" usablein="both" ApplyToHands="false">
+      <RequiredItems items="hmgammo" type="Contained" />
+    </Propulsion>
+    <ItemContainer autofill="False" capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorstyle="bullet" containedstateindicatorslot="0" containedspritedepth="0.56">
+      <Containable items="EnergyammunitionDS" hide="true" />
+    </ItemContainer>
+    <ItemContainer capacity="1" maxstacksize="1" spawnwithid="LargelaserDS">
+      <Containable items="LargelaserDS" />
+    </ItemContainer>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/lightcone.png" depth="0.4" origin="-0.001, 0.499" size="1.0,0.3" />
+    </LightComponent>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/lightcone2.png" depth="0.39" origin="-0.001, 0.499" colormultiplier="255,200,225,180" size="1.0,0.3" />
+    </LightComponent>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.1,0.05" anchor="BottomLeft" absoluteoffset="20,128" style="ItemUI" />
+      <TickBox text="ToggleLaser">
+        <StatusEffect type="OnUse" target="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+      </TickBox>
+    </CustomInterface>
+    <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="0,235,292,118" origin="0.5,0.5" />
+    <Quality Qualitylevel="3" />
+    <SkillRequirementHint identifier="weapons" level="70" />
+  </Item>
+  <Item name="能量弹药" identifier="EnergyammunitionDS" maxstacksize="2" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem" impactsoundtag="impact_metal_light">
+    <Price baseprice="350" sold="true" minleveldifficulty="65" displaynonempty="true">
+      <Price storeidentifier="merchantoutpost" multiplier="1.4" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
+      <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="0" maxavailable="4" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="EnergyammunitionDS" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="15">
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="386,183,41,38" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="38" density="40" />
+    <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/EX000.png" sourcerect="387,183,40,38" origin="0.5,0.5" />
+  </Item>
+  <Item name="小型激光" identifier="SmalllaserDS" category="Misc" scale="0.5" hideinmenus="true" sonarsize="2">
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" origin="0.5,0.5" />
+    <Body width="170" height="10" density="20" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true" damagedoors="true">
+      <ParticleEmitter particle="tracerguardianlaser" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,1.5" colormultiplier="150,150,255,180" />
+      <Attack structuredamage="10" targetforce="10" itemdamage="10" severlimbsprobability="1.0" penetration="0.7">
+        <Affliction identifier="burn" strength="25" />
+        <Affliction identifier="stun" strength="0.15" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="ElectricShock" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" scalemin="0.05" scalemax="0.15" colormultiplier="150,150,255,180" />
+        <ParticleEmitter particle="weldspark" particleamount="5" anglemin="0" anglemax="360" velocitymin="300" velocitymax="350" scalemin="1.5" scalemax="2.7" drawontop="true" colormultiplier="150,150,255,180" />
+        <ParticleEmitter particle="plasmasmoke" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="5" velocitymax="10" scalemin="0.2" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1.5" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="大型激光" identifier="LargelaserDS" category="Misc" scale="0.5" hideinmenus="true" sonarsize="2">
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" origin="0.5,0.5" />
+    <Body width="170" height="10" density="20" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true" maxtargetstohit="2" damagedoors="true">
+      <ParticleEmitter particle="tracerguardianlaser" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,2.5" />
+      <Attack structuredamage="50" targetforce="500" itemdamage="50" severlimbsprobability="1.0" penetration="0.8">
+        <Affliction identifier="burn" strength="60" />
+        <Affliction identifier="stun" strength="2" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="This" disabledeltatime="true">
+        <Explosion range="150.0" ballastfloradamage="0" structuredamage="0" itemdamage="0" force="200" flames="false" smoke="false" sparks="false" underwaterbubble="false" flashcolor="255,0,0,255" />
+        <sound file="Content/Items/Weapons/StunGrenade.ogg" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="muzzleflashpulselaser" anglemin="0" anglemax="360" particleamount="10" velocitymin="0" scalemin="0.5" scalemax="1.2" />
+        <ParticleEmitter particle="weldspark" particleamount="5" anglemin="0" anglemax="360" velocitymin="300" velocitymax="350" scalemin="1.5" scalemax="2.7" drawontop="true" colormultiplier="255,200,225,180" />
+        <ParticleEmitter particle="FlareBubbles" particleamount="3" anglemin="0" anglemax="360" velocitymin="0" velocitymax="50" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1.5" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="necroticeggs" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.3">
+    <Price baseprice="3000" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" multiplier="1.2" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" multiplier="1.1" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="90">
+      <RequiredSkill identifier="medical" level="20" />
+      <RequiredItem identifier="antibloodloss2" count="1" />
+      <RequiredItem identifier="huskeggs" count="2" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="huskeggs" copycondition="true" mincondition="0.1" />
+      <Item identifier="necroblood" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Medical/Medicines.png" sourcerect="435,0,62,115" depth="0.6" origin="0.5,0.5" />
+    <Body width="62" height="115" density="20" />
+    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="832,448,64,64" origin="0.5,0.5" />
+    <PreferredContainer primary="locker" spawnprobability="0.02" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true" />
+      <StatusEffect type="OnUse" target="UseTarget" Isdead="false">
+        <Conditional IsDead="true" />
+        <ReduceAffliction identifier="damage" strength="1000" />
+        <ReduceAffliction identifier="bloodloss" strength="1000" />
+        <Affliction identifier="necroinfection" strength="10000" />
+        <Affliction identifier="stun" strength="10" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect tags="poison" type="OnImpact" target="UseTarget" setvalue="true" Isdead="false">
+        <Conditional IsDead="true" />
+        <ReduceAffliction identifier="damage" strength="1000" />
+        <ReduceAffliction identifier="bloodloss" strength="1000" />
+        <Affliction identifier="necroinfection" strength="10000" />
+        <Affliction identifier="stun" strength="10" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="necroblood" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" tags="smallitem,chem,medical,weapon" description="" useinhealthinterface="true" scale="0.3">
+    <Price baseprice="1200" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" multiplier="1.2" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" multiplier="1.1" />
+    </Price>
+    <Sprite texture="%ModDir%/Content/Items/Medical/Medicines.png" sourcerect="372,122,62,115" depth="0.6" origin="0.5,0.5" />
+    <Body width="62" height="115" density="20" />
+    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="897,449,63,63" origin="0.5,0.5" />
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.05" />
+    <PreferredContainer primary="locker" spawnprobability="0.02" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0">
+      <StatusEffect type="OnUse" target="This" Condition="-50.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="UseTarget">
+        <!-- HuskInfectionState must be less than 0.01 so you can't speed up the infection -->
+        <Conditional necroinfection="lt 0.01" />
+        <Affliction identifier="necroinfection" amount="0.01" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  <Item name="怪物专用轨道炮" identifier="specialguardrailgun" category="Misc" impactsoundtag="impact_metal_light" scale="0.5" hideinmenus="true">
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new 2.png" sourcerect="0,121,144,80" depth="0.55" origin="0.5,0.5" />
+    <Body width="140" height="60" density="50" />
+    <Holdable slots="Any,RightHand" controlpose="false" aimpos="150,0" handle1="-50,-2" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="45,0" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" />
+      <Sound file="Content/Items/Weapons/HarpoonGun2.ogg" type="OnUse" />
+      <Sound file="Content/Items/Weapons/HarpoonGun3.ogg" type="OnUse" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="railgun6666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="railgun6666" spawnposition="ThisInventory" />
+      </StatusEffect>
+    </RangedWeapon>
+    <ItemContainer autofill="False" capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorstyle="bullet" containedstateindicatorslot="0" containedspritedepth="0.56" SpawnWithId="railgun6666">
+      <Containable items="railgun6666" hide="true" />
+    </ItemContainer>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/dsprlaser.png" depth="0.4" origin="-0.001, 0.5" size="1.0,0.3" />
+    </LightComponent>
+    <LightComponent LightColor="0.0,1.0,1.0,1.0" Flicker="0.02" range="700" powerconsumption="0" IsOn="true" canbeselected="true">
+      <LightTexture texture="%ModDir%/Content/Lights/dsprlaser.png" depth="0.4" origin="-0.001, 0.5" size="1.0,0.3" />
+    </LightComponent>
+    <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <Quality>
+      <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+    </Quality>
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/dspr.png" origin="0.5,0.5" />
+  </Item>
+  <Item name="怪物专用轨道炮炮弹" identifier="railgun666" category="Misc" impactsoundtag="impact_metal_light" scale="0.5" hideinmenus="true" sonarsize="6">
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="2,91,215,33" depth="0.55" origin="0.5,0.5" />
+    <Body width="215" height="30" density="30" />
+    <Projectile friendlyfire="false" characterusable="false" launchimpulse="300" maxtargetstohit="3" sticktostructures="true" damagedoors="true">
+      <Attack structuredamage="100" itemdamage="100" severlimbsprobability="5" penetration="0.5" targetforce="1000">
+        <Affliction identifier="explosiondamage" strength="250" />
+        <Affliction identifier="bleeding" strength="50" />
+        <Affliction identifier="stun" strength="15" />
+      </Attack>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="5" disabledeltatime="true">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="50" scalemin="1" scalemax="3" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" allowwhenbroken="true" setvalue="true">
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" selectionmode="Random" range="50000" />
+        <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" selectionmode="Random" range="50000" />
+        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" selectionmode="Random" range="50000" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1.0" scalemax="1.0" />
+        <Explosion range="250.0" ballastfloradamage="100" structuredamage="50" itemdamage="200" force="10.0" severlimbsprobability="0.5" decal="explosion" decalsize="0.3" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="250" />
+          <Affliction identifier="stun" strength="7" />
+        </Explosion>
+      </StatusEffect>
+    </Projectile>
+    <LightComponent range="400" castshadows="False" drawbehindsubs="False" ison="True" blinkfrequency="0" lightcolor="255,255,255,30" isactive="True" minvoltage="0" powerconsumption="0" vulnerabletoemp="False" pickingtime="0" canbepicked="False" allowingameediting="False" msg="">
+      <Sprite texture="Content/Characters/Spineling_giant/Spineling_giant.png" sourcerect="0,940,720,72" origin="0.55,0.5" alpha="0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="怪物登陆舱（炮弹）" identifier="Landingsilo666" category="Misc" impactsoundtag="impact_metal_light" scale="0.7" hideinmenus="true" sonarsize="6">
+    <Sprite texture="%ModDir%/Characters/CarrierEX/carrier.png" sourcerect="641,638,335,198" depth="0.55" />
+    <Body width="335" height="198" density="20" />
+    <Projectile friendlyfire="false" characterusable="false" launchimpulse="200" maxtargetstohit="3" sticktocharacters="false" sticktoitems="false" sticktodoors="false" sticktostructures="true" damagedoors="true">
+      <Attack structuredamage="500" itemdamage="500" severlimbsprobability="2.0" penetration="0.5">
+        <!--Hits up to 10 limbs, so the actual damage can be 10x-->
+        <Affliction identifier="lacerations" strength="15" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="1" />
+      </Attack>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="10" disabledeltatime="true">
+        <Remove />
+        <Explosion range="300.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="100" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.3">
+          <Affliction identifier="burn" strength="50" />
+          <Affliction identifier="bleeding" strength="70" probability="0.05" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget" stackable="false" delay="3" disabledeltatime="true">
+        <SpawnCharacter speciesname="Doomslashers" count="1" spread="1" />
+        <ParticleEmitter particle="plasmaspark" particlespersecond="60" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+        <ParticleEmitter particle="plasmasmoke" particlespersecond="6" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+        <!--Add some impact effect-->
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="plasmaspark" particlespersecond="60" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+        <ParticleEmitter particle="plasmasmoke" particlespersecond="6" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+        <!--Add some impact effect-->
+        <Explosion ignorecover="true" onlyinside="true" range="600" force="10" playtinnitus="false" showeffects="false" applyfireeffects="false">
+          <Affliction identifier="stun" strength="1" />
+        </Explosion>
+      </StatusEffect>
+    </Projectile>
+    <LightComponent range="400" castshadows="False" drawbehindsubs="False" ison="True" blinkfrequency="0" lightcolor="255,255,255,30" isactive="True" minvoltage="0" powerconsumption="0" vulnerabletoemp="False" pickingtime="0" canbepicked="False" allowingameediting="False" msg="">
+      <Sprite texture="Content/Characters/Spineling_giant/Spineling_giant.png" sourcerect="0,940,720,72" origin="0.55,0.5" alpha="0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="怪物武器1" identifier="specialguardianempcannon1" category="Misc" Tags="" cargocontaineridentifier="metalcrate" Scale="1" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="214,514,130,64" depth="0.55" origin="0.5,0.5" />
+    <Body width="100" height="35" density="50" />
+    <Holdable slots="RightHand" controlpose="false" aimpos="120,0" handle1="-55,0" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="2" holdtrigger="false" barrelpos="50,10" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <sound file="Content/Items/Alien/AlienTurret1.ogg" range="10000" type="OnUse" dontmuffle="true" />
+      <sound file="Content/Items/Alien/AlienTurret2.ogg" range="10000" type="OnUse" dontmuffle="true" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="tonguetendon666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="tonguetendon666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <RequiredSkill identifier="weapons" level="100" />
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RangedWeapon>
+    <ItemContainer hideitems="true" drawinventory="true" capacity="1" maxstacksize="1" canbeselected="false" characterusable="true">
+      <Containable items="tonguetendon666" />
+    </ItemContainer>
+  </Item>
+  <Item name="怪物子弹1" identifier="specialtonguetendon" category="Misc" tags="" health="50" hideinmenus="true" sonarsize="0" scale="1" damagedbyexplosions="false" damagedbyprojectiles="false" damagedbyrepairtools="false" damagedbymeleeweapons="false" impactsoundtag="impact_soft">
+    <Sprite texture="Content/Characters/Latcher/Latcher.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+    <Body radius="100" density="10" />
+    <Rope sourcepullforce="0" targetpullforce="200000" projectilepullforce="0" maxlength="5000" snaponcollision="false" spritewidth="256" tile="true" snapanimduration="1" breakfrommiddle="false" maxangle="60">
+      <Sprite name="tongue" texture="Content/Characters/Latcher/Latcher.png" sourcerect="16,0,480,256" depth="0.57" origin="0.5,0.5" />
+      <EndSprite texture="Content/Characters/Latcher/Latcher.png" sourcerect="544,0,228,256" depth="0.56" origin="0.5,0.5" />
+      <!-- Automatically snap after 14 seconds -->
+      <StatusEffect type="OnUse" target="This" Snapped="true" delay="14" />
+      <!-- Remove 1 second after snapping -->
+      <StatusEffect type="Always" target="This" delay="1" checkconditionalalways="true">
+        <Conditional Snapped="true" />
+        <Remove />
+      </StatusEffect>
+      <!-- Snap after 3 seconds if not stuck to anything -->
+      <StatusEffect type="OnUse" target="This" Snapped="true" delay="3" checkconditionalalways="true">
+        <Conditional targetitemcomponent="Projectile" IsStuckToTarget="false" />
+      </StatusEffect>
+    </Rope>
+    <Projectile characterusable="false" launchimpulse="60.0" sticktostructures="true" sticktoitems="false" sticktodoors="false" sticktodeflective="true" sticktocharacters="false" maxtargetstohit="1" prismatic="false">
+      <Attack structuredamage="10" />
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Content/Characters/Latcher/ABYSSM_tongueHit.ogg" range="20000" volume="1" selectionmode="random" dontmuffle="true" />
+        <sound file="Content/Characters/Latcher/ABYSSM_tongueHit_1.ogg" range="20000" volume="1" selectionmode="random" dontmuffle="true" />
+        <particleemitter drawontop="true" particle="tonguehitsplash" particleamount="20" scalemin="1" scalemax="3" anglemin="0" anglemax="360" />
+        <particleemitter drawontop="false" particle="damagebubbles" particleamount="20" scalemin="1" scalemax="3" anglemin="0" anglemax="360" />
+        <particleemitter drawontop="true" particle="damagebubbles" particleamount="10" scalemin="1" scalemax="3" anglemin="0" anglemax="360" />
+        <!--Add some impact effect-->
+        <Explosion ignorecover="true" onlyinside="true" range="2000" force="20" playtinnitus="false" showeffects="false" applyfireeffects="false">
+          <Affliction identifier="stun" strength="3" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="Always" target="This">
+        <Conditional Snapped="true" />
+        <sound file="Content/Characters/Latcher/ABYSSM_tongueMove_1.ogg" range="20000" volume="1" dontmuffle="false" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="怪物武器2" identifier="specialguardianempcannon2" category="Misc" Tags="" cargocontaineridentifier="metalcrate" Scale="1" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="214,514,130,64" depth="0.55" origin="0.5,0.5" />
+    <Body width="100" height="35" density="50" />
+    <Holdable slots="RightHand" controlpose="false" aimpos="120,0" handle1="-55,0" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="2" holdtrigger="false" barrelpos="50,10" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <sound file="Content/Items/Alien/AlienTurret1.ogg" range="10000" type="OnUse" dontmuffle="true" />
+      <sound file="Content/Items/Alien/AlienTurret2.ogg" range="10000" type="OnUse" dontmuffle="true" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="tonguetendoncharacter666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="tonguetendoncharacter666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <RequiredSkill identifier="weapons" level="100" />
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RangedWeapon>
+    <ItemContainer hideitems="true" drawinventory="true" capacity="1" maxstacksize="1" canbeselected="false" characterusable="true">
+      <Containable items="tonguetendoncharacter666" />
+    </ItemContainer>
+  </Item>
+  <Item name="怪物子弹2" identifier="specialtonguetendoncharacters" category="Misc" nameidentifier="tonguetendon" tags="" health="100" hideinmenus="true" sonarsize="0" scale="1" damagedbyexplosions="false" damagedbyprojectiles="false" damagedbyrepairtools="false" damagedbymeleeweapons="false" impactsoundtag="impact_soft">
+    <Sprite texture="Content/Characters/Latcher/Latcher.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+    <Body radius="100" density="10" />
+    <Rope sourcepullforce="0" targetpullforce="500" projectilepullforce="0" maxlength="3000" snaponcollision="false" spritewidth="256" tile="true" snapanimduration="1" breakfrommiddle="false" maxangle="60" lerpforces="false">
+      <Sprite name="tongue" texture="Content/Characters/Latcher/Latcher.png" sourcerect="16,0,480,256" depth="0.57" origin="0.5,0.5" />
+      <EndSprite texture="Content/Characters/Latcher/Latcher.png" sourcerect="544,0,228,256" depth="0.56" origin="0.5,0.5" />
+      <!-- Automatically snap after 5 seconds -->
+      <StatusEffect type="OnUse" target="This" Snapped="true" delay="5" />
+      <!-- Remove 1 second after snapping -->
+      <StatusEffect type="Always" target="This" delay="1" checkconditionalalways="true">
+        <Conditional Snapped="true" />
+        <Remove />
+      </StatusEffect>
+      <!-- Snap after 3 seconds if not stuck to anything -->
+      <StatusEffect type="OnUse" target="This" Snapped="true" delay="3" checkconditionalalways="true">
+        <Conditional targetitemcomponent="Projectile" IsStuckToTarget="false" />
+      </StatusEffect>
+    </Rope>
+    <Projectile characterusable="false" launchimpulse="60.0" sticktostructures="false" sticktoitems="false" sticktodoors="false" sticktodeflective="true" sticktocharacters="true" maxtargetstohit="1" sticktolighttargets="true" prismatic="false">
+      <Attack structuredamage="10">
+        <Affliction identifier="blunttrauma" strength="20" />
+        <Affliction identifier="stun" strength="5" />
+      </Attack>
+      <StatusEffect type="OnActive" target="UseTarget,This" comparison="And">
+        <Conditional Snapped="false" />
+        <Affliction identifier="drag" strength="1" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <particleemitter drawontop="true" particle="tonguehitsplash" particleamount="20" scalemin="1" scalemax="3" anglemin="0" anglemax="360" />
+        <particleemitter drawontop="false" particle="damagebubbles" particleamount="20" scalemin="1" scalemax="3" anglemin="0" anglemax="360" />
+        <particleemitter drawontop="true" particle="damagebubbles" particleamount="10" scalemin="1" scalemax="3" anglemin="0" anglemax="360" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This">
+        <Conditional Snapped="true" />
+        <sound file="Content/Characters/Latcher/ABYSSM_tongueMove_1.ogg" range="20000" volume="1" dontmuffle="false" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="冰雹制造机" identifier="specialiceshardprojectile" category="Misc" Tags="" cargocontaineridentifier="metalcrate" Scale="1" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="214,514,130,64" depth="0.55" origin="0.5,0.5" />
+    <Body width="100" height="35" density="50" />
+    <Holdable slots="RightHand" controlpose="false" aimpos="120,0" handle1="-55,0" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="2" holdtrigger="false" barrelpos="50,10" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <sound file="Content/Items/Alien/AlienTurret1.ogg" range="10000" type="OnUse" dontmuffle="true" />
+      <sound file="Content/Items/Alien/AlienTurret2.ogg" range="10000" type="OnUse" dontmuffle="true" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="iceshardprojectile666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="iceshardprojectile666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <RequiredSkill identifier="weapons" level="100" />
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RangedWeapon>
+    <ItemContainer hideitems="true" drawinventory="true" capacity="1" maxstacksize="1" canbeselected="false" characterusable="true">
+      <Containable items="iceshardprojectile666" />
+    </ItemContainer>
+  </Item>
+  <Item name="冰雹" identifier="specialiceshardprojectiles" Tags="ignorebyai" sonarsize="2" health="10" scale="0.2" hideinmenus="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" category="Misc" impacttolerance="0.05" spritecolor="186,196,199">
+    <Sprite texture="Content/Map/Biomes/ColdCaverns/BackgroundChunks.png" sourcerect="0,0,683,1024" depth="0.18" origin="0.5,0.5" />
+    <Body radius="500" mindensity="100" maxdensity="300" />
+    <Projectile characterusable="false" launchimpulse="450" deactivationtime="10" IgnoreProjectilesWhileActive="true">
+      <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
+        <Explosion range="100" structuredamage="200" itemdamage="75" smoke="false" flames="false" force="0" sparks="false" shockwave="true" underwaterbubble="false" camerashake="0" flash="false" playtinnitus="false">
+          <Affliction identifier="stun" strength="5" probability="1" />
+          <Affliction identifier="blunttrauma" strength="50" probability="1" />
+        </Explosion>
+        <Sound file="Content/Sounds/Damage/GlassBreak1.ogg" range="2000" dontmuffle="true" volume="0.5" />
+        <Sound file="Content/Sounds/Damage/GlassBreak2.ogg" range="2000" dontmuffle="true" volume="0.5" />
+        <Sound file="Content/Sounds/Damage/GlassBreak3.ogg" range="2000" dontmuffle="true" volume="0.5" />
+        <Sound file="Content/Sounds/Damage/GlassBreak4.ogg" range="2000" dontmuffle="true" volume="0.5" />
+        <particleemitter particle="iceshards" particleamount="50" velocitymin="0" velocitymax="5000" distancemin="0" distancemax="100" anglemin="0" anglemax="360" scalemin="1" scalemax="5" />
+        <Remove />
+      </StatusEffect>
+      <!-- a 10 second lifetime after being fired -->
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="10">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="守护者鱼叉炮" identifier="specialguardianhookcannon1" category="Misc" tags="" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="409,520,92,42" depth="0.55" origin="0.5,0.5" />
+    <Body width="80" height="25" density="30" />
+    <Holdable slots="Any,RightHand" controlpose="false" aimpos="150,0" handle1="-50,-2" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="45,0" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun2.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun3.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="guardianspear" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="guardianspear" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RangedWeapon>
+    <ItemContainer hideitems="true" capacity="1" maxstacksize="1" containedstateindicatorstyle="spear">
+      <Containable items="guardianspear" />
+    </ItemContainer>
+  </Item>
+  <Item name="守护者鱼叉" identifier="specialguardianspear" category="Misc" interactthroughwalls="true" hideinmenus="true" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="395,609,117,40" depth="0.55" origin="0.3,0.5" />
+    <Body width="70" height="20" density="20" />
+    <Rope sourcepullforce="0" targetpullforce="300" projectilepullforce="5" maxlength="1000" snaponcollision="true" spritewidth="8" tile="true" origin="0.30,0.5" targetminmass="0" lerpforces="true" SnapWhenNotAimed="False" snapanimduration="0.5">
+      <Sprite name="Guardian rope component" texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="343,622,32,15" depth="0.57" origin="0.5,0.5" />
+      <!-- Remove 1 second after snapping -->
+      <StatusEffect type="Always" target="This" delay="1" checkconditionalalways="true">
+        <Conditional Snapped="true" />
+        <Remove />
+      </StatusEffect>
+      <!-- Snap after 1 seconds if not stuck to anything -->
+      <StatusEffect type="OnUse" target="This" Snapped="true" delay="1" checkconditionalalways="true">
+        <Conditional targetitemcomponent="Projectile" IsStuckToTarget="false" />
+      </StatusEffect>
+      <!-- Always snap after 45 seconds -->
+      <StatusEffect type="OnUse" target="This" Snapped="true" delay="45" />
+    </Rope>
+    <Projectile characterusable="false" launchimpulse="25.0" sticktocharacters="true" sticktoitems="false" sticktostructures="false" sticktodoors="false" sticktodeflective="true">
+      <Attack structuredamage="20" itemdamage="100" targetforce="10" severlimbsprobability="0">
+        <Affliction identifier="bleeding" strength="30" />
+        <Affliction identifier="lacerations" strength="30" />
+        <Affliction identifier="stun" strength="0.3" />
+      </Attack>
+      <StatusEffect type="OnActive" target="UseTarget,This" comparison="And">
+        <Conditional Snapped="false" />
+        <Conditional mass="lt 50" />
+        <Affliction identifier="drag" strength="1" />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="守护者蒸汽炮" identifier="specialguardiansteamcannon2" category="Misc" Tags="" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="214,514,130,64" depth="0.55" origin="0.5,0.5" />
+    <Body width="100" height="35" density="30" />
+    <Holdable slots="Any,RightHand" controlpose="false" aimpos="120,0" handle1="-55,0" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RepairTool structurefixamount="0.0" range="500" barrelpos="45,0" fireprobability="0.0" spread="25">
+      <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+      <ParticleEmitter particle="steamspray" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="300" velocitymax="500" highqualitycollisiondetection="true" />
+      <ParticleEmitter particle="bubbles" particlespersecond="20" anglemin="-10" anglemax="10" scalemin="0.3" scalemax="0.7" velocitymin="5" velocitymax="100" copyentityangle="true" />
+      <sound file="Content/Items/Weapons/FlameThrowerLoop.ogg" type="OnUse" range="750.0" loop="true" />
+      <StatusEffect type="OnUse" target="UseTarget">
+        <Affliction identifier="burn" amount="1.25" />
+      </StatusEffect>
+    </RepairTool>
+  </Item>
+  <Item name="守护者激光炮" identifier="specialguardianhookcannon" category="Misc" tags="" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="409,520,92,42" depth="0.55" origin="0.5,0.5" />
+    <Body width="80" height="25" density="30" />
+    <Holdable slots="Any,RightHand" controlpose="false" aimpos="150,0" handle1="-50,-2" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="45,0" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun2.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun3.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="guardianlaserprojectile666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="guardianlaserprojectile666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RangedWeapon>
+    <ItemContainer hideitems="true" capacity="1" maxstacksize="1" containedstateindicatorstyle="spear">
+      <Containable items="guardianlaserprojectile666" />
+    </ItemContainer>
+  </Item>
+  <Item name="守护者激光弹" identifier="specialguardianlaserprojectile" category="Misc" scale="0.5" hideinmenus="true" sonarsize="2">
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
+    <Body width="170" height="10" density="20" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true" friendlyfire="false" damagedoors="true">
+      <ParticleEmitter particle="tracerguardianlaser" particleamount="1" velocitymin="0" velocitymax="0" />
+      <Attack structuredamage="25" targetforce="100" itemdamage="25" severlimbsprobability="1.0" penetration="0.5">
+        <Affliction identifier="explosiondamage" strength="40" />
+        <Affliction identifier="stun" strength="0.5" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="muzzleflashpulselaser" anglemin="0" anglemax="360" particleamount="10" velocitymin="0" scalemin="0.5" scalemax="0.8" />
+        <ParticleEmitter particle="weldspark" particleamount="5" anglemin="0" anglemax="360" velocitymin="300" velocitymax="350" scalemin="1.5" scalemax="1.9" drawontop="true" colormultiplier="255,200,225,180" />
+        <ParticleEmitter particle="FlareBubbles" particleamount="3" anglemin="0" anglemax="360" velocitymin="0" velocitymax="50" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="守护者修复弹" identifier="specialguardianrepairprojectile" category="Misc" scale="0.5" hideinmenus="true">
+    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="896,960,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new.png" sourcerect="195,282,17,6" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="14" density="40" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="tracerguardianrepair" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,3" colormultiplier="200,50,150,255" />
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional group="ancientalien" />
+        <ReduceAffliction type="damage" strength="0.1" />
+        <ReduceAffliction type="burn" strength="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="weldspark" particleamount="2" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" colormultiplier="255,100,200,255" />
+        <ParticleEmitter particle="GlowDot" particleamount="2" scalemin="1.1" scalemax="1.3" anglemin="0" anglemax="360" velocitymin="10" velocitymax="50" colormultiplier="255,100,200,255" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="守护者光束武器" identifier="specialguardianbeamweapon" category="Misc" Tags="" scale="0.5" hideinmenus="true" impactsoundtag="impact_metal_light">
+    <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" depth="0.55" sourcerect="0,1776,185,96" origin="0.5,0.4" scale="0.5" />
+    <Body width="85" height="40" density="15" />
+    <Holdable slots="Any,RightHand" controlpose="false" aimpos="120,0" handle1="0,11" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RepairTool structurefixamount="-0.75" range="400" barrelpos="75,0" targetforce="50" repairmultiple="true" repairthroughwalls="true" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-20.0">
+      <Fixable identifier="structure" />
+      <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-80.0" />
+      <!--Damage doors-->
+      <StatusEffect type="OnUse" targettype="UseTarget" Condition="-24.0" />
+      <ParticleEmitter particle="largeplasma" particlespersecond="50" copyentityangle="true" />
+      <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+      <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+      <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+      <ParticleEmitterHitItem identifiers="ore" particle="iceshards" particlespersecond="5" anglemin="-40" anglemax="40" velocitymin="10" velocitymax="300" scalemin="0.5" scalemax="1.0" />
+      <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+      <StatusEffect type="OnUse" target="Limb" severlimbsprobability="0.05">
+        <Affliction identifier="burn" amount="20" />
+      </StatusEffect>
+      <sound file="Content/Items/Alien/alienweapon.ogg" type="OnUse" range="800.0" loop="true" />
+      <LightComponent AllowInGameEditing="false" LightColor="0.8,0.7,1.0,1.0" Flicker="0.5" range="500">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+      </LightComponent>
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RepairTool>
+  </Item>
+  <Item name="守护者emp炮" identifier="specialguardianempcannon" category="Misc" Tags="" cargocontaineridentifier="metalcrate" Scale="1" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="214,514,130,64" depth="0.55" origin="0.5,0.5" />
+    <Body width="100" height="35" density="50" />
+    <Holdable slots="RightHand" controlpose="false" aimpos="120,0" handle1="-55,0" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="2" holdtrigger="false" barrelpos="50,10" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <sound file="Content/Items/Alien/AlienTurret1.ogg" range="10000" type="OnUse" dontmuffle="true" />
+      <sound file="Content/Items/Alien/AlienTurret2.ogg" range="10000" type="OnUse" dontmuffle="true" />
+      <StatusEffect type="OnUse">
+        <Explosion range="1500.0" force="1" shockwave="true" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="12.0" />
+        <SpawnItem identifier="alienturretammoemp" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <RequiredSkill identifier="weapons" level="100" />
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RangedWeapon>
+    <ItemContainer hideitems="true" drawinventory="true" capacity="1" maxstacksize="1" canbeselected="false" characterusable="true">
+      <Containable items="alienturretammoemp" />
+    </ItemContainer>
+  </Item>
+  <Item name="半机械人炮塔" identifier="specialcyborgturretammo" category="Misc" tags="" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="409,520,92,42" depth="0.55" origin="0.5,0.5" />
+    <Body width="80" height="25" density="30" />
+    <Holdable slots="Any,RightHand" controlpose="false" aimpos="150,0" handle1="-50,-2" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="45,0" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun2.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun3.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="cyborgturretammo666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="cyborgturretammo666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RangedWeapon>
+    <ItemContainer hideitems="true" capacity="1" maxstacksize="1" containedstateindicatorstyle="spear">
+      <Containable items="cyborgturretammo666" />
+    </ItemContainer>
+  </Item>
+  <Item name="半机械人炮塔弹药" identifier="specialcyborgturretammos" category="Alien" tags="alien,alienturretammo" sonarsize="5" hideinmenus="true">
+    <Sprite texture="Content/Items/Alien/EndRuin_Items.png" depth="0.7" sourcerect="839,768,71,256" origin="0.5,0.5" />
+    <Body height="215" width="30" density="30" />
+    <Projectile characterusable="false" launchimpulse="100" launchrotation="90" damagedoors="true">
+      <Attack structuredamage="200" itemdamage="100" severlimbsprobability="0" penetration="0" targetforce="1000">
+        <Affliction identifier="explosiondamage" strength="250" />
+        <Affliction identifier="stun" strength="15" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="cyborgammotracer" anglemax="360" distancemax="0" particlespersecond="300" scalemultiplier="1.5,1.5" />
+      </StatusEffect>
+      <!-- reduce condition to give the bolt a 5 second lifetime -->
+      <StatusEffect type="OnNotContained" target="This" condition="-5" />
+      <StatusEffect type="OnImpact" target="This" condition="-100" setvalue="true">
+        <ParticleEmitter particle="cyborgammotracer" anglemax="360" distancemax="200" scalemultiplier="3,3" particleamount="40" />
+        <Explosion range="250.0" ballastfloradamage="100" structuredamage="100" itemdamage="200" force="10.0" severlimbsprobability="0.5" decal="explosion" decalsize="0.3" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="250" />
+          <Affliction identifier="stun" strength="7" />
+        </Explosion>
+      </StatusEffect>
+      <!-- Remove the item after exploding -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="异常发射器" identifier="specialanomalyprojectile" category="Misc" tags="" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="409,520,92,42" depth="0.55" origin="0.5,0.5" />
+    <Body width="80" height="25" density="30" />
+    <Holdable slots="Any,RightHand" controlpose="false" aimpos="150,0" handle1="-50,-2" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="45,0" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun2.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun3.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="anomalyprojectile666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="anomalyprojectile666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RangedWeapon>
+    <ItemContainer hideitems="true" capacity="1" maxstacksize="1" containedstateindicatorstyle="spear">
+      <Containable items="anomalyprojectile666" />
+    </ItemContainer>
+  </Item>
+  <Item name="异常子弹" health="100" scale="0.5" identifier="specialanomalyprojectiles" category="Alien" tags="alien,alienturretammo" spritecolor="255,250,0,255" damagedbyprojectiles="true" showhealthbar="false" hideinmenus="true" IsAITurretTarget="true" AITurretPriority="2" AISlowTurretPriority="0.5">
+    <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" depth="0.8" origin="0.5,0.5" offset="0,0" />
+    <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="21,1367,395,395" depth="0.75" origin="0.5,0.5" offset="0,0" rotationspeed="300" />
+    <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" depth="0.7" origin="0.5,0.5" offset="0,0" rotationspeed="-350" />
+    <Body radius="300" density="1" bodytype="Kinematic" ignorecollision="true" />
+    <Projectile characterusable="false" launchimpulse="5" impulsespread="0.2">
+      <StatusEffect type="OnSpawn" target="This" forceplaysounds="true">
+        <Explosion range="500.0" force="1" shockwave="true" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+        <ParticleEmitter particle="anomaly" particleamount="10" position="0,0" anglemin="0" anglemax="360" velocitymin="0" velocitymax="500" />
+        <sound file="Content/Characters/Jove/Jove_projectile1.ogg" range="5000" selectionmode="random" />
+        <sound file="Content/Characters/Jove/Jove_projectile2.ogg" range="5000" />
+        <sound file="Content/Characters/Jove/Jove_projectile3.ogg" range="5000" />
+        <sound file="Content/Characters/Jove/Jove_projectile4.ogg" range="5000" />
+      </StatusEffect>
+      <!-- reduce condition to give the projectile a limited lifetime -->
+      <StatusEffect type="OnNotContained" target="This" condition="-5" />
+      <StatusEffect type="OnDamaged" target="This">
+        <ParticleEmitter particle="anomaly" particleamount="5" position="0,0" anglemin="0" anglemax="360" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <ParticleEmitter particle="anomaly" particleamount="5" position="0,0" anglemin="0" anglemax="360" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <AiTarget sonardisruption="1" sightrange="500" soundrange="100000" static="true" sonarlabel="entityname.anomaly" />
+    <LightComponent range="2048.0" lightcolor="255,200,15,255" IsOn="true" castshadows="false" allowingameediting="false" flicker="1.0" flickerspeed="5">
+      <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5, 0.5" size="1.0,1.0" />
+      <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1075,1367,395,395" depth="0.7" origin="0.5,0.5" />
+      <StatusEffect type="Always" target="This">
+        <sound file="Content/Characters/Jove/Jove_projectileLoop.ogg" range="5000.0" volume="1" loop="true" />
+        <ParticleEmitter particle="anomaly" particlespersecond="5" position="0,0" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.3" velocitymin="0" velocitymax="50" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="NearbyCharacters" range="1500" collapseeffectstrength="1.3">
+        <Affliction identifier="psychosis" strength="1" />
+        <ParticleEmitter particle="anomaly" particlespersecond="10" position="0,0" anglemin="0" anglemax="360" scalemin="0.2" scalemax="0.3" velocitymin="0" velocitymax="50" />
+      </StatusEffect>
+      <!-- fires every 3 seconds -->
+      <StatusEffect type="Always" delay="3" stackable="false">
+        <Fire size="10" />
+      </StatusEffect>
+      <!-- explosions every 10 seconds -->
+      <StatusEffect type="Always" delay="6" stackable="false">
+        <Explosion range="500.0" ballastfloradamage="100" structuredamage="150" itemdamage="500" force="15" severlimbsprobability="0.5" decal="explosion" decalsize="0.5" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="50" dividebylimbcount="true" />
+          <Affliction identifier="burn" strength="15" probability="0.2" dividebylimbcount="false" />
+          <Affliction identifier="bleeding" strength="40" probability="0.05" dividebylimbcount="false" />
+          <Affliction identifier="stun" strength="7" />
+        </Explosion>
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="外星炮塔" identifier="specialalienturretammo" category="Misc" tags="" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true">
+    <Sprite texture="Content/Characters/Fractalguardian/Fractalguardian.png" sourcerect="409,520,92,42" depth="0.55" origin="0.5,0.5" />
+    <Body width="80" height="25" density="30" />
+    <Holdable slots="Any,RightHand" controlpose="false" aimpos="150,0" handle1="-50,-2" holdangle="0" usehandrotationforholdangle="true" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="45,0" spread="0" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun2.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun3.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnSpawn" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="alienturretammo666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" targetitemcomponent="ItemContainer">
+        <SpawnItem identifier="alienturretammo666" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <!-- remove if the weapon ends up outside the guardian's inventory (arm severed?) -->
+    </RangedWeapon>
+    <ItemContainer hideitems="true" capacity="1" maxstacksize="1" containedstateindicatorstyle="spear">
+      <Containable items="alienturretammo666" />
+    </ItemContainer>
+  </Item>
+  <Item name="外星炮弹" identifier="specialalienturretammos" category="Alien" tags="alien,alienturretammo" hideinmenus="true">
+    <!-- TODO: alien projectile sprite -->
+    <Sprite texture="Content/Items/Alien/EndRuin_Items.png" depth="0.7" sourcerect="839,768,71,256" origin="0.5,0.5" />
+    <Body radius="25" density="10" />
+    <Projectile characterusable="false" launchimpulse="20.0" launchrotation="90">
+      <Attack structuredamage="0" severlimbsprobability="0.5">
+        <Affliction identifier="psychosis" strength="5" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="blackwaterblood" anglemin="0" anglemax="360" particlespersecond="30" scalemin="1" scalemax="2" />
+      </StatusEffect>
+      <!-- reduce condition to give the bolt a 5 second lifetime -->
+      <StatusEffect type="OnNotContained" target="This" condition="-20" />
+      <StatusEffect type="OnImpact" target="This" condition="-100" />
+      <StatusEffect type="OnBroken" target="This">
+        <!--TODO: revisit to match the other explosions. Explosion damage 15 is pretty insignificant damage. Misses item damage, ballast flora damage etc-->
+        <Explosion range="300.0" structuredamage="0" force="20.0">
+          <Affliction identifier="explosiondamage" strength="15" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="" identifier="NodseLV1" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,Nodse" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="135,182,44,38" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="34" density="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="135,182,44,38" />
+    <PreferredContainer primary="locker" spawnprobability="0.05" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Quality Qualitylevel="1" />
+  </Item>
+  <Item name="" identifier="NodseLV2" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,Nodse" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="NodseLV1" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+    </Fabricate>
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="70,182,43,38" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="34" density="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="70,182,43,38" />
+    <PreferredContainer primary="locker" spawnprobability="0.05" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Quality Qualitylevel="2" />
+  </Item>
+  <Item name="" identifier="NodseLV3" category="Equipment" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,Nodse" impactsoundtag="impact_metal_light" scale="0.2" maxstacksize="8">
+    <Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="NodseLV2" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" />
+    </Fabricate>
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="5,183,43,37" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="34" density="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/Weapons/weapons_new 3.png" sourcerect="5,183,43,37" />
+    <PreferredContainer primary="locker" spawnprobability="0.05" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Quality Qualitylevel="3" />
+  </Item>
+</Override>

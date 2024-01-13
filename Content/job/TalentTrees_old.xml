@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <TalentTrees>
+    <TalentTree jobidentifier="IsaacClarke">
+      <SubTree identifier="engineer_primary" nameidentifier="talenttree.primary" type="primary">
+        <TalentOptions requiredtalents="2" maxchosentalents="5">
+          <TalentOption identifier="stationengineer" />
+          <TalentOption identifier="junctionjunkie" />
+          <TalentOption identifier="egghead" />
+          <TalentOption identifier="grounded" />
+          <TalentOption identifier="remotemonitor" />
+        </TalentOptions>
+        <TalentOptions requiredtalents="2" maxchosentalents="5">
+          <TalentOption identifier="funwithfission" />
+          <TalentOption identifier="melodicrespite" />
+          <TalentOption identifier="militaryapplicationsss" />
+          <TalentOption identifier="aggressiveengineering" />
+          <TalentOption identifier="samplecollection" />
+        </TalentOptions>
+      </SubTree>
+      <SubTree identifier="DeadSpaceengineer" type="specialization" requires="engineer_primary" blocks="electrician,spacepowerarmour">
+        <TalentOptions>
+          <TalentOption identifier="DeadSpaceengineer" />
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="Necromorphkiller" />
+          <TalentOption identifier="Necromorphkiller2" />
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="Armedescalation" />
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="IsaacClarke" />
+        </TalentOptions>
+      </SubTree>
+      <SubTree identifier="electrician" type="specialization" requires="engineer_primary" blocks="DeadSpaceengineer,spacepowerarmour">
+        <TalentOptions>
+          <TalentOption identifier="gridmaintainer" />
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="pyromaniac" />
+          <TalentOption identifier="unlimitedpower" />
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="betterthannew" />
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="lightningwizard" />
+        </TalentOptions>
+      </SubTree>
+      <SubTree identifier="spacepowerarmour" type="specialization" requires="engineer_primary" blocks="electrician,DeadSpaceengineer">
+        <TalentOptions>
+          <TalentOption identifier="spacepowerarmourreform" />
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="spacepowerarmourenhance" />
+          <TalentOption identifier="spacepowerarmourenhancefortress" />
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="spacepowerarmourAthleticabilityUP" />
+        </TalentOptions>
+        <TalentOptions>
+          <TalentOption identifier="spacepowerarmourattackUP" />
+        </TalentOptions>
+      </SubTree>
+    </TalentTree>
+  </TalentTrees>
+</Override>

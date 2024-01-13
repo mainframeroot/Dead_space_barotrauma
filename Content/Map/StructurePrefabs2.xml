@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prefabs>
+  <label name="Label Icon Gas" Aliases="Label M Icon Gas " identifier="labelsicongas" scale="0.25" category="Decorative">
+    <sprite texture="%ModDir%/Content/Map/LabelIcons2.png" sourcerect="0,0,256,256" depth="0.85" origin="0.5,0.5" />
+  </label>
+</prefabs>

@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Randomevents>
+  <!-- Define flavor sprites that appear top left of the message box here, identifier is required -->
+  <override>
+    <EventSprites>
+      <Sprite identifier="glass" texture="%ModDir%/Content/Map/Outposts/Art/DSEvent_pic1.png" sourcerect="507,0,249,252" origin="0.5,0.5" />
+      <Sprite identifier="necro" texture="%ModDir%/Content/Map/Outposts/Art/DSEvent_pic2.png" sourcerect="261,542,248,174" origin="0.5,0.5" />
+      <Sprite identifier="gambler" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="559,6,165,240" origin="0.5,0.5" />
+      <Sprite identifier="cultist" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="37,507,182,249" origin="0.5,0.5" />
+      <Sprite identifier="mediator" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="267,5,225,242" origin="0.5,0.5" />
+      <Sprite identifier="huskinvite" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="555,775,182,248" origin="0.5,0.5" />
+      <Sprite identifier="map" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="259,521,249,240" origin="0.5,0.5" />
+      <Sprite identifier="vent" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="507,0,249,252" origin="0.5,0.5" />
+      <Sprite identifier="brokenterminal" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="768,0,244,251" origin="0.5,0.5" />
+      <Sprite identifier="ambush" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="261,542,248,174" origin="0.5,0.5" />
+      <Sprite identifier="trashcan" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="771,15,244,241" origin="0.5,0.5" />
+      <Sprite identifier="clown" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="544,259,182,249" origin="0.5,0.5" />
+      <Sprite identifier="unconscious" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="770,321,241,152" origin="0.5,0.5" />
+      <Sprite identifier="noticeboard" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="263,523,243,231" origin="0.5,0.5" />
+      <Sprite identifier="ventinside" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="510,520,248,242" origin="0.5,0.5" />
+      <Sprite identifier="redbluebottles" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="549,516,182,248" origin="0.5,0.5" />
+      <Sprite identifier="redyellowbottles" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="764,520,243,232" origin="0.5,0.5" />
+      <Sprite identifier="dorm" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="267,269,231,237" origin="0.5,0.5" />
+      <Sprite identifier="cleaner" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="34,1,182,242" origin="0.5,0.5" />
+      <Sprite identifier="note" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="808,768,182,247" origin="0.5,0.5" />
+      <Sprite identifier="noteopened" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="812,514,182,247" origin="0.5,0.5" />
+      <Sprite identifier="group" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="37,772,182,247" origin="0.5,0.5" />
+      <Sprite identifier="mechanic" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="553,775,182,248" origin="0.5,0.5" />
+      <Sprite identifier="engineer" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic4.png" sourcerect="547,257,195,250" origin="0.5,0.5" />
+      <Sprite identifier="crowd" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="1,293,248,174" origin="0.5,0.5" />
+      <Sprite identifier="clownambush" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="519,280,241,219" origin="0.5,0.5" />
+      <Sprite identifier="office" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="34,256,182,248" origin="0.5,0.5" />
+      <Sprite identifier="mines" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="760,772,246,245" origin="0.5,0.5" />
+      <Sprite identifier="security" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="294,775,182,248" origin="0.5,0.5" />
+      <Sprite identifier="captain" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic1.png" sourcerect="34,0,182,251" origin="0.5,0.5" />
+      <Sprite identifier="officeinside" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic2.png" sourcerect="766,264,245,230" origin="0.5,0.5" />
+      <Sprite identifier="JacovSubra1" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="0,0,256,256" origin="0.5,0.5" />
+      <Sprite identifier="JacovSubra2" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="256,0,256,256" origin="0.5,0.5" />
+      <Sprite identifier="JacovSubra3" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="512,0,256,256" origin="0.5,0.5" />
+      <Sprite identifier="JacovSubra4" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="768,0,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Infiltration1" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="0,256,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Infiltration2" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="256,256,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Terrorism1" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="512,256,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Terrorism2" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="768,256,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Stuckinthemiddle1" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="0,512,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Censorship1" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="256,512,256,256" origin="0.5,0.5" />
+      <Sprite identifier="BadVibration1" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="512,512,256,256" origin="0.5,0.5" />
+      <Sprite identifier="BadVibration2" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="768,512,256,256" origin="0.5,0.5" />
+      <Sprite identifier="BombScare1" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="0,768,256,256" origin="0.5,0.5" />
+      <Sprite identifier="BombScare2" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="256,768,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Stowaway1A" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="512,768,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Stowaway1B" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic3.png" sourcerect="768,768,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Stowaway2" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic4.png" sourcerect="0,0,256,256" origin="0.5,0.5" />
+      <Sprite identifier="ShockJock" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic4.png" sourcerect="256,0,256,256" origin="0.5,0.5" />
+      <Sprite identifier="HeartOfGold" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic4.png" sourcerect="512,0,256,256" origin="0.5,0.5" />
+      <Sprite identifier="ManAndHisRaptor" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic4.png" sourcerect="768,0,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Receptiondude" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic4.png" sourcerect="0,256,256,256" origin="0.5,0.5" />
+      <Sprite identifier="Instructor" texture="%ModDir%/Content/Map/Outposts/Art/Event_pic4.png" sourcerect="256,256,256,256" origin="0.5,0.5" />
+    </EventSprites>
+  </override>
+  <EventPrefabs>
+    <ScriptedEvent identifier="注释" commonness="0">
+      <TagAction criteria="player" tag="player" />
+      <!--标记操作，给互动目标上tag，主要是给物品和玩家-->
+      <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+      <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="unitologistsnpc" targettag="unitologistsnpc_1" lootingisstealing="false" spawnlocation="Outpost" />
+      <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="unitologistsnpc" targettag="unitologistsnpc_2" lootingisstealing="false" spawnlocation="Outpost" />
+      <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="unitologistsnpc" targettag="unitologistsnpc_3" lootingisstealing="false" spawnlocation="Outpost" />
+      <!--生成NPC或者怪物-->
+      <TriggerAction target1tag="unitologistsnpc_1" target2tag="player" applytotarget2="triggerer_player" radius="300" />
+      <!--触发条件，目标1目标2和作用目标-->
+      <NPCFollowAction npctag="unitologistsnpc_1" targettag="triggerer_player" follow="true" />
+      <NPCFollowAction npctag="unitologistsnpc_2" targettag="triggerer_player" follow="true" />
+      <NPCFollowAction npctag="unitologistsnpc_3" targettag="triggerer_player" follow="true" />
+      <!--NPC的跟随AI设置-->
+      <StatusEffectAction targettag="selectedmudraptorspawnvent">
+        <StatusEffect>
+          <Sound file="Content/Sounds/Damage/GlassBreak1.ogg" range="500" />
+          <Sound file="%ModDir%/Characters/Slasher.ogg" range="500" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <!--状态效果操作，targettag指定目标，StatusEffect指定发生效果-->
+      <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.c1" eventsprite="cultist">
+        <!--事件插图-->
+        <Option text="EventText.unitologistscultambush.o1">
+          <!--对话选项-->
+          <SkillCheckAction targettag="triggerer_player" requiredskill="weapons" requiredlevel="80">
+            <!--技能等级检测-->
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.o1.c1" />
+              <!--对话选项和目标-->
+              <CombatAction combatmode="Offensive" npctag="unitologistsnpc_1" enemytag="triggerer_player" isinstigator="true" guardreaction="arrest" witnessreaction="retreat" />
+              <CombatAction combatmode="Offensive" npctag="unitologistsnpc_2" enemytag="triggerer_player" isinstigator="true" guardreaction="arrest" witnessreaction="retreat" />
+              <CombatAction combatmode="Offensive" npctag="unitologistsnpc_3" enemytag="triggerer_player" isinstigator="true" guardreaction="arrest" witnessreaction="retreat" />
+              <!--战斗状态变更，isinstigator攻击发起者，guardreaction警卫反应，witnessreaction目击者反应。arrest逮捕，retreat回避-->
+              <!--combatmode战斗模式，Offensive进攻行为-->
+            </Success>
+            <Failure>
+              <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.o1.c2" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_3" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_2" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_1" />
+              <!--给予目标损伤，limbtype指定身体部位-->
+            </Failure>
+          </SkillCheckAction>
+        </Option>
+        <Option text="EventText.unitologistscultambush.o2">
+          <CheckReputationAction targettype="faction" identifier="unitologists" condition="gte 30">
+            <!--阵营声望检测，gte高于，lte低于-->
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.o2.c1" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <!--物品生成，指定玩家时可作为奖励-->
+              <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <!--怪物生成-->
+              <ReputationAction targettype="Faction" identifier="unitologists" increase="15" />
+              <!--声望变更-->
+            </Success>
+            <Failure>
+              <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.o2.c2" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_3" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_2" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_1" />
+            </Failure>
+          </CheckReputationAction>
+        </Option>
+        <Option text="EventText.unitologistscultambush.o3">
+          <!--如果有复数卖的东西，可以复制这一列，文本和东西改一下就行了（这是支付金钱的写法-->
+          <CheckMoneyAction Amount="1000">
+            <!--上面这个金额是显示的金额，也是判定的金额-->
+            <Success>
+              <MoneyAction amount="-1000">
+                <!--这个是实际变化的金额-->
+              </MoneyAction>
+              <ConversationAction targettag="triggerer_player" text="eventtext.eventstore.o2.c1" eventsprite="插图，看你有没有" />
+              <SpawnAction itemidentifier="生成物品" targetinventory="triggerer_player" />
+            </Success>
+            <Failure>
+              <ConversationAction targettag="triggerer_player" text="eventtext.eventstore.o2.c2" eventsprite="插图，看你有没有" />
+              <GoTo name="waitforinput" />
+            </Failure>
+          </CheckMoneyAction>
+        </Option>
+        <Option text="EventText.unitologistscultambush.o4">
+          <!--如果有复数卖的东西，可以复制这一列，文本和东西改一下就行了（这是支付道具的写法-->
+          <CheckItemAction targettag="triggerer_player" itemidentifiers="物品名">
+            <!--需求的物品名-->
+            <Success>
+              <Label name="checkpockets">
+                <!--Label是一个节点，如果有goto可以直接会到这个节点，再次进行以下的流程-->
+              </Label>
+              <ConversationAction targettag="triggerer_player" text="eventtext.eventstore.o3.c1" eventsprite="插图，看你有没有">
+                <RemoveItemAction targettag="triggerer_player" itemidentifier="支付的物品名" />
+              </ConversationAction>
+              <SpawnAction itemidentifier="获得的物品名" targetinventory="triggerer_player" />
+            </Success>
+            <Failure>
+              <ConversationAction targettag="triggerer_player" text="eventtext.eventstore.o3.c2" eventsprite="插图，看你有没有" />
+              <GoTo name="waitforinput" />
+            </Failure>
+          </CheckItemAction>
+        </Option>
+      </ConversationAction>
+      <!--对话流程-->
+    </ScriptedEvent>
+    <ScriptedEvent identifier="EnhancedSlasheroutbreak" commonness="100">
+      <!--强化尸变体逃出-->
+      <TagAction criteria="player" tag="player" />
+      <TriggerAction target1tag="player" targetmoduletype="researchmodule" radius="200" applytotarget1="triggerer_player" />
+      <SpawnAction speciesname="EnhancedSlasher" spawnlocation="Outpost" targetmoduletags="researchmodule" />
+      <SpawnAction speciesname="EnhancedSlasher" spawnlocation="Outpost" targetmoduletags="researchmodule" />
+      <SpawnAction speciesname="EnhancedSlasher" spawnlocation="Outpost" targetmoduletags="researchmodule" />
+      <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+      <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+      <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+      <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+      <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+      <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+      <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+      <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+      <ConversationAction targettag="triggerer_player" text="EventText.EnhancedSlasheroutbreak.c1" eventsprite="necro" />
+    </ScriptedEvent>
+    <ScriptedEvent identifier="unitologistscultambush" commonness="100">
+      <!--统一教会袭击-->
+      <TagAction criteria="player" tag="player" />
+      <SpawnAction npcsetidentifier="unitologistsnpc" npcidentifier="unitologistscultist" targettag="unitologistsnpc_1" spawnlocation="Outpost" lootingisstealing="false" />
+      <SpawnAction npcsetidentifier="unitologistsnpc" npcidentifier="unitologistscultist" targettag="unitologistsnpc_2" spawnlocation="Outpost" lootingisstealing="false" />
+      <SpawnAction npcsetidentifier="unitologistsnpc" npcidentifier="unitologistscultist" targettag="unitologistsnpc_3" spawnlocation="Outpost" lootingisstealing="false" />
+      <TriggerAction target1tag="unitologistsnpc_1" target2tag="player" applytotarget2="triggerer_player" radius="300" />
+      <NPCFollowAction npctag="unitologistsnpc_1" targettag="triggerer_player" follow="true" />
+      <NPCFollowAction npctag="unitologistsnpc_2" targettag="triggerer_player" follow="true" />
+      <NPCFollowAction npctag="unitologistsnpc_3" targettag="triggerer_player" follow="true" />
+      <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.c1" eventsprite="cultist">
+        <Option text="EventText.unitologistscultambush.o1">
+          <SkillCheckAction targettag="triggerer_player" requiredskill="weapons" requiredlevel="80">
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.o1.c1" />
+              <CombatAction combatmode="Offensive" npctag="unitologistsnpc_1" enemytag="triggerer_player" isinstigator="true" guardreaction="arrest" witnessreaction="retreat" />
+              <CombatAction combatmode="Offensive" npctag="unitologistsnpc_2" enemytag="triggerer_player" isinstigator="true" guardreaction="arrest" witnessreaction="retreat" />
+              <CombatAction combatmode="Offensive" npctag="unitologistsnpc_3" enemytag="triggerer_player" isinstigator="true" guardreaction="arrest" witnessreaction="retreat" />
+            </Success>
+            <Failure>
+              <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.o1.c2" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_3" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_2" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_1" />
+            </Failure>
+          </SkillCheckAction>
+        </Option>
+        <Option text="EventText.unitologistscultambush.o2">
+          <CheckReputationAction targettype="faction" identifier="unitologists" condition="gte 30">
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.o2.c1" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <ReputationAction targettype="Faction" identifier="unitologists" increase="15" />
+            </Success>
+            <Failure>
+              <ConversationAction targettag="triggerer_player" text="EventText.unitologistscultambush.o2.c2" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_3" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_2" />
+              <AfflictionAction affliction="necroinfection" strength="50" targettag="unitologistsnpc_1" />
+            </Failure>
+          </CheckReputationAction>
+        </Option>
+      </ConversationAction>
+    </ScriptedEvent>
+    <ScriptedEvent identifier="Growl" commonness="100">
+      <!--尸变体袭击-->
+      <TagAction criteria="player" tag="player" />
+      <TagAction criteria="itemtag:mudraptorspawnvent" tag="mudraptorspawnvent" />
+      <TriggerAction target1tag="mudraptorspawnvent" target2tag="player" applytotarget1="selectedmudraptorspawnvent" applytotarget2="triggerer_player" radius="500" />
+      <StatusEffectAction targettag="selectedmudraptorspawnvent">
+        <StatusEffect>
+          <Sound file="Content/Sounds/Damage/GlassBreak1.ogg" range="500" />
+          <Sound file="%ModDir%/Characters/Slasher.ogg" range="500" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <ConversationAction targettag="triggerer_player" text="EventText.Growl.c1" eventsprite="glass">
+        <Option text="EventText.Growl.o1">
+          <SkillCheckAction targettag="triggerer_player" requiredskill="Mechanical" requiredlevel="60">
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.Growl.o1.c1" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+            </Success>
+            <Failure>
+              <AfflictionAction affliction="lacerations" strength="15" limbtype="LeftHand" targettag="triggerer_player" />
+              <AfflictionAction affliction="necroinfection" strength="1" limbtype="LeftHand" targettag="triggerer_player" />
+              <StatusEffectAction targettag="selectedmudraptorspawnvent">
+                <StatusEffect>
+                  <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" range="500" />
+                </StatusEffect>
+              </StatusEffectAction>
+              <ConversationAction targettag="triggerer_player" text="EventText.Growl.o1.c2" />
+            </Failure>
+          </SkillCheckAction>
+        </Option>
+        <Option text="EventText.Growl.o2">
+          <SkillCheckAction targettag="triggerer_player" requiredskill="weapons" requiredlevel="80">
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.Growl.o2.c1" eventsprite="necro" />
+              <WaitAction time="1.5" />
+              <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <StatusEffectAction targettag="selectedmudraptorspawnvent">
+                <StatusEffect>
+                  <Sound file="Content/Items/Weapons/StunGrenade.ogg" range="500" />
+                </StatusEffect>
+              </StatusEffectAction>
+            </Success>
+            <Failure>
+              <ConversationAction targettag="triggerer_player" text="EventText.Growl.o2.c2" eventsprite="necro" />
+              <StatusEffectAction targettag="selectedmudraptorspawnvent">
+                <StatusEffect>
+                  <Sound file="%ModDir%/Characters/Slasher.ogg" range="500" />
+                </StatusEffect>
+              </StatusEffectAction>
+              <WaitAction time="1.5" />
+              <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="Doomslasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="Slasher3" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+            </Failure>
+          </SkillCheckAction>
+        </Option>
+        <Option text="EventText.Growl.o3">
+          <RNGAction chance="0.33">
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.Growl.o3.c1" eventsprite="necro" />
+              <StatusEffectAction targettag="selectedmudraptorspawnvent">
+                <StatusEffect>
+                  <Sound file="%ModDir%/Characters/Slasher.ogg" range="500" />
+                </StatusEffect>
+              </StatusEffectAction>
+              <ConversationAction targettag="triggerer_player" text="EventText.fetalaccident.o3.c1">
+                <Option text="EventText.fetalaccident.o3.o1" />
+              </ConversationAction>
+              <WaitAction time="180.0" />
+              <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+            </Success>
+            <Failure>
+              <ConversationAction targettag="triggerer_player" text="EventText.Growl.o3.c2" eventsprite="necro" />
+              <StatusEffectAction targettag="selectedmudraptorspawnvent">
+                <StatusEffect>
+                  <Sound file="%ModDir%/Characters/Slasher.ogg" range="500" />
+                </StatusEffect>
+              </StatusEffectAction>
+              <WaitAction time="1.5" />
+              <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="Slasher" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+            </Failure>
+          </RNGAction>
+        </Option>
+      </ConversationAction>
+    </ScriptedEvent>
+    <ScriptedEvent identifier="fetalaccident" commonness="100">
+      <!--意外遭遇-->
+      <TagAction criteria="player" tag="player" />
+      <TagAction criteria="itemtag:mudraptorspawnvent" tag="mudraptorspawnvent" />
+      <TriggerAction target1tag="mudraptorspawnvent" target2tag="player" applytotarget1="selectedmudraptorspawnvent" applytotarget2="triggerer_player" radius="50" />
+      <StatusEffectAction targettag="selectedmudraptorspawnvent">
+        <StatusEffect>
+          <Sound file="Content/Sounds/Damage/GlassBreak1.ogg" range="500" />
+          <Sound file="%ModDir%/Content/Sounds/DS/deadcrawlerevent.ogg" range="500" />
+        </StatusEffect>
+      </StatusEffectAction>
+      <ConversationAction targettag="triggerer_player" text="EventText.fetalaccident.c1" eventsprite="glass">
+        <Option text="EventText.fetalaccident.o1">
+          <SkillCheckAction targettag="triggerer_player" requiredskill="Mechanical" requiredlevel="60">
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.fetalaccident.o1.c1" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+              <SpawnAction itemidentifier="coalitionmedal" targetinventory="triggerer_player" />
+            </Success>
+            <Failure>
+              <AfflictionAction affliction="lacerations" strength="15" limbtype="LeftHand" targettag="triggerer_player" />
+              <StatusEffectAction targettag="selectedmudraptorspawnvent">
+                <StatusEffect>
+                  <Sound file="Content/Sounds/Damage/GlassImpact2.ogg" range="500" />
+                </StatusEffect>
+              </StatusEffectAction>
+              <ConversationAction targettag="triggerer_player" text="EventText.fetalaccident.o1.c2" />
+            </Failure>
+          </SkillCheckAction>
+        </Option>
+        <Option text="EventText.fetalaccident.o2">
+          <SkillCheckAction targettag="triggerer_player" requiredskill="Security" requiredlevel="70">
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.fetalaccident.o2.c1" eventsprite="necro" />
+              <WaitAction time="1.5" />
+              <SpawnAction speciesname="deadcrawler" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <StatusEffectAction targettag="selectedmudraptorspawnvent">
+                <StatusEffect>
+                  <Sound file="%ModDir%/Content/Sounds/DS/babyambush.ogg" range="500" />
+                </StatusEffect>
+              </StatusEffectAction>
+            </Success>
+            <Failure>
+              <ConversationAction targettag="triggerer_player" text="EventText.fetalaccident.o2.c2" eventsprite="necro" />
+              <StatusEffectAction targettag="selectedmudraptorspawnvent">
+                <StatusEffect>
+                  <Sound file="%ModDir%/Content/Sounds/DS/babyambush.ogg" range="500" />
+                </StatusEffect>
+              </StatusEffectAction>
+              <WaitAction time="1.5" />
+              <SpawnAction speciesname="deadcrawler" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="deadcrawler" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="deadcrawler" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="deadcrawler" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="deadcrawler" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+              <SpawnAction speciesname="deadcrawler" spawnlocation="Outpost" spawnpointtag="selectedmudraptorspawnvent" />
+            </Failure>
+          </SkillCheckAction>
+        </Option>
+        <Option text="EventText.fetalaccident.o3">
+          <RNGAction chance="0.33">
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="EventText.fetalaccident.o3.c1">
+                <Option text="EventText.fetalaccident.o3.o1" />
+              </ConversationAction>
+            </Success>
+            <Failure>
+              <SkillCheckAction requiredskill="Helm" requiredlevel="70" targettag="triggerer_player">
+                <Success>
+                  <ConversationAction targettag="triggerer_player" text="EventText.fetalaccident.o3.c2">
+                    <Option text="EventText.fetalaccident.o3.o2" />
+                  </ConversationAction>
+                </Success>
+                <Failure>
+                  <ConversationAction targettag="triggerer_player" text="EventText.fetalaccident.o3.c3">
+                    <Option text="EventText.fetalaccident.o3.o3" />
+                  </ConversationAction>
+                </Failure>
+              </SkillCheckAction>
+            </Failure>
+          </RNGAction>
+        </Option>
+      </ConversationAction>
+    </ScriptedEvent>
+  </EventPrefabs>
+  <!--EVENT SETS-->
+  <EventSet identifier="DeadSpaceOutpostevents" leveltype="outpost" locationtype="outpost,city,research,military,mine,colony,settlement,construction,camp,base,blockade,survey,excavation,study,lab,clinic,hospital,surgery,hydroponics,biosphere,nourishment,factory,shipyard,fusion" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="80" chooserandom="false" ignorecooldown="true">
+    <!-- TODO: more sets here-->
+    <!-- low-difficulty random events -->
+    <EventSet identifier="outpostevents.easy.generic.randomevents" minleveldifficulty="0" maxleveldifficulty="30" allowatstart="true" chooserandom="true" onceperoutpost="true">
+      <OverrideEventCount locationtype="City" eventcount="3" />
+      <!--死亡空间事件-->
+      <ScriptedEvent identifier="fetalaccident" commonness="60" />
+      <ScriptedEvent identifier="Growl" commonness="60" />
+      <ScriptedEvent identifier="unitologistscultambush" commonness="60" />
+      <!--原版事件-->
+      <ScriptedEvent identifier="givingdirections" commonness="100" />
+      <ScriptedEvent identifier="goodsamaritan" commonness="100" />
+      <ScriptedEvent identifier="miketheidiot1" commonness="25" />
+      <ScriptedEvent identifier="Engineers_are_special" commonness="100" />
+      <ScriptedEvent identifier="fanclub" commonness="100" />
+      <ScriptedEvent identifier="shockjock" commonness="60" />
+      <ScriptedEvent identifier="manandhisraptor1" commonness="50" />
+      <ScriptedEvent identifier="assassinationofjacovsubra2" commonness="100" />
+      <ScriptedEvent identifier="assassinationofjacovsubra3" commonness="100" />
+      <ScriptedEvent identifier="propaganda" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="unitologistscultambush" commonness="60" />
+      <!-- technically a separatist event, but takes place in coalition outposts -->
+      <ScriptedEvent identifier="bombscare" commonness="50" faction="coalition" />
+      <ScriptedEvent identifier="terrorism101" commonness="50" faction="coalition" />
+      <!-- technically a separatist event, but takes place in coalition outposts -->
+      <ScriptedEvent identifier="separatistrelations" commonness="100" />
+      <!-- technically a separatist event, but can happen in any type of outpost -->
+      <ScriptedEvent identifier="clownrelations1" commonness="100" faction="clowns" />
+      <ScriptedEvent identifier="huskcultist" commonness="100" faction="huskcult" />
+      <!-- events that only occur in low difficulty-->
+      <ScriptedEvent identifier="atwitsend" commonness="60" />
+      <ScriptedEvent identifier="censorship" commonness="60" faction="clowns" />
+      <ScriptedEvent identifier="infiltration" commonness="70" faction="clowns" />
+      <ScriptedEvent identifier="missionevent_clownoutbreak" commonness="70" faction="clowns" />
+    </EventSet>
+    <!-- high-difficulty random events -->
+    <EventSet identifier="outpostevent.difficult.generic.randomevents" minleveldifficulty="30" maxleveldifficulty="80" allowatstart="true" chooserandom="true" onceperoutpost="true">
+      <OverrideEventCount locationtype="City" eventcount="3" />
+      <!--死亡空间事件-->
+      <ScriptedEvent identifier="fetalaccident" commonness="60" />
+      <ScriptedEvent identifier="Growl" commonness="60" />
+      <ScriptedEvent identifier="unitologistscultambush" commonness="60" />
+      <!-- events that can occur in both low and high difficulty, commoness reduced here to favor the more difficult ones-->
+      <ScriptedEvent identifier="givingdirections" commonness="50" />
+      <ScriptedEvent identifier="goodsamaritan" commonness="50" />
+      <ScriptedEvent identifier="miketheidiot1" commonness="12" />
+      <ScriptedEvent identifier="Engineers_are_special" commonness="50" />
+      <ScriptedEvent identifier="fanclub" commonness="50" />
+      <ScriptedEvent identifier="shockjock" commonness="40" />
+      <ScriptedEvent identifier="manandhisraptor1" commonness="60" />
+      <ScriptedEvent identifier="assassinationofjacovsubra2" commonness="100" />
+      <ScriptedEvent identifier="assassinationofjacovsubra3" commonness="100" />
+      <ScriptedEvent identifier="nothingtoseehere" commonness="50" faction="coalition" />
+      <ScriptedEvent identifier="propaganda" commonness="50" faction="coalition" />
+      <!-- technically a separatist event, but takes place in coalition outposts -->
+      <ScriptedEvent identifier="bombscare" commonness="40" faction="coalition" />
+      <ScriptedEvent identifier="terrorism101" commonness="40" faction="coalition" />
+      <!-- technically a separatist event, but takes place in coalition outposts -->
+      <ScriptedEvent identifier="separatistrelations" commonness="50" />
+      <!-- technically a separatist event, but can happen in any type of outpost -->
+      <ScriptedEvent identifier="clownrelations1" commonness="50" faction="clowns" />
+      <ScriptedEvent identifier="huskcultist" commonness="50" faction="huskcult" />
+      <!-- events that only occur in high difficulty-->
+      <ScriptedEvent identifier="blackmarket" commonness="100" />
+      <ScriptedEvent identifier="mediator" commonness="100" />
+      <ScriptedEvent identifier="firefighting" commonness="100" />
+      <ScriptedEvent identifier="sleightofhand" commonness="100" />
+      <ScriptedEvent identifier="miketheidiot2" commonness="25" />
+      <ScriptedEvent identifier="goblincooking1" commonness="50" />
+      <ScriptedEvent identifier="soundinthevent" commonness="100" />
+      <ScriptedEvent identifier="badvibrations1" commonness="80" />
+      <ScriptedEvent identifier="stuckinthemiddle" commonness="50" faction="coalition" />
+      <!-- technically a separatist event, but happens in a coalition outpost -->
+      <ScriptedEvent identifier="outbreak" commonness="100" faction="huskcult" />
+      <ScriptedEvent identifier="huskcultambush" commonness="50" faction="huskcult" />
+      <ScriptedEvent identifier="huskcultrelations" commonness="100" faction="huskcult" />
+      <ScriptedEvent identifier="clownbrutality" commonness="100" faction="clowns" />
+      <ScriptedEvent identifier="clownrelations2" commonness="100" faction="clowns" />
+      <ScriptedEvent identifier="returner" commonness="50" />
+    </EventSet>
+    <!-- Events specific to military outposts -->
+    <EventSet identifier="outpostevent.military.randomevents" minleveldifficulty="0" maxleveldifficulty="80" locationtype="military" allowatstart="true" chooserandom="true" onceperoutpost="true">
+      <!-- 50% chance of getting a military-specific event (TODO: increase if/when we have more of these available?) -->
+      <ScriptedEvent identifier="bigbrother" commonness="150" probability="0.5" faction="coalition" />
+      <ScriptedEvent identifier="explosivemishap" commonness="50" probability="0.5" />
+      <ScriptedEvent identifier="fetalaccident" commonness="60" probability="0.5" />
+      <ScriptedEvent identifier="Growl" commonness="60" probability="0.5" />
+      <ScriptedEvent identifier="unitologistscultambush" commonness="60" probability="0.5" />
+    </EventSet>
+    <!-- Events specific to research outposts -->
+    <EventSet identifier="outpostevent.research.randomevents" minleveldifficulty="0" maxleveldifficulty="80" locationtype="research" allowatstart="true" chooserandom="true" onceperoutpost="true">
+      <!-- 50% chance of getting a research-specific event (TODO: increase if/when we have more of these available?) -->
+      <ScriptedEvent identifier="tastetest" commonness="150" probability="0.5" />
+      <ScriptedEvent identifier="crawleroutbreak" commonness="150" probability="0.5" />
+      <ScriptedEvent identifier="impromptuengineering" commonness="150" probability="0.5" />
+      <ScriptedEvent identifier="captivesouls" commonness="50" probability="0.5" />
+      <ScriptedEvent identifier="researcherescort" commonness="50" />
+      <ScriptedEvent identifier="EnhancedSlasheroutbreak" commonness="150" probability="0.5" />
+      <ScriptedEvent identifier="unitologistscultambush" commonness="50" probability="0.5" />
+      <ScriptedEvent identifier="fetalaccident" commonness="60" probability="0.5" />
+      <ScriptedEvent identifier="Growl" commonness="60" probability="0.5" />
+    </EventSet>
+    <!-- Events specific to mining outposts -->
+    <EventSet identifier="outpostevent.mine.randomevents" minleveldifficulty="0" maxleveldifficulty="80" locationtype="mine" allowatstart="true" chooserandom="true" onceperoutpost="true">
+      <!-- 50% chance of getting a mine-specific event (TODO: increase if/when we have more of these available?) -->
+      <ScriptedEvent identifier="consultant" commonness="150" probability="0.5" />
+      <ScriptedEvent identifier="occupationalhazards" commonness="150" probability="0.5" />
+      <ScriptedEvent identifier="unitologistscultambush" commonness="60" probability="0.5" />
+      <ScriptedEvent identifier="fetalaccident" commonness="60" probability="0.5" />
+      <ScriptedEvent identifier="Growl" commonness="60" probability="0.5" />
+    </EventSet>
+    <!-- Events specific to cities -->
+    <EventSet identifier="outpostevent.city.randomevents" minleveldifficulty="0" maxleveldifficulty="80" locationtype="city" allowatstart="true" chooserandom="true" onceperoutpost="true">
+      <!-- 50% chance of getting a city-specific event (TODO: increase if/when we have more of these available?) -->
+      <ScriptedEvent identifier="captivesouls" commonness="50" probability="0.5" />
+      <ScriptedEvent identifier="explosivemishap" commonness="50" probability="0.5" />
+      <ScriptedEvent identifier="hognose" commonness="50" probability="0.5" />
+      <ScriptedEvent identifier="radiationescapee" commonness="50" />
+    </EventSet>
+    <EventSet identifier="outpostevents.coldcaverns.start.missionevents" minleveldifficulty="0" maxleveldifficulty="1" allowatstart="true" chooserandom="true" eventcount="3" exhaustible="true">
+      <ScriptedEvent identifier="missionevent_cargoany" commonness="100" />
+      <ScriptedEvent identifier="missionevent_killmonster_set1" commonness="100" />
+      <ScriptedEvent identifier="missionevent_escort1coalition" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_escort1separatists" commonness="100" faction="separatists" />
+    </EventSet>
+    <EventSet identifier="outpostevents.coldcaverns.basic.generic.missionevents" minleveldifficulty="1" maxleveldifficulty="5" allowatstart="true" chooserandom="true" eventcount="3" exhaustible="true">
+      <ScriptedEvent identifier="missionevent_cargoany" commonness="50" />
+      <ScriptedEvent identifier="missionevent_cargoweaponscoalition" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_cargoexplosiveseparatists" commonness="100" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_killswarm_set1" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killmonster_set1" commonness="120" />
+      <ScriptedEvent identifier="missionevent_escort1coalition" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_escort1separatists" commonness="100" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_escort1huskcult" commonness="30" faction="huskcult" />
+      <ScriptedEvent identifier="missionevent_escort1clowns" commonness="30" faction="clowns" />
+      <ScriptedEvent identifier="missionevent_collectminerals_mainpath" commonness="80" />
+    </EventSet>
+    <EventSet identifier="outpostevents.coldcaverns.advanced.generic.missionevents" minleveldifficulty="5" maxleveldifficulty="15" allowatstart="true" chooserandom="true" eventcount="3" exhaustible="true">
+      <ScriptedEvent identifier="missionevent_cargoany" commonness="50" />
+      <ScriptedEvent identifier="missionevent_cargoweaponscoalition" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_cargoexplosiveseparatists" commonness="100" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_killswarm_set1" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killswarm_set2" commonness="50" />
+      <ScriptedEvent identifier="missionevent_killmonster_set1" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killmonster_set2" commonness="50" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set1" commonness="75" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set2" commonness="25" />
+      <ScriptedEvent identifier="missionevent_escort1coalition" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_escort1separatists" commonness="100" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_escort1huskcult" commonness="50" faction="huskcult" />
+      <ScriptedEvent identifier="missionevent_escort1clowns" commonness="50" faction="clowns" />
+    </EventSet>
+    <EventSet identifier="outpostevents.europanridge.basic.generic.missionevents" minleveldifficulty="15" maxleveldifficulty="25" allowatstart="true" chooserandom="true" eventcount="3" exhaustible="true">
+      <ScriptedEvent identifier="missionevent_cargoany" commonness="20" />
+      <ScriptedEvent identifier="missionevent_cargoweaponscoalition" commonness="200" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_cargoexplosiveseparatists" commonness="200" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_killswarm_set1" commonness="10" />
+      <ScriptedEvent identifier="missionevent_killswarm_set2" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killswarm_set3" commonness="25" />
+      <ScriptedEvent identifier="missionevent_killmonster_set1" commonness="10" />
+      <ScriptedEvent identifier="missionevent_killmonster_set2" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killmonster_set3" commonness="25" />
+      <ScriptedEvent identifier="missionevent_salvageartifact" commonness="50" />
+      <ScriptedEvent identifier="missionevent_salvagewreck" commonness="100" />
+      <ScriptedEvent identifier="missionevent_crawlernest" commonness="80" />
+      <ScriptedEvent identifier="missionevent_mudraptornest" commonness="70" />
+      <ScriptedEvent identifier="missionevent_tigerthreshernest" commonness="30" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set1" commonness="25" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set2" commonness="75" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set3" commonness="25" />
+      <ScriptedEvent identifier="missionevent_escort1coalition,missionevent_escort2coalition,missionevent_escort3coalition" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_escort1separatists,missionevent_escort2separatists,missionevent_escort3separatists" commonness="100" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_pirate1" commonness="80" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_pirate1separatists" commonness="80" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_scanruin" commonness="50" />
+      <ScriptedEvent identifier="missionevent_clearruin" commonness="30" />
+      <ScriptedEvent identifier="missionevent_escort1huskcult" commonness="50" faction="huskcult" />
+      <ScriptedEvent identifier="missionevent_escort1clowns" commonness="50" faction="clowns" />
+    </EventSet>
+    <EventSet identifier="outpostevents.europanridge.advanced.generic.missionevents" minleveldifficulty="25" maxleveldifficulty="35" allowatstart="true" chooserandom="true" eventcount="4" exhaustible="true">
+      <ScriptedEvent identifier="missionevent_cargoany" commonness="10" />
+      <ScriptedEvent identifier="missionevent_cargoweaponscoalition" commonness="200" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_cargoexplosiveseparatists" commonness="200" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_killswarm_set1" commonness="5" />
+      <ScriptedEvent identifier="missionevent_killswarm_set2" commonness="50" />
+      <ScriptedEvent identifier="missionevent_killswarm_set3" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killmonster_set1" commonness="5" />
+      <ScriptedEvent identifier="missionevent_killmonster_set2" commonness="50" />
+      <ScriptedEvent identifier="missionevent_killmonster_set3" commonness="75" />
+      <ScriptedEvent identifier="missionevent_salvageartifact" commonness="70" />
+      <ScriptedEvent identifier="missionevent_salvagewreck" commonness="100" />
+      <ScriptedEvent identifier="missionevent_crawlernest" commonness="60" />
+      <ScriptedEvent identifier="missionevent_mudraptornest" commonness="70" />
+      <ScriptedEvent identifier="missionevent_tigerthreshernest" commonness="60" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set1" commonness="10" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set2" commonness="75" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set3" commonness="50" />
+      <ScriptedEvent identifier="missionevent_escort2coalition,missionevent_escort3coalition,missionevent_escort4coalition" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_escort2separatists,missionevent_escort3separatists,missionevent_escort4separatists" commonness="100" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_jailbreak_separatists" commonness="10" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_jailbreak_coalition" commonness="10" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_pirate1" commonness="80" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_pirate1separatists" commonness="80" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_scanruin" commonness="90" />
+      <ScriptedEvent identifier="missionevent_clearruin" commonness="60" />
+      <ScriptedEvent identifier="missionevent_escort1huskcult" commonness="50" faction="huskcult" />
+      <ScriptedEvent identifier="missionevent_escort1clowns" commonness="50" faction="clowns" />
+    </EventSet>
+    <EventSet identifier="outpostevents.theaphoticplateau.basic.generic.missionevents" minleveldifficulty="35" maxleveldifficulty="50" allowatstart="true" chooserandom="true" eventcount="4" exhaustible="true">
+      <ScriptedEvent identifier="missionevent_cargoany" commonness="10" />
+      <ScriptedEvent identifier="missionevent_cargoweaponscoalition" commonness="120" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_cargoexplosiveseparatists" commonness="120" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_killswarm_set2" commonness="25" />
+      <ScriptedEvent identifier="missionevent_killswarm_set3" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killswarm_set4" commonness="50" />
+      <ScriptedEvent identifier="missionevent_killmonster_set2" commonness="25" />
+      <ScriptedEvent identifier="missionevent_killmonster_set3" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killmonster_set4" commonness="50" />
+      <ScriptedEvent identifier="missionevent_salvageartifact" commonness="140" />
+      <ScriptedEvent identifier="missionevent_salvagewreck" commonness="120" />
+      <ScriptedEvent identifier="missionevent_mudraptornest" commonness="70" />
+      <ScriptedEvent identifier="missionevent_tigerthreshernest" commonness="80" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set1" commonness="5" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set2" commonness="25" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set3" commonness="50" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set4" commonness="25" />
+      <ScriptedEvent identifier="missionevent_escort2coalition,missionevent_escort3coalition,missionevent_escort4coalition" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_escort2separatists,missionevent_escort3separatists,missionevent_escort4separatists" commonness="100" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_jailbreak_separatists" commonness="20" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_jailbreak_coalition" commonness="20" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_pirate1" commonness="80" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_pirate1separatists" commonness="80" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_scanruin" commonness="120" />
+      <ScriptedEvent identifier="missionevent_clearruin" commonness="90" />
+      <ScriptedEvent identifier="missionevent_escort1huskcult" commonness="50" faction="huskcult" />
+      <ScriptedEvent identifier="missionevent_escort1clowns" commonness="50" faction="clowns" />
+    </EventSet>
+    <EventSet identifier="outpostevent.difficult.generic.missionevents" minleveldifficulty="50" maxleveldifficulty="100" allowatstart="true" chooserandom="true" eventcount="4" exhaustible="true">
+      <!-- same missions as in the previous tier, but with adjusted probabilities to favor more difficult ones -->
+      <ScriptedEvent identifier="missionevent_cargoany" commonness="10" />
+      <ScriptedEvent identifier="missionevent_cargoweaponscoalition" commonness="100" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_cargoexplosiveseparatists" commonness="100" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_killswarm_set2" commonness="5" />
+      <ScriptedEvent identifier="missionevent_killswarm_set3" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killswarm_set4" commonness="60" />
+      <ScriptedEvent identifier="missionevent_killmonster_set2" commonness="5" />
+      <ScriptedEvent identifier="missionevent_killmonster_set3" commonness="75" />
+      <ScriptedEvent identifier="missionevent_killmonster_set4" commonness="60" />
+      <ScriptedEvent identifier="missionevent_salvageartifact" commonness="120" />
+      <ScriptedEvent identifier="missionevent_salvagewreck" commonness="100" />
+      <ScriptedEvent identifier="missionevent_mudraptornest" commonness="70" />
+      <ScriptedEvent identifier="missionevent_tigerthreshernest" commonness="80" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set1" commonness="5" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set2" commonness="5" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set3" commonness="75" />
+      <ScriptedEvent identifier="missionevent_collectminerals_set4" commonness="75" />
+      <ScriptedEvent identifier="missionevent_escort2coalition,missionevent_escort3coalition,missionevent_escort4coalition" commonness="160" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_escort2separatists,missionevent_escort3separatists,missionevent_escort4separatists" commonness="160" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_jailbreak_separatists" commonness="50" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_jailbreak_coalition" commonness="50" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_pirate1" commonness="80" faction="coalition" />
+      <ScriptedEvent identifier="missionevent_pirate1separatists" commonness="80" faction="separatists" />
+      <ScriptedEvent identifier="missionevent_scanruin" commonness="100" />
+      <ScriptedEvent identifier="missionevent_clearruin" commonness="120" />
+      <ScriptedEvent identifier="missionevent_escort1huskcult" commonness="50" faction="huskcult" />
+      <ScriptedEvent identifier="missionevent_escort1clowns" commonness="50" faction="clowns" />
+    </EventSet>
+    <!--  Faction-specific events that can only occur once. 
+        In a separate set to make these very common (when they are valid for the situation) -->
+    <EventSet identifier="outpostevents.clowns" allowatstart="true" chooserandom="true" eventcount="3" faction="clowns">
+      <ScriptedEvent identifier="clownspecialhire1" commonness="100" />
+      <ScriptedEvent identifier="pathofthebikehorn1" commonness="100" />
+      <ScriptedEvent identifier="pathofthebikehorn2" commonness="100" />
+      <ScriptedEvent identifier="pathofthebikehorn3" commonness="100" />
+      <ScriptedEvent identifier="pathofthebikehorn4" commonness="100" />
+      <ScriptedEvent identifier="pathofthebikehorn5" commonness="100" />
+    </EventSet>
+    <EventSet identifier="outpostevents.separatists" allowatstart="true" chooserandom="true" eventcount="2" faction="separatists">
+      <ScriptedEvent identifier="separatistspecialhire1" commonness="100" />
+      <ScriptedEvent identifier="separatistspecialhire2" commonness="100" />
+      <ScriptedEvent identifier="missionevent_tormsdalereport" commonness="100" />
+      <ScriptedEvent identifier="missionevent_jailbreak_sootman" commonness="10" faction="separatists" />
+    </EventSet>
+    <EventSet identifier="outpostevents.separatists.triggeralways" allowatstart="true" eventcount="1" faction="separatists">
+      <ScriptedEvent identifier="tormsdalereport_complete" commonness="100" />
+    </EventSet>
+    <EventSet identifier="outpostevents.coalition" allowatstart="true" chooserandom="true" eventcount="1" faction="coalition">
+      <ScriptedEvent identifier="coalitionspecialhire1" commonness="50" />
+      <ScriptedEvent identifier="coalitionspecialhire2" commonness="50" />
+    </EventSet>
+    <EventSet identifier="outpostevents.huskcult" allowatstart="true" chooserandom="true" eventcount="4" faction="huskcult">
+      <ScriptedEvent identifier="huskcultspecialhire1" commonness="100" />
+      <ScriptedEvent identifier="youngcultists" commonness="100" />
+      <ScriptedEvent identifier="waytoascension1" commonness="100" />
+      <ScriptedEvent identifier="waytoascension2" commonness="100" />
+      <ScriptedEvent identifier="waytoascension3" commonness="100" />
+      <ScriptedEvent identifier="waytoascension4" commonness="100" />
+      <ScriptedEvent identifier="waytoascension5" commonness="100" />
+    </EventSet>
+  </EventSet>
+</Randomevents>

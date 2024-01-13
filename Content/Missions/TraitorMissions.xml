@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TraitorMissions>
+  <!--Mission 1: "Altman Be Praised"-->
+  <!--Objective 1: Find infector egg-->
+  <!--Objective 2: Feed the egg blood until it hatches-->
+  <!--Objective 3: Keep the infector alive for 2 min.-->
+  <TraitorMission identifier="altmanbepraised">
+    <Icon texture="%ModDir%/Content/UI/MissionIcons.png" sourcerect="512,0,256,256" />
+    <StartInfoText id="necro_1_traitormissionstartinfotext" />
+    <Objective>
+      <EndMessageFailure id="traitormissionfailuremessage" />
+      <EndMessageSuccess id="altmanbepraised_objectivesuccessmessage1" />
+      <StartMessage id="necro_1_traitorobjectivestartmessage1" />
+      <Goal type="finditem" identifier="smallinfectoregg" preferNew="true" allowNew="true" allowExisting="false" allowedContainers="loosevent">
+        <InfoText id="altmanbepraised_goalinfotext_1" />
+      </Goal>
+    </Objective>
+    <Objective>
+      <EndMessageFailure id="traitormissionfailuremessage" />
+      <EndMessageSuccess id="altmanbepraised_objectivesuccessmessage2" />
+      <StartMessage id="altmanbepraised_traitorobjectivestartmessage2" />
+      <Goal type="transformentity" entities="smallinfectoregg,mediuminfectoregg,largeinfectoregg,infector" entitytypes="item,item,item,character" catalystid="antibloodloss2">
+        <InfoText id="altmanbepraised_goalinfotext_2" />
+      </Goal>
+    </Objective>
+    <Objective>
+      <EndMessageFailure id="traitormissionfailuremessage" />
+      <EndMessageSuccess id="altmanbepraised_objectivesuccessmessage3" />
+      <StartMessage id="altmanbepraised_traitorobjectivestartmessage3" />
+      <Goal type="keeptransformedalive" speciesname="infector">
+        <InfoText id="altmanbepraised_goalinfotext_3" />
+        <Modifier type="duration" duration="120" cumulative="false" />
+      </Goal>
+    </Objective>
+  </TraitorMission>
+  <!--Mission 2: "Make Us Whole"-->
+  <!--TODO: Edit text to fit shorter mission-->
+  <!--Objective 1: Find necrotic blood-->
+  <!--Objective 2: Inject everyone with necrotic blood-->
+  <TraitorMission identifier="makeuswhole">
+    <Icon texture="%ModDir%/Content/UI/MissionIcons.png" sourcerect="512,0,256,256" />
+    <StartInfoText id="necromvptraitormissionstartinfotext" />
+    <Objective>
+      <EndMessageFailure id="traitormissionfailuremessage" />
+      <EndMessageSuccess id="makeuswhole_objectivesuccessmessage2" />
+      <StartMessage id="necromvptraitorobjectivestartmessage2" />
+      <Goal type="finditem" identifier="necroblood" preferNew="true" allowNew="true" allowExisting="true" allowedContainers="loosevent">
+        <InfoText id="makeuswhole_goalinfotext_2" />
+      </Goal>
+    </Objective>
+    <Objective>
+      <EndMessageFailure id="traitormissionfailuremessage" />
+      <EndMessageSuccess id="necromvpobjectivesuccessmessage3" />
+      <StartMessage id="makeuswhole_traitorobjectivestartmessage4" />
+      <Goal type="injectpoison" poison="necroblood" affliction="necroinfection" targetpercentage="100">
+        <InfoText id="makeuswhole_goalinfotext_4" />
+      </Goal>
+    </Objective>
+  </TraitorMission>
+</TraitorMissions>

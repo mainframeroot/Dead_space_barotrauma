@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="gas " identifier="gassink" category="Electrical" Tags="smallitem,light">
+    <Sprite texture="%ModDir%/Content/Items/Gas/sink.png" sourcerect="0,0,16,32" depth="0.8" />
+    <LightComponent lightcolor="0.0,0.0,0.0,0.0" range="0.0" powerconsumption="0">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <StatusEffect type="OnActive" target="Hull" oxygen="-50000.0">
+        <sound file="%ModDir%/Content/Items/Gas/gasloop.ogg" type="OnActive" range="500.0" volumeproperty="CurrFlow" volume="0.5" loop="true" />
+      </StatusEffect>
+      <!-- additive "top light" -->
+      <sprite texture="%ModDir%/Content/Items/Gas/sink.png" sourcerect="33,0,31,37" alpha="1.0" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+</Items>

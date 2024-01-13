@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ragdoll type="Infector" Texture="%ModDir%/Characters/infector.png" Color="255,255,255,255" SpritesheetOrientation="0" LimbScale="0.75" JointScale="0.75" TextureScale="1" ColliderHeightFromFloor="45" ImpactTolerance="50" CanEnterSubmarine="True" CanWalk="True" Draggable="True" MainLimb="Torso">
+  <collider Name="Main Collider" Radius="42" Height="0" Width="1" />
+  <limb Name="Body (0)" ID="0" Type="Torso" Notes="" Scale="1" Flip="True" MirrorVertically="False" MirrorHorizontally="False" Hide="False" SpriteOrientation="NaN" InheritLimbDepth="None" SteerForce="0" Radius="0" Height="155.7" Width="75.6" Density="10" IgnoreCollisions="False" AngularDamping="7" AttackPriority="1" PullPos="0,0" StepOffset="0,0" RefJoint="-1" MouthPos="0,0" ConstantTorque="0" ConstantAngle="0" AttackForceMultiplier="1" MinSeveranceDamage="1" CanBeSeveredAlive="True" SeveredFadeOutTime="10" ApplyTailAngle="False" SineFrequencyMultiplier="1" SineAmplitudeMultiplier="1" BlinkFrequency="0" BlinkDurationIn="0.2" BlinkDurationOut="0.5" BlinkHoldTime="0" BlinkRotationIn="0" BlinkRotationOut="45" BlinkForce="50" OnlyBlinkInWater="False" BlinkTransitionIn="Linear" BlinkTransitionOut="Linear" HealthIndex="0" Friction="0.3" Restitution="0.05">
+    <sprite SourceRect="137,56,84,173" Origin="0.5,0.5" Depth="0.1" Texture="" IgnoreTint="False" Color="255,255,255,255" DeadColor="255,255,255,255" DeadColorTime="0" />
+    <attack StructureSoundType="StructureBlunt" Context="Any" TargetType="Character" TargetLimbType="Torso" HitDetectionType="Distance" AfterAttack="Pursue" AfterAttackDelay="0" Reverse="False" Retreat="False" Range="2500" DamageRange="2500" MinRange="0" Duration="0.1" CoolDown="20" SecondaryCoolDown="0.01" CoolDownRandomFactor="0" FullSpeedAfterAttack="False" StructureDamage="0" EmitStructureDamageParticles="True" ItemDamage="0" Penetration="0" LevelWallDamage="0" Ranged="True" AvoidFriendlyFire="False" RequiredAngle="0" Stun="0" OnlyHumans="True" ApplyForceOnLimbs="" Force="0" RootForceWorldStart="0,0" RootForceWorldMiddle="0,0" RootForceWorldEnd="0,0" RootTransitionEasing="Linear" Torque="0" ApplyForcesOnlyOnce="False" TargetImpulse="0" TargetImpulseWorld="0,0" TargetForce="0" TargetForceWorld="0,0" SubmarineImpactMultiplier="1" SeverLimbsProbability="0" Priority="15" Blink="False">
+      <conditional drag="lte 0" />
+      <StatusEffect type="OnFailure" target="UseTarget">
+        <SpawnItem identifier="tcp_infectorgrasp" spawnposition="This" count="1" aimspread="1" rotationtype="Target" rotation="0" />
+      </StatusEffect>
+      <Conditional health="lte 33" />
+    </attack>
+  </limb>
+  <limb Name="Injector (1)" ID="1" Type="Tail" Notes="" Scale="1" Flip="True" MirrorVertically="False" MirrorHorizontally="False" Hide="False" SpriteOrientation="NaN" InheritLimbDepth="None" SteerForce="0" Radius="0" Height="79.2" Width="56.699997" Density="10" IgnoreCollisions="False" AngularDamping="7" AttackPriority="1" PullPos="0,0" StepOffset="0,0" RefJoint="-1" MouthPos="0,0" ConstantTorque="0" ConstantAngle="0" AttackForceMultiplier="1" MinSeveranceDamage="1" CanBeSeveredAlive="True" SeveredFadeOutTime="10" ApplyTailAngle="False" SineFrequencyMultiplier="1" SineAmplitudeMultiplier="1" BlinkFrequency="0" BlinkDurationIn="0.2" BlinkDurationOut="0.5" BlinkHoldTime="0" BlinkRotationIn="0" BlinkRotationOut="45" BlinkForce="50" OnlyBlinkInWater="False" BlinkTransitionIn="Linear" BlinkTransitionOut="Linear" HealthIndex="0" Friction="0.3" Restitution="0.05">
+    <sprite SourceRect="610,41,67,200" Origin="0.49754152,0.49262446" Depth="0" Texture="" IgnoreTint="False" Color="255,255,255,255" DeadColor="255,255,255,255" DeadColorTime="0" />
+    <attack StructureSoundType="StructureBlunt" Context="Any" TargetType="Character" TargetLimbType="Head" HitDetectionType="Distance" AfterAttack="FollowThrough" AfterAttackDelay="0" Reverse="False" Retreat="False" Range="120" DamageRange="60" MinRange="0" Duration="0.5" CoolDown="0" SecondaryCoolDown="0" CoolDownRandomFactor="0" FullSpeedAfterAttack="False" StructureDamage="0" EmitStructureDamageParticles="True" ItemDamage="0" Penetration="0" LevelWallDamage="0" Ranged="False" AvoidFriendlyFire="False" RequiredAngle="20" Stun="0" OnlyHumans="False" ApplyForceOnLimbs="0" Force="0" RootForceWorldStart="0,0" RootForceWorldMiddle="0,0" RootForceWorldEnd="0,0" RootTransitionEasing="Smooth" Torque="0" ApplyForcesOnlyOnce="False" TargetImpulse="10" TargetImpulseWorld="0,0" TargetForce="0" TargetForceWorld="0,0" SubmarineImpactMultiplier="1" SeverLimbsProbability="0" Priority="0" Blink="False">
+      <StatusEffect type="OnFailure" target="Character" delay="7.15" stackable="False" disabledeltatime="true">
+        <Affliction identifier="tcp_markerinfectionslasher" amount="30" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" delay="7.25" stackable="False" disabledeltatime="true">
+        <Affliction identifier="internaldamage" amount="5000" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" delay="6.20" stackable="False" disabledeltatime="true">
+        <ParticleEmitter particle="blackblood" particlespersecond="35" scalemin="0.5" scalemax="0.9" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="blood" particlespersecond="50" scalemin="0.7" scalemax="1.1" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <Sound file="%ModDir%/Sounds/infector/infector_mutating_bones_crunching.ogg" volume="0.75" range="750" />
+        <Affliction identifier="stun" amount="50" />
+        <Affliction identifier="tcp_infectorgrasp1" amount="50" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" delay="6.8" stackable="False" disabledeltatime="true">
+        <Sound file="%ModDir%/Sounds/infector/infector_mutating_bones_crunching 00.ogg" volume="0.75" range="750" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" stackable="False" disabledeltatime="true">
+        <Affliction identifier="tcp_markerspooker3" amount="0.1" />
+        <ReduceAffliction identifier="tcp_markerinfection" amount="1000" />
+        <ReduceAffliction type="alieninfection" amount="1000" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" targetlimb="Head" stackable="False" setvalue="True" isdead="False" delay="5" duration="2.14" disabledeltatime="true">
+        <ParticleEmitter particle="blackblood" particlespersecond="35" scalemin="0.3" scalemax="0.4" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="blood" particlespersecond="50" scalemin="0.4" scalemax="0.6" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning1.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning2.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning3.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning4.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning5.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning6.ogg" selectionmode="Random" volume="0.75" range="750" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" targetlimb="Head" stackable="False" duration="4.14" disabledeltatime="true">
+        <ParticleEmitter particle="blackblood" particlespersecond="35" scalemin="0.3" scalemax="0.4" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="blood" particlespersecond="50" scalemin="0.4" scalemax="0.6" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <sound File="%ModDir%/Sounds/infector/ds_infector_corps_explode_lp_00.ogg" Range="1250" loop="True" Volume="1.25" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" targetlimb="Head" stackable="False" delay="4.15" disabledeltatime="true">
+        <sound File="%ModDir%/Sounds/infector/ds_infector_corpse_bodyfall.ogg" Range="1250" loop="False" Volume="1.25" />
+      </StatusEffect>
+      <Conditional tcp_infectorgrasp="gt 0" />
+    </attack>
+  </limb>
+  <limb Name="Wing (2)" ID="2" Type="None" Notes="" Scale="1" Flip="True" MirrorVertically="False" MirrorHorizontally="False" Hide="False" SpriteOrientation="NaN" InheritLimbDepth="None" SteerForce="0" Radius="0" Height="154" Width="105" Density="10" IgnoreCollisions="True" AngularDamping="7" AttackPriority="1" PullPos="0,0" StepOffset="0,0" RefJoint="-1" MouthPos="0,0" ConstantTorque="0" ConstantAngle="0" AttackForceMultiplier="1" MinSeveranceDamage="1" CanBeSeveredAlive="True" SeveredFadeOutTime="10" ApplyTailAngle="False" SineFrequencyMultiplier="1" SineAmplitudeMultiplier="1" BlinkFrequency="0" BlinkDurationIn="0.2" BlinkDurationOut="0.5" BlinkHoldTime="0" BlinkRotationIn="0" BlinkRotationOut="45" BlinkForce="50" OnlyBlinkInWater="False" BlinkTransitionIn="Linear" BlinkTransitionOut="Linear" HealthIndex="0" Friction="0.3" Restitution="0.05">
+    <sprite SourceRect="33,216,108,162" Origin="0.49537036,0.49999994" Depth="0" Texture="" IgnoreTint="False" Color="255,255,255,255" DeadColor="255,255,255,255" DeadColorTime="0" />
+    <attack StructureSoundType="StructureBlunt" Context="Any" TargetType="Character" TargetLimbType="Head" HitDetectionType="Distance" AfterAttack="FollowThrough" AfterAttackDelay="0" Reverse="False" Retreat="False" Range="120" DamageRange="60" MinRange="0" Duration="0.5" CoolDown="0" SecondaryCoolDown="0" CoolDownRandomFactor="0" FullSpeedAfterAttack="False" StructureDamage="0" EmitStructureDamageParticles="True" ItemDamage="0" Penetration="0" LevelWallDamage="0" Ranged="False" AvoidFriendlyFire="False" RequiredAngle="20" Stun="0" OnlyHumans="False" ApplyForceOnLimbs="0" Force="0" RootForceWorldStart="0,0" RootForceWorldMiddle="0,0" RootForceWorldEnd="0,0" RootTransitionEasing="Smooth" Torque="0" ApplyForcesOnlyOnce="False" TargetImpulse="10" TargetImpulseWorld="0,0" TargetForce="0" TargetForceWorld="0,0" SubmarineImpactMultiplier="1" SeverLimbsProbability="0" Priority="0" Blink="False">
+      <StatusEffect type="OnFailure" target="Character" delay="7.15" stackable="False" disabledeltatime="true">
+        <Affliction identifier="tcp_markerinfectionslasher" amount="30" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" delay="7.25" stackable="False" disabledeltatime="true">
+        <Affliction identifier="internaldamage" amount="5000" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" delay="6.20" stackable="False" disabledeltatime="true">
+        <ParticleEmitter particle="blackblood" particlespersecond="35" scalemin="0.5" scalemax="0.9" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="blood" particlespersecond="50" scalemin="0.7" scalemax="1.1" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <Sound file="%ModDir%/Sounds/infector/infector_mutating_bones_crunching.ogg" volume="0.75" range="750" />
+        <Affliction identifier="stun" amount="50" />
+        <Affliction identifier="tcp_infectorgrasp1" amount="50" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" delay="6.8" stackable="False" disabledeltatime="true">
+        <Sound file="%ModDir%/Sounds/infector/infector_mutating_bones_crunching 00.ogg" volume="0.75" range="750" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" stackable="False" disabledeltatime="true">
+        <Affliction identifier="tcp_markerspooker3" amount="0.1" />
+        <ReduceAffliction identifier="tcp_markerinfection" amount="1000" />
+        <ReduceAffliction type="alieninfection" amount="1000" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" targetlimb="Head" stackable="False" setvalue="True" isdead="False" delay="5" duration="2.14" disabledeltatime="true">
+        <ParticleEmitter particle="blackblood" particlespersecond="35" scalemin="0.3" scalemax="0.4" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="blood" particlespersecond="50" scalemin="0.4" scalemax="0.6" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning1.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning2.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning3.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning4.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning5.ogg" selectionmode="Random" volume="0.75" range="750" />
+        <Sound file="%ModDir%/Sounds/shared/gurgleturning6.ogg" selectionmode="Random" volume="0.75" range="750" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" targetlimb="Head" stackable="False" duration="4.14" disabledeltatime="true">
+        <ParticleEmitter particle="blackblood" particlespersecond="35" scalemin="0.3" scalemax="0.4" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="blood" particlespersecond="50" scalemin="0.4" scalemax="0.6" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <sound File="%ModDir%/Sounds/infector/ds_infector_corps_explode_lp_00.ogg" Range="1250" loop="True" Volume="1.25" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="Character" targetlimb="Head" stackable="False" delay="4.15" disabledeltatime="true">
+        <sound File="%ModDir%/Sounds/infector/ds_infector_corpse_bodyfall.ogg" Range="1250" loop="False" Volume="1.25" />
+      </StatusEffect>
+      <Conditional isdead="True" />
+    </attack>
+  </limb>
+  <limb Name="Limb 3" ID="3" Type="None" Notes="" Scale="1" Flip="True" MirrorVertically="False" MirrorHorizontally="False" Hide="False" SpriteOrientation="NaN" InheritLimbDepth="None" SteerForce="0" Radius="0" Height="154" Width="105" Density="10" IgnoreCollisions="True" AngularDamping="7" AttackPriority="1" PullPos="0,0" StepOffset="0,0" RefJoint="-1" MouthPos="0,0" ConstantTorque="0" ConstantAngle="0" AttackForceMultiplier="1" MinSeveranceDamage="1" CanBeSeveredAlive="True" SeveredFadeOutTime="10" ApplyTailAngle="False" SineFrequencyMultiplier="1" SineAmplitudeMultiplier="1" BlinkFrequency="0" BlinkDurationIn="0.2" BlinkDurationOut="0.5" BlinkHoldTime="0" BlinkRotationIn="0" BlinkRotationOut="45" BlinkForce="50" OnlyBlinkInWater="False" BlinkTransitionIn="Linear" BlinkTransitionOut="Linear" HealthIndex="0" Friction="0.3" Restitution="0.05">
+    <sprite SourceRect="405,214,124,161" Origin="0.55645156,0.5155278" Depth="0.11" Texture="" IgnoreTint="False" Color="255,255,255,255" DeadColor="255,255,255,255" DeadColorTime="0" />
+  </limb>
+  <limb Name="LeftFoot (4)" ID="4" Type="LeftFoot" Notes="" Scale="1" Flip="True" MirrorVertically="False" MirrorHorizontally="False" Hide="False" SpriteOrientation="NaN" InheritLimbDepth="None" SteerForce="0" Radius="0" Height="38" Width="35" Density="10" IgnoreCollisions="False" AngularDamping="7" AttackPriority="1" PullPos="0,0" StepOffset="0,0" RefJoint="-1" MouthPos="0,0" ConstantTorque="0" ConstantAngle="0" AttackForceMultiplier="1" MinSeveranceDamage="1" CanBeSeveredAlive="True" SeveredFadeOutTime="10" ApplyTailAngle="False" SineFrequencyMultiplier="1" SineAmplitudeMultiplier="1" BlinkFrequency="0" BlinkDurationIn="0.2" BlinkDurationOut="0.5" BlinkHoldTime="0" BlinkRotationIn="0" BlinkRotationOut="45" BlinkForce="50" OnlyBlinkInWater="False" BlinkTransitionIn="Linear" BlinkTransitionOut="Linear" HealthIndex="0" Friction="0.3" Restitution="0.05">
+    <sprite SourceRect="606,266,35,38" Origin="0.5,0.5" Depth="0" Texture="" IgnoreTint="False" Color="255,255,255,255" DeadColor="255,255,255,255" DeadColorTime="0" />
+    <sound Tag="tcp_footstep_necroinfector" />
+  </limb>
+  <limb Name="RightFoot (5)" ID="5" Type="RightFoot" Notes="" Scale="1" Flip="True" MirrorVertically="False" MirrorHorizontally="False" Hide="False" SpriteOrientation="NaN" InheritLimbDepth="None" SteerForce="0" Radius="0" Height="38" Width="35" Density="10" IgnoreCollisions="False" AngularDamping="7" AttackPriority="1" PullPos="0,0" StepOffset="0,0" RefJoint="-1" MouthPos="0,0" ConstantTorque="0" ConstantAngle="0" AttackForceMultiplier="1" MinSeveranceDamage="1" CanBeSeveredAlive="True" SeveredFadeOutTime="10" ApplyTailAngle="False" SineFrequencyMultiplier="1" SineAmplitudeMultiplier="1" BlinkFrequency="0" BlinkDurationIn="0.2" BlinkDurationOut="0.5" BlinkHoldTime="0" BlinkRotationIn="0" BlinkRotationOut="45" BlinkForce="50" OnlyBlinkInWater="False" BlinkTransitionIn="Linear" BlinkTransitionOut="Linear" HealthIndex="0" Friction="0.3" Restitution="0.05">
+    <sprite SourceRect="606,266,35,38" Origin="0.5,0.5" Depth="0" Texture="" IgnoreTint="False" Color="255,255,255,255" DeadColor="255,255,255,255" DeadColorTime="0" />
+    <sound Tag="tcp_footstep_necroinfector" />
+  </limb>
+  <joint Name="Joint 1 - 0" Limb1="1" Limb2="0" Limb1Anchor="3.1804576,-38.11695" Limb2Anchor="-8.112799,40.663105" CanBeSevered="True" SeveranceProbabilityModifier="0" BreakSound="gore" LimitEnabled="True" UpperLimit="118.99999" LowerLimit="67" Stiffness="0.25" Scale="1" WeldJoint="False" ClockWiseRotation="False" />
+  <joint Name="Joint 2 - 0" Limb1="2" Limb2="0" Limb1Anchor="-25.031815,21.471817" Limb2Anchor="-4.8510056,-11.464895" CanBeSevered="True" SeveranceProbabilityModifier="0" BreakSound="gore" LimitEnabled="True" UpperLimit="26" LowerLimit="-31.000015" Stiffness="0.25" Scale="1" WeldJoint="False" ClockWiseRotation="False" />
+  <joint Name="Joint 3 - 0" Limb1="3" Limb2="0" Limb1Anchor="-41.328476,5.962959" Limb2Anchor="-3.892613,-9.468417" CanBeSevered="True" SeveranceProbabilityModifier="0" BreakSound="gore" LimitEnabled="True" UpperLimit="26" LowerLimit="-31.000015" Stiffness="0.25" Scale="1" WeldJoint="False" ClockWiseRotation="False" />
+  <joint Name="Joint 4 - 3" Limb1="4" Limb2="3" Limb1Anchor="0,0" Limb2Anchor="28.820559,43.12264" CanBeSevered="True" SeveranceProbabilityModifier="0" BreakSound="gore" LimitEnabled="True" UpperLimit="0" LowerLimit="0" Stiffness="0.25" Scale="1" WeldJoint="False" ClockWiseRotation="False" />
+  <joint Name="Joint 5 - 2" Limb1="5" Limb2="2" Limb1Anchor="0,0" Limb2Anchor="32.659634,47.574867" CanBeSevered="True" SeveranceProbabilityModifier="0" BreakSound="gore" LimitEnabled="True" UpperLimit="0" LowerLimit="0" Stiffness="0.25" Scale="1" WeldJoint="False" ClockWiseRotation="False" />
+</Ragdoll>

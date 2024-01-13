@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Nuclear Detonator" identifier="nucleardetonator" description="" category="Equipment" Tags="smallitem,detonator" Scale="0.5" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_metal_light" isshootable="true">
+    <Upgrade gameversion="0.9.3.0" scale="0.5" />
+    <PreferredContainer primary="armcab" minamount="1" maxamount="2" spawnprobability="0.5" />
+    <Price locationtype="Military" buyprice="50" />
+    <Price locationtype="City" buyprice="100" />
+    <Price locationtype="Outpost" buyprice="100" />
+    <Price locationtype="Research" buyprice="100" />
+    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="704,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="weapons_new.png" depth="0.8" sourcerect="-1,385,41,21" origin="0.5,0.5" />
+    <Body width="40" height="22" density="20" />
+    <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" aimpos="35,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <ItemContainer canbeselected="true" capacity="1" itempos="0,0" hideitems="false">
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,204,110,27" />
+      <Containable items="explosive" />
+    </ItemContainer>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,175" maxsize="480,210" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="activate" displayname="connection.activate">
+        <StatusEffect type="OnUse" target="This">
+          <Explosion range="1000.0" structuredamage="10000" force="5000.0" severlimbsprobability="1.0" decal="explosion" decalsize="5.0" camerashake="10000" camerashakerange="1000" flashrange="10000" flashduration="20.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0">
+            <Affliction identifier="burn" strength="500" />
+            <Affliction identifier="radiationsickness" strength="100" />
+            <Affliction identifier="internaldamage" strength="4000" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion>
+          <SpawnItem identifier="nuclearaftereffectemitter" spawnposition="This" />
+          <Use />
+        </StatusEffect>
+      </input>
+    </ConnectionPanel>
+  </Item>
+</Items>

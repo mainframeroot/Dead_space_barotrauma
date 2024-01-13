@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <DeathNemesis name="Death Buster （DeathNemesis）" identifier="DeathNemesis" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="Effective only until 80% necrotic infection! （Only works before 80% necro infection!）" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
+    <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.1" />
+    <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.03" />
+    <PreferredContainer primary="medcab" secondary="medcontainer" />
+    <Price baseprice="510">
+      <Price storeidentifier="merchantoutpost" minavailable="5" />
+      <Price storeidentifier="merchantcity" minavailable="5" />
+      <Price storeidentifier="merchantresearch" minavailable="7" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.1" minavailable="5" />
+      <Price storeidentifier="merchantmine" multiplier="1.1" minavailable="5" />
+      <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="7" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
+      <RequiredSkill identifier="medical" level="22" />
+      <RequiredItem identifier="necroblood" />
+      <RequiredItem identifier="antibiotics" />
+      <RequiredItem identifier="stabilozine" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="antibiotics" />
+      <Item identifier="stabilozine" />
+    </Deconstruct>
+    <SuitableTreatment identifier="necroinfection" suitability="40" />
+    <SuitableTreatment identifier="redmarkerinfection" suitability="40" />
+    <SuitableTreatment identifier="division" suitability="40" />
+    <InventoryIcon texture="%ModDir%/Content/Items/InventoryIconAtlas.png" sourcerect="897,449,63,63" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Content/items/Medical/Medicines2.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="70" density="15" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+      <RequiredSkill identifier="medical" level="30" />
+      <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true" />
+      <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="1">
+        <Conditional necroinfection="lt 80.0" redmarkerinfection="lt 80.0" division="lt 80.0" />
+        <ReduceAffliction identifier="necroinfection" amount="70" />
+        <ReduceAffliction identifier="redmarkerinfection" amount="70" />
+        <ReduceAffliction identifier="division" amount="70" />
+        <Affliction identifier="organdamage" amount="3" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="1">
+        <Conditional necroinfection="lt 80.0" redmarkerinfection="lt 80.0" division="lt 80.0" />
+        <ReduceAffliction identifier="necroinfection" amount="40" />
+        <ReduceAffliction identifier="redmarkerinfection" amount="40" />
+        <ReduceAffliction identifier="division" amount="40" />
+        <Affliction identifier="organdamage" amount="5" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
+  </DeathNemesis>
+</Items>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<override>
+  <Character SpeciesName="Slasher2" SpeciesTranslationOverride="" DisplayName="" Group="Necromorph" Humanoid="False" HasInfo="False" CanInteract="False" Husk="False" UseHuskAppendage="False" NeedsAir="False" NeedsWater="False" IsMachine="False" CanSpeak="False" UseBossHealthBar="False" Noise="300" Visibility="300" BloodDecal="blood" BleedParticleAir="blooddrop" BleedParticleWater="waterblood" BleedParticleMultiplier="1" CanEat="True" EatingSpeed="10" UsePathFinding="True" PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="False" SonarDisruption="0" DistantSonarRange="0" DisableDistance="25000" SoundInterval="10" DrawLast="False">
+    <ragdolls folder="%ModDir%/Content/Characters/Slasher2/Ragdolls/" />
+    <animations folder="%ModDir%/Content/Characters/Slasher2/Animations/" />
+    <sound gender="None" File="%ModDir%/Content/Characters/Slasher2/idle1.ogg" State="Idle" Range="1000" Volume="0.5" Tags="" />
+    <sound gender="None" File="%ModDir%/Content/Characters/Slasher2/idle2.ogg" State="Idle" Range="1000" Volume="0.5" Tags="" />
+    <sound gender="None" File="%ModDir%/Content/Characters/Slasher2/idle3.ogg" State="Idle" Range="1000" Volume="0.5" Tags="" />
+    <sound gender="None" File="%ModDir%/Content/Characters/Slasher2/hurt1.ogg" State="Damage" Range="1000" Volume="0.5" Tags="" />
+    <sound gender="None" File="%ModDir%/Content/Characters/Slasher2/hurt2.ogg" State="Damage" Range="1000" Volume="0.5" Tags="" />
+    <sound gender="None" File="%ModDir%/Content/Characters/Slasher2/hurt3.ogg" State="Damage" Range="1000" Volume="0.5" Tags="" />
+    <sound gender="None" File="%ModDir%/Content/Characters/Slasher2/die1.ogg" State="Die" Range="1000" Volume="0.5" Tags="" />
+    <sound gender="None" File="%ModDir%/Content/Characters/Slasher2/die2.ogg" State="Die" Range="1000" Volume="0.5" Tags="" />
+    <health Vitality="230" DoesBleed="False" CrushDepth="Infinity" UseHealthWindow="False" BleedingReduction="20" BurnReduction="0" ConstantHealthRegeneration="2" HealthRegenerationWhenEating="10" StunImmunity="False" PoisonImmunity="False" PoisonVulnerability="1" EmpVulnerability="0" ApplyAfflictionColors="False">
+      <Limb name="Head">
+        <VitalityMultiplier type="damage" multiplier="0.8" />
+      </Limb>
+      <Limb name="Torso">
+        <VitalityMultiplier type="damage" multiplier="0.8" />
+      </Limb>
+      <Limb name="LeftArm" />
+      <Limb name="RightArm" />
+      <Limb name="LeftLeg" />
+      <Limb name="RightLeg" />
+    </health>
+    <ai infiltrate="False" CombatStrength="200" Sight="0.75" Hearing="1" AggressionHurt="300" AggressionGreed="20" FleeHealthThreshold="0" AttackWhenProvoked="True" AvoidGunfire="False" DamageThreshold="0" AvoidTime="3" MinFleeTime="20" AggressiveBoarding="True" EnforceAggressiveBehaviorForMissions="True" TargetOuterWalls="True" RandomAttack="True" CanOpenDoors="False" KeepDoorsClosed="False" AvoidAbyss="True" StayInAbyss="False" PatrolFlooded="False" PatrolDry="False" StartAggression="0" MaxAggression="100" AggressionCumulation="0" WallTargetingMethod="Target">
+      <latchonto attachtowalls="true" attachtosub="false" attachlimb="Head" />
+      <target damagethreshold="0" Tag="decoy" State="Attack" Priority="600" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+      <target damagethreshold="0" Tag="provocative" State="Attack" Priority="150" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+      <target damagethreshold="0" Tag="human" State="Attack" Priority="100" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+      <target damagethreshold="0" Tag="door" State="Attack" Priority="50" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+      <target damagethreshold="0" Tag="wall" State="Attack" Priority="40" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+      <target damagethreshold="0" Tag="Infector" State="Protect" Priority="1" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="True" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+      <target damagethreshold="0" Tag="sonar" State="Attack" Priority="30" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="True" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+      <target damagethreshold="0" Tag="nasonov" State="Attack" Priority="30" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+      <target damagethreshold="0" Tag="dead" State="Eat" Priority="30" ReactDistance="0" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="False" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    </ai>
+    <inventory Slots="RightHand, LeftHand, Head, Any, Any, Any, Any, Any" AccessibleWhenAlive="False" Commonness="3">
+      <Item Identifier="necroblood" />
+    </inventory>
+  </Character>
+</override>

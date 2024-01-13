@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Items>
+    <Item name="Red Marker" identifier="redmarker" category="Alien" Tags="alien,alienartifact" sonarsize="30" scale="0.5" impactsoundtag="impact_metal_heavy">
+      <Upgrade gameversion="0.9.3.1" scale="0.5" />
+      <LightComponent range="300.0" lightcolor="200,50,50,200" IsOn="true" castshadows="false" allowingameediting="false" pulseamount="0.9" pulsefrequency="0.25" />
+      <Deconstruct time="120">
+        <Item identifier="redmarkerdead" />
+      </Deconstruct>
+      <Sprite texture="%ModDir%/Content/Items/Alien/AlienArtifact1.png" sourcerect="0,0,170,416" depth="0.55" origin="0.5,0.5" />
+      <Body width="170" height="416" density="50" friction="0.95" />
+      <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
+        <sound file="%ModDir%/Content/Items/Alien/whispers.ogg" type="OnActive" range="3000" loop="true" />
+        <StatusEffect type="OnContained" target="Character">
+          <Affliction identifier="internaldamage" strength="0.5" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="NearbyCharacters" range="500">
+          <Affliction identifier="psychosis" strength="1" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="NearbyCharacters" range="200">
+          <Affliction identifier="nausea" strength="0.1" />
+          <sound file="%ModDir%/Content/Items/Alien/whispers.ogg" type="OnActive" range="3000" loop="true" />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    <Item name="Red Marker" identifier="redmarkerMission" category="Alien" Tags="alien,alienartifact" sonarsize="30" scale="0.5" impactsoundtag="impact_metal_heavy">
+      <Upgrade gameversion="0.9.3.1" scale="0.5" />
+      <LightComponent range="300.0" lightcolor="200,50,50,200" IsOn="true" castshadows="false" allowingameediting="false" pulseamount="0.9" pulsefrequency="0.25" />
+      <Sprite texture="%ModDir%/Content/Items/Alien/AlienArtifact1.png" sourcerect="0,0,170,416" depth="0.55" origin="0.5,0.5" />
+      <Body width="170" height="416" density="50" friction="0.95" />
+      <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
+        <sound file="%ModDir%/Content/Items/Alien/whispers.ogg" type="OnActive" range="3000" loop="true" />
+        <StatusEffect type="OnContained" target="Character">
+          <Affliction identifier="internaldamage" strength="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnSpawn" target="This" delay="284">
+          <ParticleEmitter particle="bloodtrail" particleamount="20" scalemin="2" scalemax="5" velocitymin="200" velocitymax="1000" anglemin="0" anglemax="360" />
+          <ParticleEmitter particle="waterblood" particleamount="10" scalemin="2" scalemax="4" velocitymin="0" velocitymax="20" anglemin="0" anglemax="360" />
+          <ParticleEmitter particle="waterblood" drawontop="True" particleamount="10" scalemin="2" scalemax="4" velocitymin="0" velocitymax="20" anglemin="0" anglemax="360" />
+          <ParticleEmitter particle="blackwaterblood" particleamount="10" scalemin="3" scalemax="5" velocitymin="0" velocitymax="20" anglemin="0" anglemax="360" />
+          <ParticleEmitter particle="heavygib" particleamount="2" scalemin="15" scalemax="15" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+          <SpawnCharacter speciesname="Slasher" count="1" />
+        </StatusEffect>
+        <StatusEffect type="OnSpawn" target="This" delay="568">
+          <ParticleEmitter particle="bloodtrail" particleamount="20" scalemin="2" scalemax="5" velocitymin="200" velocitymax="1000" anglemin="0" anglemax="360" />
+          <ParticleEmitter particle="waterblood" particleamount="10" scalemin="2" scalemax="4" velocitymin="0" velocitymax="20" anglemin="0" anglemax="360" />
+          <ParticleEmitter particle="waterblood" drawontop="True" particleamount="10" scalemin="2" scalemax="4" velocitymin="0" velocitymax="20" anglemin="0" anglemax="360" />
+          <ParticleEmitter particle="blackwaterblood" particleamount="10" scalemin="3" scalemax="5" velocitymin="0" velocitymax="20" anglemin="0" anglemax="360" />
+          <ParticleEmitter particle="heavygib" particleamount="2" scalemin="15" scalemax="15" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+          <SpawnCharacter speciesname="Slasher" count="1" />
+          <SpawnCharacter speciesname="Slasher" count="1" />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+    <Item name="Red Marker Deconstruct" identifier="redmarkerdead" category="Alien" Tags="alien,alienartifact" sonarsize="30" scale="0.5" impactsoundtag="impact_metal_heavy">
+      <Upgrade gameversion="0.9.3.1" scale="0.5" />
+      <LightComponent range="300.0" lightcolor="200,50,50,200" IsOn="true" castshadows="false" allowingameediting="false" pulseamount="0.9" pulsefrequency="0.25" />
+      <Sprite texture="%ModDir%/Content/Items/Alien/AlienArtifact1.png" sourcerect="0,0,170,416" depth="0.55" origin="0.5,0.5" />
+      <Body width="170" height="416" density="50" friction="0.95" />
+      <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnContained" target="Character">
+          <Affliction identifier="psychosis" strength="0.1" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="NearbyCharacters" range="500">
+          <Affliction identifier="nausea" strength="0.05" />
+        </StatusEffect>
+        <sound file="%ModDir%/Content/Items/Alien/whispers.ogg" type="OnActive" range="3000" loop="true" />
+        <StatusEffect type="OnSpawn" target="This" Condition="-100.0" disabledeltatime="true">
+          <Explosion range="1000" structuredamage="100" force="500.0" severlimbsprobability="1.0" decal="explosion" decalsize="1.0" camerashake="1" camerashakerange="1" flashrange="1000" flashduration="10.0" screencolor="255,255,255,255" screencolorrange="1000" screencolorduration="3.0">
+            <Affliction identifier="burn" strength="500" />
+            <Affliction identifier="radiationsickness" strength="100" />
+            <Affliction identifier="internaldamage" strength="400" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion>
+          <SpawnItem identifier="nuclearaftereffectemitter" spawnposition="This" />
+        </StatusEffect>
+      </Holdable>
+    </Item>
+  </Items>
+</Override>

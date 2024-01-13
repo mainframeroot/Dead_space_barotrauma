@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<npcsets>
+  <npcset identifier="unitologistsnpc">
+    <npc identifier="unitologistscultist" job="assistant" commonness="0" behavior="Passive" preferredoutpostmoduletypes="crewmodule,seccrewmodule" healthmultiplier="2.0" moduleflags="none">
+      <health>
+        <Affliction identifier="necroinfection" strength="55" />
+      </health>
+      <ItemSet commonness="1">
+        <Item identifier="idcard" equip="true" />
+        <Item identifier="commonerclothes1" equip="true" />
+        <Item identifier="necroblood" equip="false" />
+        <Item identifier="divingknife" equip="false" />
+      </ItemSet>
+    </npc>
+  </npcset>
+</npcsets>

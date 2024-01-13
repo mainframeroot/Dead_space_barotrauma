@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Factions>
+  <Override>
+    <Faction identifier="coalition" initialreputation="15" minreputation="-100" maxreputation="100" menuorder="0" controlledoutpostpercentage="60" startoutpost="true">
+      <Icon name="CoalitionIcon" texture="%ModDir%/Content/UI/CampaignUIAtlas2.png" sourcerect="134,507,118,149" color="62,177,182,255" />
+      <IconSmall name="CoalitionIconSmall" texture="%ModDir%/Content/Map/MapAtlas.png" sourcerect="0,0,852,340" />
+      <Portrait name="CoalitionPortrait" texture="%ModDir%/Content/UI/Server/ServerAtlas1.png" sourcerect="0,0,852,340" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireablecoalitionsecurityofficer" minreputation="20" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireablecoalitionengineer" minreputation="20" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireablecoalitionmechanic" minreputation="20" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireablecoalitionmedic" minreputation="20" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireablecoalitionsecurityofficerveteran" minreputation="50" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireablecoalitionengineerveteran" minreputation="50" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireablecoalitionmechanicveteran" minreputation="50" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireablecoalitionmedicveteran" minreputation="50" />
+      <AutomaticMission leveltype="LocationConnection" missiontag="coalitionattack" minreputation="-100" maxreputation="-50" MaxDistanceFromFactionOutpost="3" DisallowBetweenOtherFactionOutposts="true" minprobability="0.2" maxprobability="0.01" />
+    </Faction>
+  </Override>
+  <Override>
+    <Faction identifier="separatists" initialreputation="-10" minreputation="-100" maxreputation="100" menuorder="1" controlledoutpostpercentage="40">
+      <Icon name="SeparatistIcon" texture="%ModDir%/Content/UI/CampaignUIAtlas2.png" sourcerect="268,523,105,113" color="215,156,85,255" />
+      <IconSmall name="SeparatistIconSmall" texture="%ModDir%/Content/Map/MapAtlas.png" sourcerect="58,837,50,50" />
+      <Portrait name="SeparatistPortrait" texture="%ModDir%/Content/UI/Server/ServerAtlas1.png" sourcerect="0,342,852,340" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableseparatistsecurityofficer" minreputation="20" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableseparatistengineer" minreputation="20" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableseparatistmechanic" minreputation="20" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableseparatistmedic" minreputation="20" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableseparatistsecurityofficerveteran" minreputation="50" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableseparatistengineerveteran" minreputation="50" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableseparatistmechanicveteran" minreputation="50" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableseparatistmedicveteran" minreputation="50" />
+      <AutomaticMission leveltype="LocationConnection" missiontag="separatistattack" minreputation="-100" maxreputation="-50" MaxDistanceFromFactionOutpost="3" DisallowBetweenOtherFactionOutposts="true" minprobability="0.2" maxprobability="0.01" />
+    </Faction>
+  </Override>
+  <Override>
+    <Faction identifier="huskcult" initialreputation="-5" minreputation="-100" maxreputation="100" menuorder="2" secondarycontrolledoutpostpercentage="40">
+      <Icon name="HuskCultIcon" texture="%ModDir%/Content/UI/CampaignUIAtlas2.png" sourcerect="402,523,96,113" color="58,165,121,255" />
+      <Portrait name="HuskCultPortrait" texture="%ModDir%/Content/UI/Server/ServerAtlas2.png" sourcerect="0,342,852,340" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableclown" minreputation="20" />
+    </Faction>
+  </Override>
+  <Override>
+    <Faction identifier="clowns" initialreputation="-5" minreputation="-100" maxreputation="100" menuorder="3" secondarycontrolledoutpostpercentage="40">
+      <Icon name="ClownIcon" texture="%ModDir%/Content/UI/CampaignUIAtlas2.png" sourcerect="0,523,118,113" color="206,62,62,255" />
+      <Portrait name="ClownPortrait" texture="%ModDir%/Content/UI/Server/ServerAtlas2.png" sourcerect="0,0,852,340" />
+      <Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireablehuskcultist" minreputation="20" />
+    </Faction>
+  </Override>
+  <Override>
+    <Faction identifier="unitologists" initialreputation="-15" minreputation="-100" maxreputation="100" menuorder="4">
+      <Icon name="UnitologistIcon" texture="%ModDir%/Content/UI/CampaignUIAtlas2.png" sourcerect="645,494,108,132" color="255,255,255" />
+      <Portrait name="UnitologistPortrait" texture="%ModDir%/Content/UI/Server/ServerAtlas3.png" sourcerect="0,344,855,342" />
+      <!-- 	<Hireable npcsetidentifier="outpostnpcs1" npcidentifier="hireableunitologists" minreputation="20" /> -->
+    </Faction>
+  </Override>
+</Factions>

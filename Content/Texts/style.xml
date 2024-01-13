@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <style>
+    <TitleText color="255,255,255,255" hovercolor="255,155,155,255" selectedcolor="255,0,0,255" pressedcolor="255,55,55,255">
+      <Sprite texture="%ModDir%/Content/ui/titleText.png" sourcerect="0,0,1516,265" tile="false" maintainaspectratio="true" />
+    </TitleText>
+  </style>
+</Override>

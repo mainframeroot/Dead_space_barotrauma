@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<override>
+  <Character SpeciesName="Infector" Group="necromorph" Noise="100" Visibility="100" BloodDecal="blood" BleedParticleAir="blooddrop" BleedParticleWater="waterblood" BleedParticleMultiplier="1" CanEat="True" EatingSpeed="10" UsePathFinding="True" PathFinderPriority="1" DisableDistance="25000">
+    <ragdolls folder="%ModDir%/Characters/Infector/Ragdolls/" />
+    <animations folder="%ModDir%/Characters/Infector/Animations/" />
+    <health Vitality="45" DoesBleed="True">
+      <Limb>
+        <VitalityMultiplier type="burn" multiplier="10" />
+      </Limb>
+    </health>
+    <ai CombatStrength="95" Sight="0.5" Hearing="0.5" AggressionHurt="100" AggressionGreed="10" AvoidTime="3" MinFleeTime="20" EnforceAggressiveBehaviorForMissions="True" TargetOuterWalls="True" AvoidAbyss="True">
+      <target Tag="light" State="Attack" Priority="500" />
+      <target Tag="decoy" State="Attack" Priority="500" />
+      <target Tag="provocative" State="Attack" Priority="100" />
+      <target Tag="weapon" State="Attack" Priority="100" />
+      <target Tag="stronger" State="Attack" Priority="100" />
+      <target Tag="dead" State="Attack" Priority="100" />
+      <target Tag="tool" State="Attack" Priority="100" />
+      <target Tag="human" State="Attack" Priority="100" />
+      <target Tag="necromorph" State="Idle" Priority="0" IgnoreInside="True" IgnoreOutside="True" />
+      <SwarmBehavior mindistfromclosest="25" maxdistfromcenter="750" cohesion="1" />
+      <latchonto attachtocharacters="true" mindeattachspeed="5.0" maxdeattachspeed="8.0" damageondetach="5" detachstun="5.0" attachlimb="Head" localattachpos="0,0" weld="false" maxattachduration="6" cooldown="2" />
+    </ai>
+    <sound gender="None" File="%ModDir%/Content/Sounds/infector/infector_death 00.ogg" State="Die" Range="850" Volume="0.65" Tags="None" />
+    <sound gender="None" File="%ModDir%/Content/Sounds//Sounds/infector/infector_hurt 00.ogg" State="Damage" Range="850" Volume="0.65" Tags="None" />
+    <sound gender="None" File="%ModDir%/Content/Sounds/Sounds/infector/infector_awarness_yell 00.ogg" State="Attack" Range="850" Volume="0.65" Tags="None" />
+    <!-- Add other sound elements here -->
+    <inventory arrowslot="9" Slots="Card, Headset, Card, Card, Card, LeftHand, RightHand, Card, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" AccessibleWhenAlive="True" Commonness="1" />
+  </Character>
+</override>
