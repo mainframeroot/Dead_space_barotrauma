@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Missions>
+  <MonsterMission name="Call of the Void" identifier="killnecros" tags="killmonster,killmonstercommon" type="Monster" description="A research team sent out by the USG Ishimura has sent out a distress signal before going radio silent between [location1] and [location2].  All attempts to establish communication with the missing team have failed as no one is responding to comms. Find the missing crew and bring them back to the Ishimura safely." commonness="100" reward="3500" sonarlabel="Distress-Signal" successmessage="You have escaped the necromorphs." monsterfile="Slasher" monstercount="9">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Reputation identifier="unitologists" amount="-5" />
+    <Icon texture="%ModDir%/Content/UI/MissionIcons2.png" sourcerect="768,256,256,256" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="City" />
+    <LocationType from="City" to="Outpost" />
+    <LocationType from="City" to="Military" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="Mine" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="City" />
+    <LocationType from="Outpost" to="Outpost" />
+    <LocationType from="Outpost" to="Military" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="Mine" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Military" to="None" />
+    <LocationType from="Military" to="City" />
+    <LocationType from="Military" to="Outpost" />
+    <LocationType from="Military" to="Military" />
+    <LocationType from="Military" to="Research" />
+    <LocationType from="Military" to="Mine" />
+    <LocationType from="Military" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <LocationType from="Mine" to="None" />
+    <LocationType from="Mine" to="City" />
+    <LocationType from="Mine" to="Outpost" />
+    <LocationType from="Mine" to="Military" />
+    <LocationType from="Mine" to="Research" />
+    <LocationType from="Mine" to="Mine" />
+    <LocationType from="Mine" to="Lair" />
+    <message header="Target terminated" text="The missing crew members seem to have been overwhelmed by parasitic alien life and had to be terminated. Navigate the submarine out of the cavern and report back to the Ishimura." />
+  </MonsterMission>
+  <MonsterMission name="Call of the Void" identifier="killnecros2" tags="killmonster,killmonstercommon" type="Monster" description="A research team sent out by the USG Ishimura has sent out a distress signal before going radio silent between [location1] and [location2].  all attempts to establish communication with the missing team have failed as no one is responding to comms. Find the missing crew and bring them back to the Ishimura safely." commonness="100" reward="3500" sonarlabel="Distress-Signal" successmessage="You have escaped the necromorphs" monsterfile="Slasher2" monstercount="9">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Reputation identifier="unitologists" amount="-5" />
+    <Icon texture="%ModDir%/Content/UI/MissionIcons2.png" sourcerect="768,256,256,256" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="City" />
+    <LocationType from="City" to="Outpost" />
+    <LocationType from="City" to="Military" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="Mine" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="City" />
+    <LocationType from="Outpost" to="Outpost" />
+    <LocationType from="Outpost" to="Military" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="Mine" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Military" to="None" />
+    <LocationType from="Military" to="City" />
+    <LocationType from="Military" to="Outpost" />
+    <LocationType from="Military" to="Military" />
+    <LocationType from="Military" to="Research" />
+    <LocationType from="Military" to="Mine" />
+    <LocationType from="Military" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <LocationType from="Mine" to="None" />
+    <LocationType from="Mine" to="City" />
+    <LocationType from="Mine" to="Outpost" />
+    <LocationType from="Mine" to="Military" />
+    <LocationType from="Mine" to="Research" />
+    <LocationType from="Mine" to="Mine" />
+    <LocationType from="Mine" to="Lair" />
+    <message header="Target terminated" text="The missing crew members seem to have been overwhelmed by parasitic alien life and had to be terminated. Navigate the submarine out of the cavern and report back to the Ishimura." />
+  </MonsterMission>
+  <MonsterMission name="Infanticide" identifier="killbabynecros" tags="killmonster,killmonstercommon" type="Monster" description="It has been discovered that necromorphs have been multiplying on Europa in an attempt to claim the moon. A nest of young necromorphs has been discovered between [location1] and [location2]. A reward of [reward] credits will be rewarded to any crew that can clear the nest of the infestation and return back safely." commonness="259" reward="2000" sonarlabel="Young" successmessage="The nest has been cleared." monsterfile="DeadCrawler" monstercount="18">
+    <message header="Target terminated" text="The infestation has slowed down but continues to spread elsewhere. Navigate the submarine out of the cavern to claim the reward." />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Reputation identifier="unitologists" amount="-10" />
+    <Icon texture="%ModDir%/Content/UI/MissionIcons2.png" sourcerect="768,256,256,256" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="City" />
+    <LocationType from="City" to="Outpost" />
+    <LocationType from="City" to="Military" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="Mine" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="City" />
+    <LocationType from="Outpost" to="Outpost" />
+    <LocationType from="Outpost" to="Military" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="Mine" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Military" to="None" />
+    <LocationType from="Military" to="City" />
+    <LocationType from="Military" to="Outpost" />
+    <LocationType from="Military" to="Military" />
+    <LocationType from="Military" to="Research" />
+    <LocationType from="Military" to="Mine" />
+    <LocationType from="Military" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <LocationType from="Mine" to="None" />
+    <LocationType from="Mine" to="City" />
+    <LocationType from="Mine" to="Outpost" />
+    <LocationType from="Mine" to="Military" />
+    <LocationType from="Mine" to="Research" />
+    <LocationType from="Mine" to="Mine" />
+    <LocationType from="Mine" to="Lair" />
+    <message header="Target terminated" text="The infestation has slowed down but continues to spread elsewhere. Navigate the submarine out of the cavern to claim the reward." />
+  </MonsterMission>
+  <MonsterMission name="Seismic Activity" identifier="seismicactivity" tags="killmonster,killmonsterrare" type="Monster" description="There have been peristent tremors occuring between [location1] and [location2]. It is believed that a group of Molochs may be colliding against cave walls. This may result in a cave-in so it is advisable to steer clear of this route until the threat is dealt with." commonness="100" reward="40000" sonarlabel="Seismic-Signal" successmessage="You may want to start swimming now." monsterfile="DwarfMoon" monstercount="1">
+    <Reputation identifier="location" amount="100" />
+    <Reputation identifier="coalition" amount="50" />
+    <Reputation identifier="unitologists" amount="-50" />
+    <Icon texture="%ModDir%/Content/UI/MissionIcons2.png" sourcerect="768,256,256,256" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="City" />
+    <LocationType from="City" to="Outpost" />
+    <LocationType from="City" to="Military" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="Mine" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="City" />
+    <LocationType from="Outpost" to="Outpost" />
+    <LocationType from="Outpost" to="Military" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="Mine" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Military" to="None" />
+    <LocationType from="Military" to="City" />
+    <LocationType from="Military" to="Outpost" />
+    <LocationType from="Military" to="Military" />
+    <LocationType from="Military" to="Research" />
+    <LocationType from="Military" to="Mine" />
+    <LocationType from="Military" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <LocationType from="Mine" to="None" />
+    <LocationType from="Mine" to="City" />
+    <LocationType from="Mine" to="Outpost" />
+    <LocationType from="Mine" to="Military" />
+    <LocationType from="Mine" to="Research" />
+    <LocationType from="Mine" to="Mine" />
+    <LocationType from="Mine" to="Lair" />
+    <message header="Target terminated" text="The missing crew members seem to have been overwhelmed by parasitic alien life and had to be terminated. Navigate the submarine out of the cavern and report back to the Ishimura." />
+  </MonsterMission>
+  <SalvageMission name="KILL YOURSELF" identifier="salvageobelisk" tags="salvage,salvageartifact" type="Salvage" description="There have been numerous reports of sailors feeling uneasy and violent while passing by [location1]. It is believed that an obelisk nearby has been infecting passing sailors. Investigate and retrieve the obelisk." commonness="300" reward="1000" achievementidentifier="artifactmission" sonarlabel="Infectious Transmission" sonaricon="artifact" failuremessage="Retrieving the obelisk failed." successmessage="The obelisk has been successfully retrieved." spawntype="ruin" itemidentifier="redmarker">
+    <Reputation identifier="coalition" amount="-5" />
+    <Reputation identifier="unitologists" amount="10" />
+    <Icon texture="%ModDir%/Content/UI/MissionIcons2.png" sourcerect="768,256,256,256" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="None" />
+    <LocationType from="City" to="Lair" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="None" />
+    <LocationType from="Outpost" to="Lair" />
+    <LocationType from="Research" to="None" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+    <LocationType from="Research" to="Lair" />
+    <message header="Obelisk collected" text="The obelisk is now on board. Navigate the submarine out of the cavern to claim the reward." />
+  </SalvageMission>
+  <CargoMission name="Necrophile Express" identifier="cargobiohazards" tags="cargo,cargoresearch" type="Cargo" description="The Church of Unitology at [location1] need someone to smuggle some unmarked contraband to [location2] for a reward of [reward] credits no questions asked." commonness="50" reward="10000" achievementidentifier="cargomission" successmessage="The contraband has been successfully delivered." requireddeliveryamount="20">
+    <Items>
+      <Item identifier="chemicalcrate">
+        <Item identifier="necroticeggs" amount="5" />
+        <Item identifier="necroblood" amount="5" />
+      </Item>
+      <Item identifier="chemicalcrate">
+        <Item identifier="antibloodloss2" amount="5" />
+        <Item identifier="smallinfectoregg" amount="3" />
+        <Item identifier="syringegun" amount="2" />
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="-20" />
+    <Reputation identifier="coalition" amount="-10" />
+    <Reputation identifier="unitologists" amount="15" />
+    <Icon texture="%ModDir%/Content/UI/MissionIcons2.png" sourcerect="768,256,256,256" />
+    <LocationType from="City" to="City" />
+    <LocationType from="City" to="Outpost" />
+    <LocationType from="City" to="Military" />
+    <LocationType from="City" to="Research" />
+    <LocationType from="City" to="Mine" />
+    <LocationType from="Outpost" to="City" />
+    <LocationType from="Outpost" to="Outpost" />
+    <LocationType from="Outpost" to="Military" />
+    <LocationType from="Outpost" to="Research" />
+    <LocationType from="Outpost" to="Mine" />
+    <LocationType from="Research" to="City" />
+    <LocationType from="Research" to="Outpost" />
+    <LocationType from="Research" to="Military" />
+    <LocationType from="Research" to="Research" />
+    <LocationType from="Research" to="Mine" />
+  </CargoMission>
+  <OutpostNestMission name="Judgement Day" identifier="necrooutpostassassinate" textidentifier="necrooutpostassassinate" tags="abandonedoutpost" type="OutpostDestroy" reward="7000" difficulty="5" commonness="259" allowretry="true" sonarlabel="target" unhideentitysubcategories="abandonedmonster">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Reputation identifier="unitologists" amount="-50" />
+    <Icon texture="%ModDir%/Content/UI/MissionIcons2.png" sourcerect="768,256,256,256" />
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="husk" min="-2" max="2" />
+      <Character identifier="slasher" min="4" max="6" />
+      <Character identifier="slasher2" min="4" max="6" />
+      <Character identifier="deadcrawler" min="6" max="12" />
+      <Character identifier="infector" min="2" max="3" multiplayeronly="true" />
+      <Character identifier="enhancedslasher" min="1" max="1" multiplayeronly="true" />
+    </Characters>
+    <Items>
+      <Item identifier="largeinfectoregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" />
+      </Item>
+      <Item identifier="largeinfectoregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="largeinfectoregg" spawnpointtags="nest" />
+      <Item identifier="largeinfectoregg" spawnpointtags="nest" />
+      <Item identifier="largeinfectoregg" spawnpointtags="nest" />
+      <Item identifier="largeinfectoregg" spawnpointtags="nest" />
+    </Items>
+  </OutpostNestMission>
+</Missions>
